@@ -87,7 +87,7 @@ false as pressed)</scr:Expression>
                 <Value>Please write 'The quick brown fox jumps over the lazy dog' as neatly and accurately as you can. Please continue writing this sentence each time on a new line until we say stop after 30s.</Value>
               </Combinator>
             </Expression>
-            <Expression xsi:type="rx:PublishSubject">
+            <Expression xsi:type="rx:BehaviorSubject">
               <Name>Instructions</Name>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -95,7 +95,7 @@ false as pressed)</scr:Expression>
                 <Value>true</Value>
               </Combinator>
             </Expression>
-            <Expression xsi:type="rx:PublishSubject">
+            <Expression xsi:type="rx:BehaviorSubject">
               <Name>EnableStart</Name>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -103,7 +103,7 @@ false as pressed)</scr:Expression>
                 <Value>false</Value>
               </Combinator>
             </Expression>
-            <Expression xsi:type="rx:PublishSubject">
+            <Expression xsi:type="rx:BehaviorSubject">
               <Name>EnableTextBox</Name>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -111,7 +111,7 @@ false as pressed)</scr:Expression>
                 <Value>false</Value>
               </Combinator>
             </Expression>
-            <Expression xsi:type="rx:PublishSubject">
+            <Expression xsi:type="rx:BehaviorSubject">
               <Name>EnableRepeat</Name>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -119,8 +119,8 @@ false as pressed)</scr:Expression>
                 <Value>0</Value>
               </Combinator>
             </Expression>
-            <Expression xsi:type="rx:PublishSubject">
-              <Name>Timer</Name>
+            <Expression xsi:type="rx:BehaviorSubject">
+              <Name>CountDown</Name>
             </Expression>
           </Nodes>
           <Edges>
@@ -196,7 +196,7 @@ until end of 30s countdown'</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
-              <Name>Timer</Name>
+              <Name>CountDown</Name>
             </Expression>
             <Expression xsi:type="scr:ExpressionTransform">
               <scr:Expression>it.ToString()</scr:Expression>
@@ -463,7 +463,7 @@ until end of 30s countdown'</Value>
               <scr:Expression>it.Item2-it.Item1</scr:Expression>
             </Expression>
             <Expression xsi:type="MulticastSubject">
-              <Name>Timer</Name>
+              <Name>CountDown</Name>
             </Expression>
             <Expression xsi:type="rx:TakeWhile">
               <Workflow>
