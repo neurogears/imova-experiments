@@ -8,6 +8,8 @@
                  xmlns:al="clr-namespace:Bonsai.Audio;assembly=Bonsai.Audio"
                  xmlns:cv="clr-namespace:Bonsai.Vision;assembly=Bonsai.Vision"
                  xmlns:gui="clr-namespace:Bonsai.Gui;assembly=Bonsai.Gui"
+                 xmlns:p1="clr-namespace:OpenCV.Net;assembly=OpenCV.Net"
+                 xmlns:p2="clr-namespace:Bonsai.Vision.Design;assembly=Bonsai.Vision.Design"
                  xmlns:ui="clr-namespace:Bonsai.Design;assembly=Bonsai.Design"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
@@ -59,7 +61,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\Keyboard\2025-06-27T08-43-14\keystrokes.csv</io:FileName>
+              <io:FileName>C:\Data\IMOVA\Webcam\2025-07-24T11-21-14\keystrokes.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -82,7 +84,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\MicrophoneSpeech\2025-06-27T08-41-32\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\IMOVA\Webcam\2025-07-24T11-21-14\Instructions.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -154,7 +156,7 @@ false as pressed)</scr:Expression>
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="al:AudioWriter">
-                      <al:FileName>C:\Data\IMOVA\MicrophoneSpeech\2025-06-27T08-41-32\Audio.wav</al:FileName>
+                      <al:FileName>C:\Data\IMOVA\Webcam\2025-07-24T11-21-14\Audio.wav</al:FileName>
                       <al:Suffix>Timestamp</al:Suffix>
                       <al:Buffered>true</al:Buffered>
                       <al:Overwrite>false</al:Overwrite>
@@ -191,7 +193,7 @@ false as pressed)</scr:Expression>
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:\Data\IMOVA\MicrophoneSpeech\2025-06-27T08-41-32\Audio.csv</io:FileName>
+                    <io:FileName>C:\Data\IMOVA\Webcam\2025-07-24T11-21-14\Audio.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>Timestamp</io:Suffix>
@@ -289,6 +291,9 @@ false as pressed)</scr:Expression>
                       <cv:CaptureProperties />
                     </Combinator>
                   </Expression>
+                  <Expression xsi:type="MulticastSubject">
+                    <Name>Webcam</Name>
+                  </Expression>
                   <Expression xsi:type="SubscribeSubject">
                     <Name>BaseFileName</Name>
                   </Expression>
@@ -311,7 +316,7 @@ false as pressed)</scr:Expression>
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:VideoWriter">
-                      <cv:FileName>C:\Data\IMOVA\MicrophoneSpeech\2025-06-27T08-41-32\Video.avi</cv:FileName>
+                      <cv:FileName>C:\Data\IMOVA\Webcam\2025-07-24T11-21-14\Video.avi</cv:FileName>
                       <cv:Suffix>Timestamp</cv:Suffix>
                       <cv:Buffered>true</cv:Buffered>
                       <cv:Overwrite>false</cv:Overwrite>
@@ -354,7 +359,7 @@ false as pressed)</scr:Expression>
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:\Data\IMOVA\MicrophoneSpeech\2025-06-27T08-41-32\Video.csv</io:FileName>
+                    <io:FileName>C:\Data\IMOVA\Webcam\2025-07-24T11-21-14\Video.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>Timestamp</io:Suffix>
@@ -388,25 +393,26 @@ false as pressed)</scr:Expression>
                   <Edge From="0" To="1" Label="Source1" />
                   <Edge From="1" To="2" Label="Source1" />
                   <Edge From="2" To="3" Label="Source1" />
-                  <Edge From="4" To="10" Label="Source1" />
-                  <Edge From="5" To="6" Label="Source1" />
+                  <Edge From="4" To="5" Label="Source1" />
+                  <Edge From="5" To="11" Label="Source1" />
                   <Edge From="6" To="7" Label="Source1" />
                   <Edge From="7" To="8" Label="Source1" />
                   <Edge From="8" To="9" Label="Source1" />
-                  <Edge From="9" To="10" Label="Source2" />
-                  <Edge From="10" To="11" Label="Source1" />
+                  <Edge From="9" To="10" Label="Source1" />
+                  <Edge From="10" To="11" Label="Source2" />
                   <Edge From="11" To="12" Label="Source1" />
                   <Edge From="12" To="13" Label="Source1" />
-                  <Edge From="13" To="19" Label="Source1" />
-                  <Edge From="14" To="15" Label="Source1" />
+                  <Edge From="13" To="14" Label="Source1" />
+                  <Edge From="14" To="20" Label="Source1" />
                   <Edge From="15" To="16" Label="Source1" />
                   <Edge From="16" To="17" Label="Source1" />
                   <Edge From="17" To="18" Label="Source1" />
-                  <Edge From="18" To="19" Label="Source2" />
-                  <Edge From="19" To="22" Label="Source1" />
-                  <Edge From="20" To="21" Label="Source1" />
-                  <Edge From="21" To="22" Label="Source2" />
-                  <Edge From="22" To="23" Label="Source1" />
+                  <Edge From="18" To="19" Label="Source1" />
+                  <Edge From="19" To="20" Label="Source2" />
+                  <Edge From="20" To="23" Label="Source1" />
+                  <Edge From="21" To="22" Label="Source1" />
+                  <Edge From="22" To="23" Label="Source2" />
+                  <Edge From="23" To="24" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
@@ -503,10 +509,31 @@ false as pressed)</scr:Expression>
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 27.8571434pt</gui:Font>
-              <gui:Text>Please screw up your eyes as tight as you for about two seconds.
-Then,
-open and close your eyes repeatedly until we say stop.
-Wait for start command</gui:Text>
+              <gui:Text>Please open your mouth wide and hold open for about two seconds.
+Then
+Close and open your mouth as wide as you can until we say stop
+Wait for command</gui:Text>
+            </Expression>
+            <Expression xsi:type="VisualizerMapping" />
+            <Expression xsi:type="rx:BehaviorSubject" TypeArguments="p1:IplImage">
+              <rx:Name>Webcam</rx:Name>
+            </Expression>
+            <Expression xsi:type="VisualizerMapping">
+              <VisualizerType xsi:type="TypeMapping" TypeArguments="p2:IplImageVisualizer" />
+            </Expression>
+            <Expression xsi:type="gui:TableLayoutPanelBuilder">
+              <gui:Enabled>true</gui:Enabled>
+              <gui:Visible>true</gui:Visible>
+              <gui:ColumnCount>2</gui:ColumnCount>
+              <gui:RowCount>1</gui:RowCount>
+              <gui:ColumnStyles />
+              <gui:RowStyles>
+                <gui:RowStyle>
+                  <gui:SizeType>Absolute</gui:SizeType>
+                  <gui:Height>400</gui:Height>
+                </gui:RowStyle>
+              </gui:RowStyles>
+              <gui:CellSpans />
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
@@ -634,32 +661,36 @@ Wait for start command</gui:Text>
             <Edge From="0" To="1" Label="Source1" />
             <Edge From="1" To="2" Label="Source1" />
             <Edge From="2" To="3" Label="Source1" />
-            <Edge From="3" To="28" Label="Source1" />
+            <Edge From="3" To="6" Label="Source1" />
             <Edge From="4" To="5" Label="Source1" />
-            <Edge From="5" To="6" Label="Source1" />
+            <Edge From="5" To="6" Label="Source2" />
             <Edge From="6" To="7" Label="Source1" />
-            <Edge From="7" To="8" Label="Source1" />
-            <Edge From="8" To="26" Label="Source1" />
+            <Edge From="7" To="32" Label="Source1" />
+            <Edge From="8" To="9" Label="Source1" />
             <Edge From="9" To="10" Label="Source1" />
             <Edge From="10" To="11" Label="Source1" />
             <Edge From="11" To="12" Label="Source1" />
-            <Edge From="12" To="13" Label="Source1" />
-            <Edge From="13" To="16" Label="Source1" />
+            <Edge From="12" To="30" Label="Source1" />
+            <Edge From="13" To="14" Label="Source1" />
             <Edge From="14" To="15" Label="Source1" />
-            <Edge From="15" To="16" Label="Source2" />
+            <Edge From="15" To="16" Label="Source1" />
             <Edge From="16" To="17" Label="Source1" />
-            <Edge From="17" To="26" Label="Source2" />
+            <Edge From="17" To="20" Label="Source1" />
             <Edge From="18" To="19" Label="Source1" />
-            <Edge From="19" To="20" Label="Source1" />
-            <Edge From="20" To="24" Label="Source1" />
-            <Edge From="21" To="22" Label="Source1" />
+            <Edge From="19" To="20" Label="Source2" />
+            <Edge From="20" To="21" Label="Source1" />
+            <Edge From="21" To="30" Label="Source2" />
             <Edge From="22" To="23" Label="Source1" />
-            <Edge From="23" To="24" Label="Source2" />
-            <Edge From="24" To="25" Label="Source1" />
-            <Edge From="25" To="26" Label="Source3" />
+            <Edge From="23" To="24" Label="Source1" />
+            <Edge From="24" To="28" Label="Source1" />
+            <Edge From="25" To="26" Label="Source1" />
             <Edge From="26" To="27" Label="Source1" />
             <Edge From="27" To="28" Label="Source2" />
             <Edge From="28" To="29" Label="Source1" />
+            <Edge From="29" To="30" Label="Source3" />
+            <Edge From="30" To="31" Label="Source1" />
+            <Edge From="31" To="32" Label="Source2" />
+            <Edge From="32" To="33" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
