@@ -57,7 +57,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\Keyboard\2025-06-27T08-43-14\keystrokes.csv</io:FileName>
+              <io:FileName>C:\Data\IMOVA\Keyboard\2025-07-30T07-06-24\keystrokes.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -80,7 +80,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName />
+              <io:FileName>C:\Data\IMOVA\Keyboard\2025-07-30T07-06-24\text.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -102,7 +102,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName />
+              <io:FileName>C:\Data\IMOVA\Keyboard\2025-07-30T07-06-24\text_input_start.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -124,7 +124,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName />
+              <io:FileName>C:\Data\IMOVA\Keyboard\2025-07-30T07-06-24\Instructions.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -227,11 +227,7 @@ false as pressed)</scr:Expression>
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 27.8571434pt</gui:Font>
-              <gui:Text>Please write 
-'The quick brown fox jumps over the lazy dog' 
-as neatly and accurately as you can. 
-Please continue writing this sentence each time on a new line 
-until end of 30s countdown'</gui:Text>
+              <gui:Text>Chose Repeat or Next Task</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
@@ -245,8 +241,8 @@ until end of 30s countdown'</gui:Text>
             </Expression>
             <Expression xsi:type="gui:ButtonBuilder">
               <gui:Name>Start</gui:Name>
-              <gui:Enabled>true</gui:Enabled>
-              <gui:Visible>true</gui:Visible>
+              <gui:Enabled>false</gui:Enabled>
+              <gui:Visible>false</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 26.1428585pt, style=Bold</gui:Font>
               <gui:Text>Start</gui:Text>
             </Expression>
@@ -477,11 +473,9 @@ until end of 30s countdown'</gui:Text>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Please write 
-'The quick brown fox jumps over the lazy dog' 
-as neatly and accurately as you can. 
-Please continue writing this sentence each time on a new line 
-until end of 30s countdown'</Value>
+                <Value>Please type: 'The quick brown fox jumps over the lazy dog'
+Each time you finish the sentence, press the return key to start a new line. 
+Any questions?</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -575,10 +569,7 @@ until end of 30s countdown'</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Please write: 
-'The quick brown fox jumps over the lazy dog' 
-Please continue writing this sentence each time on a new line 
-Until count reaches zero</Value>
+                <Value>The quick brown fox jumps over the lazy dog</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
