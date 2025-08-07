@@ -53,7 +53,7 @@
                 <harp:VisualIndicators>On</harp:VisualIndicators>
                 <harp:Heartbeat>Disabled</harp:Heartbeat>
                 <harp:IgnoreErrors>false</harp:IgnoreErrors>
-                <harp:PortName>COM9</harp:PortName>
+                <harp:PortName>COM3</harp:PortName>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -99,7 +99,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT4.127S</rx:DueTime>
+                      <rx:DueTime>PT2.023S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -289,41 +289,16 @@ false as pressed)</scr:Expression>
               <Name>LogHarp</Name>
               <Workflow>
                 <Nodes>
-                  <Expression xsi:type="ExternalizedMapping">
-                    <Property Name="DeviceFolderName" />
-                    <Property Name="DeviceEvents" />
-                    <Property Name="DeviceYamlFile" />
-                    <Property Name="DeviceName" />
-                  </Expression>
                   <Expression xsi:type="rx:Defer">
                     <Workflow>
                       <Nodes>
-                        <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
-                          <Path />
-                        </Expression>
-                        <Expression xsi:type="ExternalizedMapping">
-                          <Property Name="Value" DisplayName="DeviceFolderName" Description="The name of the folder where the binaryFiles will be logged into" />
-                        </Expression>
-                        <Expression xsi:type="Add">
-                          <Operand xsi:type="StringProperty">
-                            <Value>SynchronizerBoard</Value>
-                          </Operand>
-                        </Expression>
-                        <Expression xsi:type="Add">
-                          <Operand xsi:type="StringProperty">
-                            <Value>.harp\</Value>
-                          </Operand>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="rx:Take">
-                            <rx:Count>1</rx:Count>
-                          </Combinator>
-                        </Expression>
-                        <Expression xsi:type="rx:AsyncSubject">
-                          <Name>DeviceFolderName</Name>
-                        </Expression>
                         <Expression xsi:type="SubscribeSubject">
-                          <Name>DeviceFolderName</Name>
+                          <Name>PathPrefix</Name>
+                        </Expression>
+                        <Expression xsi:type="Add">
+                          <Operand xsi:type="StringProperty">
+                            <Value>\</Value>
+                          </Operand>
                         </Expression>
                         <Expression xsi:type="ExternalizedMapping">
                           <Property Name="Value" DisplayName="DeviceName" />
@@ -335,7 +310,7 @@ false as pressed)</scr:Expression>
                         </Expression>
                         <Expression xsi:type="Add">
                           <Operand xsi:type="StringProperty">
-                            <Value>.bin</Value>
+                            <Value>\</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -344,7 +319,7 @@ false as pressed)</scr:Expression>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="rx:AsyncSubject">
-                          <Name>BinaryFilename</Name>
+                          <Name>DeviceFolderName</Name>
                         </Expression>
                         <Expression xsi:type="SubscribeSubject">
                           <Name>DeviceFolderName</Name>
@@ -362,6 +337,22 @@ false as pressed)</scr:Expression>
                         <Expression xsi:type="rx:AsyncSubject">
                           <Name>DeviceYamlFilename</Name>
                         </Expression>
+                        <Expression xsi:type="SubscribeSubject">
+                          <Name>DeviceFolderName</Name>
+                        </Expression>
+                        <Expression xsi:type="Add">
+                          <Operand xsi:type="StringProperty">
+                            <Value>Behavior</Value>
+                          </Operand>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:Take">
+                            <rx:Count>1</rx:Count>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="rx:AsyncSubject">
+                          <Name>BinaryFilename</Name>
+                        </Expression>
                         <Expression xsi:type="ExternalizedMapping">
                           <Property Name="Name" DisplayName="DeviceEvents" Description="TaskControlBehaviorEvents" />
                         </Expression>
@@ -371,23 +362,81 @@ false as pressed)</scr:Expression>
                         <Expression xsi:type="rx:GroupBy">
                           <rx:KeySelector>Address</rx:KeySelector>
                         </Expression>
-                        <Expression xsi:type="SubscribeSubject">
-                          <Name>BinaryFilename</Name>
-                        </Expression>
-                        <Expression xsi:type="PropertyMapping">
-                          <PropertyMappings>
-                            <Property Name="FileName" />
-                          </PropertyMappings>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="harp:MessageWriter">
-                            <harp:FileName>\2025-08-07T13-43-49SynchronizerBoard.harp\Behavior.bin</harp:FileName>
-                            <harp:Suffix>None</harp:Suffix>
-                            <harp:Buffered>true</harp:Buffered>
-                            <harp:Overwrite>false</harp:Overwrite>
-                            <harp:FilterType>Include</harp:FilterType>
-                            <harp:MessageType xsi:nil="true" />
-                          </Combinator>
+                        <Expression xsi:type="rx:SelectMany">
+                          <Name>LogRegisters</Name>
+                          <Workflow>
+                            <Nodes>
+                              <Expression xsi:type="WorkflowInput">
+                                <Name>Source1</Name>
+                              </Expression>
+                              <Expression xsi:type="rx:AsyncSubject">
+                                <Name>Register</Name>
+                              </Expression>
+                              <Expression xsi:type="SubscribeSubject">
+                                <Name>BinaryFilename</Name>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="rx:Take">
+                                  <rx:Count>1</rx:Count>
+                                </Combinator>
+                              </Expression>
+                              <Expression xsi:type="SubscribeSubject">
+                                <Name>Register</Name>
+                              </Expression>
+                              <Expression xsi:type="MemberSelector">
+                                <Selector>Key</Selector>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="rx:Zip" />
+                              </Expression>
+                              <Expression xsi:type="Format">
+                                <Format>{0}_{1}.bin</Format>
+                                <Selector>Item1,Item2</Selector>
+                              </Expression>
+                              <Expression xsi:type="rx:AsyncSubject">
+                                <Name>LogName</Name>
+                              </Expression>
+                              <Expression xsi:type="SubscribeSubject">
+                                <Name>Register</Name>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="rx:Merge" />
+                              </Expression>
+                              <Expression xsi:type="SubscribeSubject">
+                                <Name>LogName</Name>
+                              </Expression>
+                              <Expression xsi:type="PropertyMapping">
+                                <PropertyMappings>
+                                  <Property Name="FileName" />
+                                </PropertyMappings>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="harp:MessageWriter">
+                                  <harp:FileName>C:\Data\IMOVA\Keyboard\2025-08-07T15-18-31\Behavior\Behavior_35.bin</harp:FileName>
+                                  <harp:Suffix>None</harp:Suffix>
+                                  <harp:Buffered>true</harp:Buffered>
+                                  <harp:Overwrite>false</harp:Overwrite>
+                                  <harp:FilterType>Include</harp:FilterType>
+                                  <harp:MessageType xsi:nil="true" />
+                                </Combinator>
+                              </Expression>
+                              <Expression xsi:type="WorkflowOutput" />
+                            </Nodes>
+                            <Edges>
+                              <Edge From="0" To="1" Label="Source1" />
+                              <Edge From="2" To="3" Label="Source1" />
+                              <Edge From="3" To="6" Label="Source1" />
+                              <Edge From="4" To="5" Label="Source1" />
+                              <Edge From="5" To="6" Label="Source2" />
+                              <Edge From="6" To="7" Label="Source1" />
+                              <Edge From="7" To="8" Label="Source1" />
+                              <Edge From="9" To="10" Label="Source1" />
+                              <Edge From="10" To="13" Label="Source1" />
+                              <Edge From="11" To="12" Label="Source1" />
+                              <Edge From="12" To="13" Label="Source2" />
+                              <Edge From="13" To="14" Label="Source1" />
+                            </Edges>
+                          </Workflow>
                         </Expression>
                         <Expression xsi:type="ExternalizedMapping">
                           <Property Name="Path" DisplayName="DeviceYamlFile" />
@@ -407,35 +456,32 @@ false as pressed)</scr:Expression>
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>\2025-08-07T13-43-49SynchronizerBoard.harp\device.yml</io:Path>
+                            <io:Path>C:\Data\IMOVA\Keyboard\2025-08-07T15-18-31\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
                         </Expression>
                       </Nodes>
                       <Edges>
-                        <Edge From="0" To="2" Label="Source1" />
-                        <Edge From="1" To="2" Label="Source2" />
-                        <Edge From="2" To="3" Label="Source1" />
+                        <Edge From="0" To="1" Label="Source1" />
+                        <Edge From="1" To="3" Label="Source1" />
+                        <Edge From="2" To="3" Label="Source2" />
                         <Edge From="3" To="4" Label="Source1" />
                         <Edge From="4" To="5" Label="Source1" />
-                        <Edge From="6" To="8" Label="Source1" />
-                        <Edge From="7" To="8" Label="Source2" />
+                        <Edge From="5" To="6" Label="Source1" />
+                        <Edge From="7" To="8" Label="Source1" />
                         <Edge From="8" To="9" Label="Source1" />
                         <Edge From="9" To="10" Label="Source1" />
-                        <Edge From="10" To="11" Label="Source1" />
+                        <Edge From="11" To="12" Label="Source1" />
                         <Edge From="12" To="13" Label="Source1" />
                         <Edge From="13" To="14" Label="Source1" />
-                        <Edge From="14" To="15" Label="Source1" />
+                        <Edge From="15" To="16" Label="Source1" />
                         <Edge From="16" To="17" Label="Source1" />
                         <Edge From="17" To="18" Label="Source1" />
-                        <Edge From="18" To="21" Label="Source1" />
                         <Edge From="19" To="20" Label="Source1" />
-                        <Edge From="20" To="21" Label="Source2" />
-                        <Edge From="22" To="23" Label="Source1" />
-                        <Edge From="23" To="26" Label="Source1" />
-                        <Edge From="24" To="25" Label="Source1" />
-                        <Edge From="25" To="26" Label="Source2" />
+                        <Edge From="20" To="23" Label="Source1" />
+                        <Edge From="21" To="22" Label="Source1" />
+                        <Edge From="22" To="23" Label="Source2" />
                       </Edges>
                     </Workflow>
                   </Expression>
@@ -443,7 +489,6 @@ false as pressed)</scr:Expression>
                 </Nodes>
                 <Edges>
                   <Edge From="0" To="1" Label="Source1" />
-                  <Edge From="1" To="2" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
@@ -544,7 +589,7 @@ false as pressed)</scr:Expression>
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 27.8571434pt</gui:Font>
-              <gui:Text>Please write 'The quick brown fox jumps over the lazy dog' as neatly and accurately as you can. Please continue writing this sentence each time on a new line until we say stop after 30s.</gui:Text>
+              <gui:Text>The quick brown fox jumps over the lazy dog</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
@@ -558,8 +603,8 @@ false as pressed)</scr:Expression>
             </Expression>
             <Expression xsi:type="gui:ButtonBuilder">
               <gui:Name>Start</gui:Name>
-              <gui:Enabled>true</gui:Enabled>
-              <gui:Visible>true</gui:Visible>
+              <gui:Enabled>false</gui:Enabled>
+              <gui:Visible>false</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 26.1428585pt, style=Bold</gui:Font>
               <gui:Text>Start</gui:Text>
             </Expression>
@@ -602,7 +647,7 @@ false as pressed)</scr:Expression>
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 48pt</gui:Font>
-              <gui:Text>0</gui:Text>
+              <gui:Text>24</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
@@ -615,8 +660,8 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="gui:TableLayoutPanelBuilder">
-              <gui:Enabled>false</gui:Enabled>
-              <gui:Visible>false</gui:Visible>
+              <gui:Enabled>true</gui:Enabled>
+              <gui:Visible>true</gui:Visible>
               <gui:ColumnCount>2</gui:ColumnCount>
               <gui:RowCount>1</gui:RowCount>
               <gui:ColumnStyles>
