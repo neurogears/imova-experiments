@@ -57,7 +57,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\Keyboard\2025-07-30T07-06-24\keystrokes.csv</io:FileName>
+              <io:FileName />
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -80,7 +80,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\Keyboard\2025-07-30T07-06-24\text.csv</io:FileName>
+              <io:FileName />
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -102,7 +102,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\Keyboard\2025-07-30T07-06-24\text_input_start.csv</io:FileName>
+              <io:FileName />
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -124,7 +124,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\Keyboard\2025-07-30T07-06-24\Instructions.csv</io:FileName>
+              <io:FileName />
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>

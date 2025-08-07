@@ -88,7 +88,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="al:AudioWriter">
-                      <al:FileName>C:\Data\IMOVA\MicrophoneSpeech\2025-07-30T06-31-38\Audio.wav</al:FileName>
+                      <al:FileName />
                       <al:Suffix>Timestamp</al:Suffix>
                       <al:Buffered>true</al:Buffered>
                       <al:Overwrite>false</al:Overwrite>
@@ -125,7 +125,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:\Data\IMOVA\MicrophoneSpeech\2025-07-30T06-31-38\Audio.csv</io:FileName>
+                    <io:FileName />
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>Timestamp</io:Suffix>
@@ -245,7 +245,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:VideoWriter">
-                      <cv:FileName>C:\Data\IMOVA\MicrophoneSpeech\2025-07-30T06-31-38\Video.avi</cv:FileName>
+                      <cv:FileName />
                       <cv:Suffix>Timestamp</cv:Suffix>
                       <cv:Buffered>true</cv:Buffered>
                       <cv:Overwrite>false</cv:Overwrite>
@@ -288,7 +288,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:\Data\IMOVA\MicrophoneSpeech\2025-07-30T06-31-38\Video.csv</io:FileName>
+                    <io:FileName />
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>Timestamp</io:Suffix>
@@ -359,7 +359,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\MicrophoneSpeech\2025-07-30T06-37-02\Instructions.csv</io:FileName>
+              <io:FileName />
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>

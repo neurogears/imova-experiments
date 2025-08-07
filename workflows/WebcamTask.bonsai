@@ -61,7 +61,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\Webcam\2025-07-30T07-12-57\keystrokes.csv</io:FileName>
+              <io:FileName />
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -84,7 +84,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\Webcam\2025-07-30T07-12-57\Instructions.csv</io:FileName>
+              <io:FileName />
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -156,7 +156,7 @@ false as pressed)</scr:Expression>
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="al:AudioWriter">
-                      <al:FileName>C:\Data\IMOVA\Webcam\2025-07-30T07-12-57\Audio.wav</al:FileName>
+                      <al:FileName />
                       <al:Suffix>Timestamp</al:Suffix>
                       <al:Buffered>true</al:Buffered>
                       <al:Overwrite>false</al:Overwrite>
@@ -193,7 +193,7 @@ false as pressed)</scr:Expression>
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:\Data\IMOVA\Webcam\2025-07-30T07-12-57\Audio.csv</io:FileName>
+                    <io:FileName />
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>Timestamp</io:Suffix>
@@ -316,7 +316,7 @@ false as pressed)</scr:Expression>
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:VideoWriter">
-                      <cv:FileName>C:\Data\IMOVA\Webcam\2025-07-30T07-12-57\Video.avi</cv:FileName>
+                      <cv:FileName />
                       <cv:Suffix>Timestamp</cv:Suffix>
                       <cv:Buffered>true</cv:Buffered>
                       <cv:Overwrite>false</cv:Overwrite>
@@ -359,7 +359,7 @@ false as pressed)</scr:Expression>
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:\Data\IMOVA\Webcam\2025-07-30T07-12-57\Video.csv</io:FileName>
+                    <io:FileName />
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>Timestamp</io:Suffix>
