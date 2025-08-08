@@ -626,6 +626,7 @@ false as pressed)</scr:Expression>
             <Expression xsi:type="gui:TextBoxBuilder">
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
+              <gui:Text />
               <gui:Multiline>true</gui:Multiline>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
