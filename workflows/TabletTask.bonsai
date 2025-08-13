@@ -103,7 +103,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT2.325S</rx:DueTime>
+                      <rx:DueTime>PT2.127S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -315,7 +315,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>C:\Data\IMOVA\Webcam\2025-08-13T06-41-46\Behavior\Behavior_35.bin</harp:FileName>
+                                  <harp:FileName>C:\Data\IMOVA\Webcam\2025-08-13T15-52-42\Behavior\Behavior_35.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -359,7 +359,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>C:\Data\IMOVA\Webcam\2025-08-13T06-41-46\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\IMOVA\Webcam\2025-08-13T15-52-42\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -409,8 +409,8 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="cv:CreatePoint">
-                <cv:X>958</cv:X>
-                <cv:Y>618</cv:Y>
+                <cv:X>2531</cv:X>
+                <cv:Y>1143</cv:Y>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -462,7 +462,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\Webcam\2025-08-13T06-41-46\keystrokes.csv</io:FileName>
+              <io:FileName>C:\Data\IMOVA\Webcam\2025-08-13T15-52-42\keystrokes.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -483,7 +483,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\Webcam\2025-08-13T06-41-46\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\IMOVA\Webcam\2025-08-13T15-52-42\Instructions.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -600,8 +600,8 @@
             <Expression xsi:type="gui:LabelBuilder">
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
-              <gui:Font>Microsoft Sans Serif, 27.8571434pt</gui:Font>
-              <gui:Text>We will now complete tasks with a pen and paper resting on top of the tablet.  </gui:Text>
+              <gui:Font>Microsoft Sans Serif, 24pt</gui:Font>
+              <gui:Text>Finished, Thank you</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="rx:BehaviorSubject" TypeArguments="sys:Tuple(p3:Point,p3:IplImage)">
@@ -645,9 +645,9 @@
             </Expression>
             <Expression xsi:type="gui:ButtonBuilder">
               <gui:Name>Start</gui:Name>
-              <gui:Enabled>true</gui:Enabled>
-              <gui:Visible>true</gui:Visible>
-              <gui:Font>Microsoft Sans Serif, 26.1428585pt, style=Bold</gui:Font>
+              <gui:Enabled>false</gui:Enabled>
+              <gui:Visible>false</gui:Visible>
+              <gui:Font>Microsoft Sans Serif, 50pt, style=Bold</gui:Font>
               <gui:Text>Start</gui:Text>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -668,8 +668,8 @@
             <Expression xsi:type="gui:LabelBuilder">
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
-              <gui:Font>Microsoft Sans Serif, 48pt</gui:Font>
-              <gui:Text>26</gui:Text>
+              <gui:Font>Microsoft Sans Serif, 24pt</gui:Font>
+              <gui:Text>0</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
@@ -682,8 +682,8 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="gui:TableLayoutPanelBuilder">
-              <gui:Enabled>true</gui:Enabled>
-              <gui:Visible>true</gui:Visible>
+              <gui:Enabled>false</gui:Enabled>
+              <gui:Visible>false</gui:Visible>
               <gui:ColumnCount>2</gui:ColumnCount>
               <gui:RowCount>1</gui:RowCount>
               <gui:ColumnStyles>
@@ -704,7 +704,7 @@
               <gui:Name>Repeat</gui:Name>
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
-              <gui:Font>Microsoft Sans Serif, 26.1428585pt, style=Bold</gui:Font>
+              <gui:Font>Microsoft Sans Serif, 50pt, style=Bold</gui:Font>
               <gui:Text>Repeat</gui:Text>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -715,7 +715,7 @@
               <gui:Name>Next</gui:Name>
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
-              <gui:Font>Microsoft Sans Serif, 26.1428585pt, style=Bold</gui:Font>
+              <gui:Font>Microsoft Sans Serif, 50pt, style=Bold</gui:Font>
               <gui:Text>Next</gui:Text>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -735,7 +735,7 @@
             <Expression xsi:type="gui:GroupBoxBuilder">
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
-              <gui:Font>Microsoft Sans Serif, 27.8571434pt</gui:Font>
+              <gui:Font>Microsoft Sans Serif, 60pt</gui:Font>
               <gui:Text />
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
@@ -850,7 +850,11 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>We will now complete tasks with a pen and paper resting on top of the tablet.  </Value>
+                <Value>We will now complete tasks with a digitising tablet.  You will see what you write on the screen, NOT on the paper.  
+
+We will change the sheet of paper for each task.
+
+Touch 'Start' to continue!</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -909,9 +913,13 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Please write 
-'The quick brown fox jumps over the lazy dog' as neatly and accurately as you can. 
-Please continue writing this sentence each time on a new line until end of 30s countdown'</Value>
+                <Value>Please write 'The quick brown fox jumps over the lazy dog'
+
+Start a new line if you finish the sentence.
+
+You have half a minute to write this as many times as you can.
+
+Touch 'Start' when you are ready</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1004,10 +1012,7 @@ Please continue writing this sentence each time on a new line until end of 30s c
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Please write 
-'The quick brown fox jumps over the lazy dog' as neatly and accurately as you can. 
-Please continue writing this sentence each time on a new line until end of 30s countdown'
-STARTED</Value>
+                <Value>Please write!</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1039,7 +1044,8 @@ STARTED</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Chose Repeat or Next Task</Value>
+                <Value>
+Please touch 'Repeat' to repeat the task or 'Next' to continue</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1140,9 +1146,11 @@ STARTED</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>With the right hand please draw both spirals starting at the centre dot and moving outward.
-There is plenty of time for this task.
-For this task, do not rest your hand or arm on the table while you draw.</Value>
+                <Value>Now with the RIGHT hand draw both spirals starting at the centre dot and moving outwards.
+
+DO NOT REST YOUR HAND OR ARM ON THE TABLET while you draw.
+
+Touch 'Start' when you are ready!</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1193,7 +1201,7 @@ For this task, do not rest your hand or arm on the table while you draw.</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>2</Value>
+                <Value>10</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -1235,10 +1243,8 @@ For this task, do not rest your hand or arm on the table while you draw.</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>With the right hand please draw both spirals starting at the centre dot and moving outward.
-There is plenty of time for this task.
-For this task, do not rest your hand or arm on the table while you draw.
-START!</Value>
+                <Value>
+Trace the spirals!</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1270,7 +1276,9 @@ START!</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Chose Repeat or Next Task</Value>
+                <Value>
+Please touch 'Repeat' to repeat the task or 'Next' to continue
+</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1371,10 +1379,12 @@ START!</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Now please focus on the lines on the same page.
-Starting at the top draw a line going across the page connecting the dots, trying not to cross the other lines.
-Keep moving down the page and keep drawing lines to connect the dots as the width between lines gets smaller.
-Again there is plenty of time for this task and make sure you do not rest your hand or arm on the table while you draw.</Value>
+                <Value>Continuing with the RIGHT hand now trace the lines.
+
+DO NOT REST YOUR HAND OR ARM ON THE TABLET while you draw.
+
+Touch 'Start' when you are ready!
+</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1425,7 +1435,7 @@ Again there is plenty of time for this task and make sure you do not rest your h
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>2</Value>
+                <Value>5</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -1467,7 +1477,8 @@ Again there is plenty of time for this task and make sure you do not rest your h
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Draw Lines</Value>
+                <Value>
+Trace the lines!</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1499,7 +1510,9 @@ Again there is plenty of time for this task and make sure you do not rest your h
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Chose Repeat or Next Task</Value>
+                <Value>
+Please touch 'Repeat' to repeat the task or 'Next' to continue
+</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1600,8 +1613,12 @@ Again there is plenty of time for this task and make sure you do not rest your h
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Now with the left hand, please draw both spirals starting at the centre dot and moving outward.
-Again, please do not rest your hand or arm on the table while you draw.</Value>
+                <Value>Now with the LEFT hand draw both spirals starting at the centre dot and moving outwards.
+
+DO NOT REST YOUR HAND OR ARM ON THE TABLET while you draw.
+
+Touch 'Start' when you are ready!
+</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1652,7 +1669,7 @@ Again, please do not rest your hand or arm on the table while you draw.</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>2</Value>
+                <Value>10</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -1694,7 +1711,8 @@ Again, please do not rest your hand or arm on the table while you draw.</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Draw A Spiral</Value>
+                <Value>
+Trace the spirals!</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1726,7 +1744,9 @@ Again, please do not rest your hand or arm on the table while you draw.</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Chose Repeat or Next Task</Value>
+                <Value>
+Please touch 'Repeat' to repeat the task or 'Next' to continue
+</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1827,10 +1847,12 @@ Again, please do not rest your hand or arm on the table while you draw.</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Now, continuing with the left hand, please focus on the lines on the same page.
-Starting at the top, draw a line going across the page connecting the dots, trying not to cross the other lines.
-Keep moving down the page and keep drawing lines to connect the dots as the width between lines gets smaller.
-Please do not rest your hand or arm on the table while you draw.</Value>
+                <Value>Continuing with the LEFT hand now trace the lines.
+
+DO NOT REST YOUR HAND OR ARM ON THE TABLET while you draw.
+
+Touch 'Start' when you are ready!
+</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1848,7 +1870,7 @@ Please do not rest your hand or arm on the table while you draw.</Value>
         </Workflow>
       </Expression>
       <Expression xsi:type="rx:SelectMany">
-        <Name>ArchimedesL</Name>
+        <Name>DrawLinesL</Name>
         <Workflow>
           <Nodes>
             <Expression xsi:type="WorkflowInput">
@@ -1881,7 +1903,7 @@ Please do not rest your hand or arm on the table while you draw.</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>2</Value>
+                <Value>5</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -1923,7 +1945,8 @@ Please do not rest your hand or arm on the table while you draw.</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Draw Lines</Value>
+                <Value>
+Trace the lines!</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1955,7 +1978,9 @@ Please do not rest your hand or arm on the table while you draw.</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Chose Repeat or Next Task</Value>
+                <Value>
+Please touch 'Repeat' to repeat the task or 'Next' to continue
+</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">

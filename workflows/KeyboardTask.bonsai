@@ -99,7 +99,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT2.023S</rx:DueTime>
+                      <rx:DueTime>PT3.34S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -218,7 +218,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName />
+              <io:FileName>C:\Data\IMOVA\Keyboard\2025-08-13T14-08-57\keystrokes.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -239,7 +239,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName />
+              <io:FileName>C:\Data\IMOVA\Keyboard\2025-08-13T14-08-57\text.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -259,7 +259,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName />
+              <io:FileName>C:\Data\IMOVA\Keyboard\2025-08-13T14-08-57\text_input_start.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -279,7 +279,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName />
+              <io:FileName>C:\Data\IMOVA\Keyboard\2025-08-13T14-08-57\Instructions.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -412,7 +412,7 @@ false as pressed)</scr:Expression>
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>C:\Data\IMOVA\Keyboard\2025-08-07T15-18-31\Behavior\Behavior_35.bin</harp:FileName>
+                                  <harp:FileName>C:\Data\IMOVA\Keyboard\2025-08-13T14-08-57\Behavior\Behavior_35.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -456,7 +456,7 @@ false as pressed)</scr:Expression>
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>C:\Data\IMOVA\Keyboard\2025-08-07T15-18-31\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\IMOVA\Keyboard\2025-08-13T14-08-57\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -588,8 +588,8 @@ false as pressed)</scr:Expression>
             <Expression xsi:type="gui:LabelBuilder">
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
-              <gui:Font>Microsoft Sans Serif, 27.8571434pt</gui:Font>
-              <gui:Text>The quick brown fox jumps over the lazy dog</gui:Text>
+              <gui:Font>Microsoft Sans Serif, 24pt</gui:Font>
+              <gui:Text>Chose Repeat or Next Task</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
@@ -605,7 +605,7 @@ false as pressed)</scr:Expression>
               <gui:Name>Start</gui:Name>
               <gui:Enabled>false</gui:Enabled>
               <gui:Visible>false</gui:Visible>
-              <gui:Font>Microsoft Sans Serif, 26.1428585pt, style=Bold</gui:Font>
+              <gui:Font>Microsoft Sans Serif, 50pt, style=Bold</gui:Font>
               <gui:Text>Start</gui:Text>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -647,8 +647,8 @@ false as pressed)</scr:Expression>
             <Expression xsi:type="gui:LabelBuilder">
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
-              <gui:Font>Microsoft Sans Serif, 48pt</gui:Font>
-              <gui:Text>24</gui:Text>
+              <gui:Font>Microsoft Sans Serif, 24pt</gui:Font>
+              <gui:Text>0</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
@@ -661,8 +661,8 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="gui:TableLayoutPanelBuilder">
-              <gui:Enabled>true</gui:Enabled>
-              <gui:Visible>true</gui:Visible>
+              <gui:Enabled>false</gui:Enabled>
+              <gui:Visible>false</gui:Visible>
               <gui:ColumnCount>2</gui:ColumnCount>
               <gui:RowCount>1</gui:RowCount>
               <gui:ColumnStyles>
@@ -683,7 +683,7 @@ false as pressed)</scr:Expression>
               <gui:Name>Repeat</gui:Name>
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
-              <gui:Font>Microsoft Sans Serif, 26.1428585pt, style=Bold</gui:Font>
+              <gui:Font>Microsoft Sans Serif, 50pt, style=Bold</gui:Font>
               <gui:Text>Repeat</gui:Text>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -691,14 +691,14 @@ false as pressed)</scr:Expression>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="gui:ButtonBuilder">
-              <gui:Name>Finish</gui:Name>
+              <gui:Name>Next</gui:Name>
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
-              <gui:Font>Microsoft Sans Serif, 26.1428585pt, style=Bold</gui:Font>
-              <gui:Text>Finish</gui:Text>
+              <gui:Font>Microsoft Sans Serif, 50pt, style=Bold</gui:Font>
+              <gui:Text>Next</gui:Text>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
-              <Name>Finish</Name>
+              <Name>Next</Name>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="gui:TableLayoutPanelBuilder">
@@ -714,7 +714,7 @@ false as pressed)</scr:Expression>
             <Expression xsi:type="gui:GroupBoxBuilder">
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
-              <gui:Font>Microsoft Sans Serif, 27.8571434pt</gui:Font>
+              <gui:Font>Microsoft Sans Serif, 40pt</gui:Font>
               <gui:Text />
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
@@ -835,9 +835,10 @@ false as pressed)</scr:Expression>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Please type: 'The quick brown fox jumps over the lazy dog'
-Each time you finish the sentence, press the return key to start a new line. 
-Any questions?</Value>
+                <Value>We would now like you to type 'The quick brown fox jumps over the lazy dog'.  
+If you finish the sentence press return to start a new line. You have half a minute.
+To activate the task you will need to touch the white box on the screen.  
+If no questions press 'Start' on the screen! </Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -931,7 +932,10 @@ Any questions?</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>The quick brown fox jumps over the lazy dog</Value>
+                <Value>TOUCH THE LARGE WHITE BOX ON THE SCREEN
+
+Please type:
+The quick brown fox jumps over the lazy dog</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1045,7 +1049,7 @@ Any questions?</Value>
         <Combinator xsi:type="rx:Repeat" />
       </Expression>
       <Expression xsi:type="SubscribeSubject">
-        <Name>Finish</Name>
+        <Name>Next</Name>
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="rx:TakeUntil" />
