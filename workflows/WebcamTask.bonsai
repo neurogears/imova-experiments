@@ -102,7 +102,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT4.01S</rx:DueTime>
+                      <rx:DueTime>PT3.169S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -314,7 +314,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>C:\Data\IMOVA\Webcam\2025-08-13T15-13-25\Behavior\Behavior_35.bin</harp:FileName>
+                                  <harp:FileName>C:\Data\IMOVA\Webcam\2025-08-14T08-35-40\Behavior\Behavior_122.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -358,7 +358,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>C:\Data\IMOVA\Webcam\2025-08-13T15-13-25\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\IMOVA\Webcam\2025-08-14T08-35-40\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -407,7 +407,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\Webcam\2025-08-13T15-13-25\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\IMOVA\Webcam\2025-08-14T08-35-40\Instructions.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -479,7 +479,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="al:AudioWriter">
-                      <al:FileName>C:\Data\IMOVA\Webcam\2025-08-13T15-13-25\Audio.wav</al:FileName>
+                      <al:FileName>C:\Data\IMOVA\Webcam\2025-08-14T08-35-40\Audio.wav</al:FileName>
                       <al:Suffix>Timestamp</al:Suffix>
                       <al:Buffered>true</al:Buffered>
                       <al:Overwrite>false</al:Overwrite>
@@ -516,7 +516,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:\Data\IMOVA\Webcam\2025-08-13T15-13-25\Audio.csv</io:FileName>
+                    <io:FileName>C:\Data\IMOVA\Webcam\2025-08-14T08-35-40\Audio.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>Timestamp</io:Suffix>
@@ -610,7 +610,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:CameraCapture">
-                      <cv:Index>1</cv:Index>
+                      <cv:Index>0</cv:Index>
                       <cv:CaptureProperties />
                     </Combinator>
                   </Expression>
@@ -639,7 +639,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:VideoWriter">
-                      <cv:FileName>C:\Data\IMOVA\Webcam\2025-08-13T15-13-25\Video.avi</cv:FileName>
+                      <cv:FileName>C:\Data\IMOVA\Webcam\2025-08-14T08-35-40\Video.avi</cv:FileName>
                       <cv:Suffix>Timestamp</cv:Suffix>
                       <cv:Buffered>true</cv:Buffered>
                       <cv:Overwrite>false</cv:Overwrite>
@@ -682,7 +682,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:\Data\IMOVA\Webcam\2025-08-13T15-13-25\Video.csv</io:FileName>
+                    <io:FileName>C:\Data\IMOVA\Webcam\2025-08-14T08-35-40\Video.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>Timestamp</io:Suffix>
@@ -823,9 +823,9 @@
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 24pt</gui:Font>
-              <gui:Text>
-Please touch 'Repeat' to repeat task or 'Next' to continue
-</gui:Text>
+              <gui:Text>Please 'screw up your eyes' as tight as possible for 2 seconds and then open them.
+
+Touch 'Start' on the screen when you are ready!</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="rx:BehaviorSubject" TypeArguments="p2:IplImage">
@@ -855,8 +855,8 @@ Please touch 'Repeat' to repeat task or 'Next' to continue
             </Expression>
             <Expression xsi:type="gui:ButtonBuilder">
               <gui:Name>Start</gui:Name>
-              <gui:Enabled>false</gui:Enabled>
-              <gui:Visible>false</gui:Visible>
+              <gui:Enabled>true</gui:Enabled>
+              <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50pt, style=Bold</gui:Font>
               <gui:Text>Start</gui:Text>
             </Expression>
@@ -999,6 +999,124 @@ Please touch 'Repeat' to repeat task or 'Next' to continue
           <ui:Height>600</ui:Height>
         </ui:Size>
         <ui:WindowState>Normal</ui:WindowState>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:Timer">
+          <rx:DueTime>PT0S</rx:DueTime>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="rx:SelectMany">
+        <Name>Instruction</Name>
+        <Workflow>
+          <Nodes>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>Start</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Take">
+                <rx:Count>1</rx:Count>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="WorkflowOutput" />
+            <Expression xsi:type="WorkflowInput">
+              <Name>Source1</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="BooleanProperty">
+                <Value>true</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>EnableStart</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="BooleanProperty">
+                <Value>true</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>EnableRecording</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="BooleanProperty">
+                <Value>false</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>EnableRepeat</Name>
+            </Expression>
+            <Expression xsi:type="ExternalizedMapping">
+              <Property Name="Value" />
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="StringProperty">
+                <Value>Make sure you are centered in the image</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>Instructions</Name>
+            </Expression>
+          </Nodes>
+          <Edges>
+            <Edge From="0" To="1" Label="Source1" />
+            <Edge From="1" To="2" Label="Source1" />
+            <Edge From="4" To="5" Label="Source1" />
+            <Edge From="6" To="7" Label="Source1" />
+            <Edge From="8" To="9" Label="Source1" />
+            <Edge From="10" To="11" Label="Source1" />
+            <Edge From="11" To="12" Label="Source1" />
+          </Edges>
+        </Workflow>
+      </Expression>
+      <Expression xsi:type="rx:SelectMany">
+        <Name>StopRecording</Name>
+        <Workflow>
+          <Nodes>
+            <Expression xsi:type="WorkflowInput">
+              <Name>Source1</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="BooleanProperty">
+                <Value>false</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>EnableStart</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="BooleanProperty">
+                <Value>false</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>EnableRecording</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="BooleanProperty">
+                <Value>false</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>EnableRepeat</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="StringProperty" />
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Take">
+                <rx:Count>1</rx:Count>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="WorkflowOutput" />
+          </Nodes>
+          <Edges>
+            <Edge From="1" To="2" Label="Source1" />
+            <Edge From="3" To="4" Label="Source1" />
+            <Edge From="5" To="6" Label="Source1" />
+            <Edge From="7" To="8" Label="Source1" />
+            <Edge From="8" To="9" Label="Source1" />
+          </Edges>
+        </Workflow>
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="rx:Timer">
@@ -2564,47 +2682,50 @@ Please touch 'Repeat' to repeat task or 'Next' to continue
       <Edge From="3" To="4" Label="Source1" />
       <Edge From="5" To="6" Label="Source1" />
       <Edge From="6" To="7" Label="Source1" />
-      <Edge From="7" To="8" Label="Source1" />
+      <Edge From="7" To="50" Label="Source1" />
       <Edge From="8" To="9" Label="Source1" />
-      <Edge From="9" To="11" Label="Source1" />
-      <Edge From="10" To="11" Label="Source2" />
-      <Edge From="11" To="47" Label="Source1" />
-      <Edge From="12" To="13" Label="Source1" />
-      <Edge From="13" To="14" Label="Source1" />
-      <Edge From="14" To="15" Label="Source1" />
+      <Edge From="9" To="10" Label="Source1" />
+      <Edge From="10" To="11" Label="Source1" />
+      <Edge From="11" To="12" Label="Source1" />
+      <Edge From="12" To="14" Label="Source1" />
+      <Edge From="13" To="14" Label="Source2" />
+      <Edge From="14" To="50" Label="Source2" />
       <Edge From="15" To="16" Label="Source1" />
-      <Edge From="16" To="18" Label="Source1" />
-      <Edge From="17" To="18" Label="Source2" />
-      <Edge From="18" To="47" Label="Source2" />
-      <Edge From="19" To="20" Label="Source1" />
-      <Edge From="20" To="21" Label="Source1" />
-      <Edge From="21" To="22" Label="Source1" />
+      <Edge From="16" To="17" Label="Source1" />
+      <Edge From="17" To="18" Label="Source1" />
+      <Edge From="18" To="19" Label="Source1" />
+      <Edge From="19" To="21" Label="Source1" />
+      <Edge From="20" To="21" Label="Source2" />
+      <Edge From="21" To="50" Label="Source3" />
       <Edge From="22" To="23" Label="Source1" />
-      <Edge From="23" To="25" Label="Source1" />
-      <Edge From="24" To="25" Label="Source2" />
-      <Edge From="25" To="47" Label="Source3" />
-      <Edge From="26" To="27" Label="Source1" />
-      <Edge From="27" To="28" Label="Source1" />
-      <Edge From="28" To="29" Label="Source1" />
+      <Edge From="23" To="24" Label="Source1" />
+      <Edge From="24" To="25" Label="Source1" />
+      <Edge From="25" To="26" Label="Source1" />
+      <Edge From="26" To="28" Label="Source1" />
+      <Edge From="27" To="28" Label="Source2" />
+      <Edge From="28" To="50" Label="Source4" />
       <Edge From="29" To="30" Label="Source1" />
-      <Edge From="30" To="32" Label="Source1" />
-      <Edge From="31" To="32" Label="Source2" />
-      <Edge From="32" To="47" Label="Source4" />
-      <Edge From="33" To="34" Label="Source1" />
-      <Edge From="34" To="35" Label="Source1" />
-      <Edge From="35" To="36" Label="Source1" />
+      <Edge From="30" To="31" Label="Source1" />
+      <Edge From="31" To="32" Label="Source1" />
+      <Edge From="32" To="33" Label="Source1" />
+      <Edge From="33" To="35" Label="Source1" />
+      <Edge From="34" To="35" Label="Source2" />
+      <Edge From="35" To="50" Label="Source5" />
       <Edge From="36" To="37" Label="Source1" />
-      <Edge From="37" To="39" Label="Source1" />
-      <Edge From="38" To="39" Label="Source2" />
-      <Edge From="39" To="47" Label="Source5" />
-      <Edge From="40" To="41" Label="Source1" />
-      <Edge From="41" To="42" Label="Source1" />
-      <Edge From="42" To="43" Label="Source1" />
+      <Edge From="37" To="38" Label="Source1" />
+      <Edge From="38" To="39" Label="Source1" />
+      <Edge From="39" To="40" Label="Source1" />
+      <Edge From="40" To="42" Label="Source1" />
+      <Edge From="41" To="42" Label="Source2" />
+      <Edge From="42" To="50" Label="Source6" />
       <Edge From="43" To="44" Label="Source1" />
-      <Edge From="44" To="46" Label="Source1" />
-      <Edge From="45" To="46" Label="Source2" />
-      <Edge From="46" To="47" Label="Source6" />
-      <Edge From="47" To="48" Label="Source1" />
+      <Edge From="44" To="45" Label="Source1" />
+      <Edge From="45" To="46" Label="Source1" />
+      <Edge From="46" To="47" Label="Source1" />
+      <Edge From="47" To="49" Label="Source1" />
+      <Edge From="48" To="49" Label="Source2" />
+      <Edge From="49" To="50" Label="Source7" />
+      <Edge From="50" To="51" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>

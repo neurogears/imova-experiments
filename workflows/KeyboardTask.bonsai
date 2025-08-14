@@ -99,7 +99,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT3.34S</rx:DueTime>
+                      <rx:DueTime>PT4.918S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -218,7 +218,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\Keyboard\2025-08-13T14-08-57\keystrokes.csv</io:FileName>
+              <io:FileName>C:\Data\IMOVA\Keyboard\2025-08-14T08-27-02\keystrokes.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -239,7 +239,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\Keyboard\2025-08-13T14-08-57\text.csv</io:FileName>
+              <io:FileName>C:\Data\IMOVA\Keyboard\2025-08-14T08-27-02\text.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -259,7 +259,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\Keyboard\2025-08-13T14-08-57\text_input_start.csv</io:FileName>
+              <io:FileName>C:\Data\IMOVA\Keyboard\2025-08-14T08-27-02\text_input_start.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -279,7 +279,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\Keyboard\2025-08-13T14-08-57\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\IMOVA\Keyboard\2025-08-14T08-27-02\Instructions.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -412,7 +412,7 @@ false as pressed)</scr:Expression>
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>C:\Data\IMOVA\Keyboard\2025-08-13T14-08-57\Behavior\Behavior_35.bin</harp:FileName>
+                                  <harp:FileName>C:\Data\IMOVA\Keyboard\2025-08-14T08-27-02\Behavior\Behavior_122.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -456,7 +456,7 @@ false as pressed)</scr:Expression>
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>C:\Data\IMOVA\Keyboard\2025-08-13T14-08-57\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\IMOVA\Keyboard\2025-08-14T08-27-02\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -525,7 +525,7 @@ false as pressed)</scr:Expression>
           <Nodes>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Please write 'The quick brown fox jumps over the lazy dog' as neatly and accurately as you can. Please continue writing this sentence each time on a new line until we say stop after 30s.</Value>
+                <Value />
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -589,7 +589,10 @@ false as pressed)</scr:Expression>
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 24pt</gui:Font>
-              <gui:Text>Chose Repeat or Next Task</gui:Text>
+              <gui:Text>We would now like you to type 'The quick brown fox jumps over the lazy dog'.  
+If you finish the sentence press return to start a new line. You have half a minute.
+To activate the task you will need to touch the white box on the screen.  
+If no questions press 'Start' on the screen! </gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
@@ -603,8 +606,8 @@ false as pressed)</scr:Expression>
             </Expression>
             <Expression xsi:type="gui:ButtonBuilder">
               <gui:Name>Start</gui:Name>
-              <gui:Enabled>false</gui:Enabled>
-              <gui:Visible>false</gui:Visible>
+              <gui:Enabled>true</gui:Enabled>
+              <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50pt, style=Bold</gui:Font>
               <gui:Text>Start</gui:Text>
             </Expression>
@@ -626,7 +629,6 @@ false as pressed)</scr:Expression>
             <Expression xsi:type="gui:TextBoxBuilder">
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
-              <gui:Text />
               <gui:Multiline>true</gui:Multiline>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -787,7 +789,7 @@ false as pressed)</scr:Expression>
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="rx:Timer">
-          <rx:DueTime>PT3S</rx:DueTime>
+          <rx:DueTime>PT1S</rx:DueTime>
         </Combinator>
       </Expression>
       <Expression xsi:type="rx:SelectMany">
