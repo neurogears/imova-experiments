@@ -8,8 +8,6 @@
                  xmlns:sys="clr-namespace:System;assembly=mscorlib"
                  xmlns:beh="clr-namespace:Harp.Behavior;assembly=Harp.Behavior"
                  xmlns:io="clr-namespace:Bonsai.IO;assembly=Bonsai.System"
-                 xmlns:cv="clr-namespace:Bonsai.Vision;assembly=Bonsai.Vision"
-                 xmlns:drw="clr-namespace:Bonsai.Vision.Drawing;assembly=Bonsai.Vision"
                  xmlns:p2="clr-namespace:Bonsai.Wintab;assembly=Bonsai.Wintab"
                  xmlns:gui="clr-namespace:Bonsai.Gui;assembly=Bonsai.Gui"
                  xmlns:p3="clr-namespace:OpenCV.Net;assembly=OpenCV.Net"
@@ -103,7 +101,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT2.936S</rx:DueTime>
+                      <rx:DueTime>PT4.666S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -315,7 +313,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>C:\Data\IMOVA\Webcam\2025-08-14T08-37-53\Behavior\Behavior_35.bin</harp:FileName>
+                                  <harp:FileName>C:\Data\IMOVA\Webcam\2025-08-14T10-54-18\Behavior\Behavior_35.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -359,7 +357,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>C:\Data\IMOVA\Webcam\2025-08-14T08-37-53\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\IMOVA\Webcam\2025-08-14T10-54-18\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -395,55 +393,6 @@
                 </Edges>
               </Workflow>
             </Expression>
-            <Expression xsi:type="SubscribeSubject">
-              <Name>WintabDataFrame</Name>
-            </Expression>
-            <Expression xsi:type="scr:ExpressionTransform">
-              <scr:Expression>new(it.X,1600 - it.Y as Y)</scr:Expression>
-            </Expression>
-            <Expression xsi:type="InputMapping">
-              <PropertyMappings>
-                <Property Name="X" Selector="X" />
-                <Property Name="Y" Selector="Y" />
-              </PropertyMappings>
-            </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="cv:CreatePoint">
-                <cv:X>2531</cv:X>
-                <cv:Y>1143</cv:Y>
-              </Combinator>
-            </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="drw:CreateCanvas">
-                <drw:Size>
-                  <drw:Width>2600</drw:Width>
-                  <drw:Height>1600</drw:Height>
-                </drw:Size>
-                <drw:Depth>U8</drw:Depth>
-                <drw:Channels>3</drw:Channels>
-                <drw:Color>
-                  <drw:Val0>0</drw:Val0>
-                  <drw:Val1>0</drw:Val1>
-                  <drw:Val2>0</drw:Val2>
-                  <drw:Val3>0</drw:Val3>
-                </drw:Color>
-              </Combinator>
-            </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="drw:DrawCanvas" />
-            </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="rx:CombineLatest" />
-            </Expression>
-            <Expression xsi:type="MulticastSubject">
-              <Name>TabletCanvas</Name>
-            </Expression>
-            <Expression xsi:type="MemberSelector">
-              <Selector>Item1</Selector>
-            </Expression>
-            <Expression xsi:type="MemberSelector">
-              <Selector>Item2</Selector>
-            </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p2:WintabCapture">
                 <p2:SystemCursor>false</p2:SystemCursor>
@@ -462,7 +411,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\Webcam\2025-08-14T08-37-53\keystrokes.csv</io:FileName>
+              <io:FileName>C:\Data\IMOVA\Webcam\2025-08-14T10-54-18\keystrokes.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -483,7 +432,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\Webcam\2025-08-14T08-37-53\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\IMOVA\Webcam\2025-08-14T10-54-18\Instructions.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -510,24 +459,15 @@
             <Edge From="0" To="1" Label="Source1" />
             <Edge From="3" To="4" Label="Source1" />
             <Edge From="4" To="5" Label="Source1" />
-            <Edge From="5" To="6" Label="Source1" />
-            <Edge From="6" To="9" Label="Source1" />
-            <Edge From="7" To="8" Label="Source1" />
-            <Edge From="8" To="9" Label="Source2" />
-            <Edge From="9" To="10" Label="Source1" />
+            <Edge From="5" To="8" Label="Source1" />
+            <Edge From="6" To="7" Label="Source1" />
+            <Edge From="7" To="8" Label="Source2" />
+            <Edge From="8" To="9" Label="Source1" />
             <Edge From="10" To="11" Label="Source1" />
-            <Edge From="10" To="12" Label="Source1" />
-            <Edge From="13" To="14" Label="Source1" />
-            <Edge From="14" To="15" Label="Source1" />
-            <Edge From="15" To="18" Label="Source1" />
-            <Edge From="16" To="17" Label="Source1" />
-            <Edge From="17" To="18" Label="Source2" />
-            <Edge From="18" To="19" Label="Source1" />
-            <Edge From="20" To="21" Label="Source1" />
-            <Edge From="21" To="24" Label="Source1" />
-            <Edge From="22" To="23" Label="Source1" />
-            <Edge From="23" To="24" Label="Source2" />
-            <Edge From="25" To="26" Label="Source1" />
+            <Edge From="11" To="14" Label="Source1" />
+            <Edge From="12" To="13" Label="Source1" />
+            <Edge From="13" To="14" Label="Source2" />
+            <Edge From="15" To="16" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -601,24 +541,13 @@
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 24pt</gui:Font>
-              <gui:Text>We will now complete tasks with a digitising tablet.  You will see what you write on the screen, NOT on the paper.  
-
-We will change the sheet of paper for each task.
-
-Touch 'Start' to continue!</gui:Text>
+              <gui:Text>
+Please touch 'Repeat' to repeat the task or 'Next' to continue
+</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
-            <Expression xsi:type="rx:BehaviorSubject" TypeArguments="sys:Tuple(p3:Point,p3:IplImage)">
+            <Expression xsi:type="rx:BehaviorSubject" TypeArguments="p3:IplImage">
               <rx:Name>TabletCanvas</rx:Name>
-            </Expression>
-            <Expression xsi:type="MemberSelector">
-              <Selector>Item2</Selector>
-            </Expression>
-            <Expression xsi:type="MemberSelector">
-              <Selector>Item1</Selector>
-            </Expression>
-            <Expression xsi:type="VisualizerMapping">
-              <VisualizerType xsi:type="TypeMapping" TypeArguments="p4:PointVisualizer" />
             </Expression>
             <Expression xsi:type="VisualizerMapping">
               <VisualizerType xsi:type="TypeMapping" TypeArguments="p4:IplImageVisualizer" />
@@ -649,8 +578,8 @@ Touch 'Start' to continue!</gui:Text>
             </Expression>
             <Expression xsi:type="gui:ButtonBuilder">
               <gui:Name>Start</gui:Name>
-              <gui:Enabled>true</gui:Enabled>
-              <gui:Visible>true</gui:Visible>
+              <gui:Enabled>false</gui:Enabled>
+              <gui:Visible>false</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50pt, style=Bold</gui:Font>
               <gui:Text>Start</gui:Text>
             </Expression>
@@ -758,40 +687,36 @@ Touch 'Start' to continue!</gui:Text>
             <Edge From="0" To="1" Label="Source1" />
             <Edge From="1" To="2" Label="Source1" />
             <Edge From="2" To="3" Label="Source1" />
-            <Edge From="3" To="9" Label="Source1" />
+            <Edge From="3" To="6" Label="Source1" />
             <Edge From="4" To="5" Label="Source1" />
-            <Edge From="4" To="6" Label="Source1" />
-            <Edge From="5" To="8" Label="Source1" />
+            <Edge From="5" To="6" Label="Source2" />
             <Edge From="6" To="7" Label="Source1" />
-            <Edge From="7" To="8" Label="Source2" />
-            <Edge From="8" To="9" Label="Source2" />
+            <Edge From="7" To="32" Label="Source1" />
+            <Edge From="8" To="9" Label="Source1" />
             <Edge From="9" To="10" Label="Source1" />
-            <Edge From="10" To="35" Label="Source1" />
+            <Edge From="10" To="11" Label="Source1" />
             <Edge From="11" To="12" Label="Source1" />
-            <Edge From="12" To="13" Label="Source1" />
+            <Edge From="12" To="30" Label="Source1" />
             <Edge From="13" To="14" Label="Source1" />
             <Edge From="14" To="15" Label="Source1" />
-            <Edge From="15" To="33" Label="Source1" />
+            <Edge From="15" To="16" Label="Source1" />
             <Edge From="16" To="17" Label="Source1" />
-            <Edge From="17" To="18" Label="Source1" />
+            <Edge From="17" To="20" Label="Source1" />
             <Edge From="18" To="19" Label="Source1" />
-            <Edge From="19" To="20" Label="Source1" />
-            <Edge From="20" To="23" Label="Source1" />
-            <Edge From="21" To="22" Label="Source1" />
-            <Edge From="22" To="23" Label="Source2" />
+            <Edge From="19" To="20" Label="Source2" />
+            <Edge From="20" To="21" Label="Source1" />
+            <Edge From="21" To="30" Label="Source2" />
+            <Edge From="22" To="23" Label="Source1" />
             <Edge From="23" To="24" Label="Source1" />
-            <Edge From="24" To="33" Label="Source2" />
+            <Edge From="24" To="28" Label="Source1" />
             <Edge From="25" To="26" Label="Source1" />
             <Edge From="26" To="27" Label="Source1" />
-            <Edge From="27" To="31" Label="Source1" />
+            <Edge From="27" To="28" Label="Source2" />
             <Edge From="28" To="29" Label="Source1" />
-            <Edge From="29" To="30" Label="Source1" />
-            <Edge From="30" To="31" Label="Source2" />
-            <Edge From="31" To="32" Label="Source1" />
-            <Edge From="32" To="33" Label="Source3" />
-            <Edge From="33" To="34" Label="Source1" />
-            <Edge From="34" To="35" Label="Source2" />
-            <Edge From="35" To="36" Label="Source1" />
+            <Edge From="29" To="30" Label="Source3" />
+            <Edge From="30" To="31" Label="Source1" />
+            <Edge From="31" To="32" Label="Source2" />
+            <Edge From="32" To="33" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -899,6 +824,7 @@ Touch 'Start' to continue!</Value>
             <Expression xsi:type="MulticastSubject">
               <Name>EnableStart</Name>
             </Expression>
+            <Expression xsi:type="IncludeWorkflow" Path="Extensions\clearCanvas.bonsai" />
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="BooleanProperty">
                 <Value>false</Value>
@@ -929,9 +855,9 @@ Touch 'Start' when you are ready</Value>
             <Edge From="0" To="1" Label="Source1" />
             <Edge From="1" To="2" Label="Source1" />
             <Edge From="4" To="5" Label="Source1" />
-            <Edge From="6" To="7" Label="Source1" />
-            <Edge From="8" To="9" Label="Source1" />
+            <Edge From="7" To="8" Label="Source1" />
             <Edge From="9" To="10" Label="Source1" />
+            <Edge From="10" To="11" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -1006,6 +932,12 @@ Touch 'Start' when you are ready</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="WorkflowOutput" />
+            <Expression xsi:type="IncludeWorkflow" Path="Extensions\PenDigitizer.bonsai">
+              <Size>
+                <Width>2600</Width>
+                <Height>1600</Height>
+              </Size>
+            </Expression>
             <Expression xsi:type="ExternalizedMapping">
               <Property Name="Value" DisplayName="Instructions" />
             </Expression>
@@ -1029,8 +961,8 @@ Touch 'Start' when you are ready</Value>
             <Edge From="10" To="11" Label="Source1" />
             <Edge From="11" To="12" Label="Source1" />
             <Edge From="12" To="13" Label="Source1" />
-            <Edge From="14" To="15" Label="Source1" />
             <Edge From="15" To="16" Label="Source1" />
+            <Edge From="16" To="17" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -1140,6 +1072,7 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue</Value>
             <Expression xsi:type="MulticastSubject">
               <Name>EnableRepeat</Name>
             </Expression>
+            <Expression xsi:type="IncludeWorkflow" Path="Extensions\clearCanvas.bonsai" />
             <Expression xsi:type="ExternalizedMapping">
               <Property Name="Value" DisplayName="Instructions" />
             </Expression>
@@ -1161,8 +1094,8 @@ Touch 'Start' when you are ready!</Value>
             <Edge From="1" To="2" Label="Source1" />
             <Edge From="4" To="5" Label="Source1" />
             <Edge From="6" To="7" Label="Source1" />
-            <Edge From="8" To="9" Label="Source1" />
             <Edge From="9" To="10" Label="Source1" />
+            <Edge From="10" To="11" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -1237,6 +1170,12 @@ Touch 'Start' when you are ready!</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="WorkflowOutput" />
+            <Expression xsi:type="IncludeWorkflow" Path="Extensions\PenDigitizer.bonsai">
+              <Size>
+                <Width>2600</Width>
+                <Height>1600</Height>
+              </Size>
+            </Expression>
             <Expression xsi:type="ExternalizedMapping">
               <Property Name="Value" DisplayName="Instructions" />
             </Expression>
@@ -1261,8 +1200,8 @@ Trace the spirals!</Value>
             <Edge From="10" To="11" Label="Source1" />
             <Edge From="11" To="12" Label="Source1" />
             <Edge From="12" To="13" Label="Source1" />
-            <Edge From="14" To="15" Label="Source1" />
             <Edge From="15" To="16" Label="Source1" />
+            <Edge From="16" To="17" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -1389,6 +1328,7 @@ Touch 'Start' when you are ready!
             <Expression xsi:type="MulticastSubject">
               <Name>Instructions</Name>
             </Expression>
+            <Expression xsi:type="IncludeWorkflow" Path="Extensions\clearCanvas.bonsai" />
           </Nodes>
           <Edges>
             <Edge From="0" To="1" Label="Source1" />
@@ -1482,6 +1422,12 @@ Trace the lines!</Value>
             </Expression>
             <Expression xsi:type="MulticastSubject">
               <Name>Instructions</Name>
+            </Expression>
+            <Expression xsi:type="IncludeWorkflow" Path="Extensions\PenDigitizer.bonsai">
+              <Size>
+                <Width>2600</Width>
+                <Height>1600</Height>
+              </Size>
             </Expression>
           </Nodes>
           <Edges>
@@ -1623,6 +1569,7 @@ Touch 'Start' when you are ready!
             <Expression xsi:type="MulticastSubject">
               <Name>Instructions</Name>
             </Expression>
+            <Expression xsi:type="IncludeWorkflow" Path="Extensions\clearCanvas.bonsai" />
           </Nodes>
           <Edges>
             <Edge From="0" To="1" Label="Source1" />
@@ -1716,6 +1663,12 @@ Trace the spirals!</Value>
             </Expression>
             <Expression xsi:type="MulticastSubject">
               <Name>Instructions</Name>
+            </Expression>
+            <Expression xsi:type="IncludeWorkflow" Path="Extensions\PenDigitizer.bonsai">
+              <Size>
+                <Width>2600</Width>
+                <Height>1600</Height>
+              </Size>
             </Expression>
           </Nodes>
           <Edges>
@@ -1857,6 +1810,7 @@ Touch 'Start' when you are ready!
             <Expression xsi:type="MulticastSubject">
               <Name>Instructions</Name>
             </Expression>
+            <Expression xsi:type="IncludeWorkflow" Path="Extensions\clearCanvas.bonsai" />
           </Nodes>
           <Edges>
             <Edge From="0" To="1" Label="Source1" />
@@ -1950,6 +1904,12 @@ Trace the lines!</Value>
             </Expression>
             <Expression xsi:type="MulticastSubject">
               <Name>Instructions</Name>
+            </Expression>
+            <Expression xsi:type="IncludeWorkflow" Path="Extensions\PenDigitizer.bonsai">
+              <Size>
+                <Width>2600</Width>
+                <Height>1600</Height>
+              </Size>
             </Expression>
           </Nodes>
           <Edges>

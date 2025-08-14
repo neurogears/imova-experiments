@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorkflowBuilder Version="2.9.0"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xmlns:drw="clr-namespace:Bonsai.Vision.Drawing;assembly=Bonsai.Vision"
+                 xmlns="https://bonsai-rx.org/2018/workflow">
+  <Workflow>
+    <Nodes>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="drw:CreateCanvas">
+          <drw:Size>
+            <drw:Width>1000</drw:Width>
+            <drw:Height>1000</drw:Height>
+          </drw:Size>
+          <drw:Depth>U8</drw:Depth>
+          <drw:Channels>3</drw:Channels>
+          <drw:Color>
+            <drw:Val0>255</drw:Val0>
+            <drw:Val1>255</drw:Val1>
+            <drw:Val2>255</drw:Val2>
+            <drw:Val3>255</drw:Val3>
+          </drw:Color>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="drw:DrawCanvas" />
+      </Expression>
+      <Expression xsi:type="MulticastSubject">
+        <Name>TabletCanvas</Name>
+      </Expression>
+      <Expression xsi:type="WorkflowOutput" />
+    </Nodes>
+    <Edges>
+      <Edge From="0" To="1" Label="Source1" />
+      <Edge From="1" To="2" Label="Source1" />
+      <Edge From="2" To="3" Label="Source1" />
+    </Edges>
+  </Workflow>
+</WorkflowBuilder>
