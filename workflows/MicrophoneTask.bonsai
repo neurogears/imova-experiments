@@ -382,7 +382,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:CameraCapture">
-                      <cv:Index>1</cv:Index>
+                      <cv:Index>0</cv:Index>
                       <cv:CaptureProperties />
                     </Combinator>
                   </Expression>
@@ -1100,7 +1100,7 @@ Touch 'Start' on the screen when you are ready!</Value>
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="IntProperty">
-                      <Value>30</Value>
+                      <Value>2</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
