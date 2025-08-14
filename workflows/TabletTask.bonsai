@@ -103,7 +103,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT2.127S</rx:DueTime>
+                      <rx:DueTime>PT2.936S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -315,7 +315,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>C:\Data\IMOVA\Webcam\2025-08-13T15-52-42\Behavior\Behavior_35.bin</harp:FileName>
+                                  <harp:FileName>C:\Data\IMOVA\Webcam\2025-08-14T08-37-53\Behavior\Behavior_35.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -359,7 +359,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>C:\Data\IMOVA\Webcam\2025-08-13T15-52-42\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\IMOVA\Webcam\2025-08-14T08-37-53\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -462,7 +462,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\Webcam\2025-08-13T15-52-42\keystrokes.csv</io:FileName>
+              <io:FileName>C:\Data\IMOVA\Webcam\2025-08-14T08-37-53\keystrokes.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -483,7 +483,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\Webcam\2025-08-13T15-52-42\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\IMOVA\Webcam\2025-08-14T08-37-53\Instructions.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -601,7 +601,11 @@
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 24pt</gui:Font>
-              <gui:Text>Finished, Thank you</gui:Text>
+              <gui:Text>We will now complete tasks with a digitising tablet.  You will see what you write on the screen, NOT on the paper.  
+
+We will change the sheet of paper for each task.
+
+Touch 'Start' to continue!</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="rx:BehaviorSubject" TypeArguments="sys:Tuple(p3:Point,p3:IplImage)">
@@ -645,8 +649,8 @@
             </Expression>
             <Expression xsi:type="gui:ButtonBuilder">
               <gui:Name>Start</gui:Name>
-              <gui:Enabled>false</gui:Enabled>
-              <gui:Visible>false</gui:Visible>
+              <gui:Enabled>true</gui:Enabled>
+              <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50pt, style=Bold</gui:Font>
               <gui:Text>Start</gui:Text>
             </Expression>
@@ -745,12 +749,7 @@
               <gui:ColumnCount>1</gui:ColumnCount>
               <gui:RowCount>2</gui:RowCount>
               <gui:ColumnStyles />
-              <gui:RowStyles>
-                <gui:RowStyle>
-                  <gui:SizeType>Percent</gui:SizeType>
-                  <gui:Height>60</gui:Height>
-                </gui:RowStyle>
-              </gui:RowStyles>
+              <gui:RowStyles />
               <gui:CellSpans />
             </Expression>
             <Expression xsi:type="WorkflowOutput" />
