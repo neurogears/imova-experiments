@@ -100,7 +100,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT4.803S</rx:DueTime>
+                      <rx:DueTime>PT4.61S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -251,7 +251,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="al:AudioWriter">
-                      <al:FileName>C:\data\computeMD\microphone\2025-08-16T10-13-11\Audio.wav</al:FileName>
+                      <al:FileName>C:\Data\computeMD\microphone\2025-08-16T16-05-12\Audio.wav</al:FileName>
                       <al:Suffix>Timestamp</al:Suffix>
                       <al:Buffered>true</al:Buffered>
                       <al:Overwrite>false</al:Overwrite>
@@ -288,7 +288,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:\data\computeMD\microphone\2025-08-16T10-13-11\Audio.csv</io:FileName>
+                    <io:FileName>C:\Data\computeMD\microphone\2025-08-16T16-05-12\Audio.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>Timestamp</io:Suffix>
@@ -408,7 +408,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:VideoWriter">
-                      <cv:FileName>C:\data\computeMD\microphone\2025-08-16T10-13-11\Video.avi</cv:FileName>
+                      <cv:FileName>C:\Data\computeMD\microphone\2025-08-16T16-05-12\Video.avi</cv:FileName>
                       <cv:Suffix>Timestamp</cv:Suffix>
                       <cv:Buffered>true</cv:Buffered>
                       <cv:Overwrite>false</cv:Overwrite>
@@ -451,7 +451,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:\data\computeMD\microphone\2025-08-16T10-13-11\Video.csv</io:FileName>
+                    <io:FileName>C:\Data\computeMD\microphone\2025-08-16T16-05-12\Video.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>Timestamp</io:Suffix>
@@ -520,7 +520,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\data\computeMD\microphone\2025-08-16T10-13-11\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\computeMD\microphone\2025-08-16T16-05-12\Instructions.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -653,7 +653,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>C:\data\computeMD\microphone\2025-08-16T10-13-11\Behavior\Behavior_35.bin</harp:FileName>
+                                  <harp:FileName>C:\Data\computeMD\microphone\2025-08-16T16-05-12\Behavior\Behavior_35.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -697,7 +697,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>C:\data\computeMD\microphone\2025-08-16T10-13-11\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\computeMD\microphone\2025-08-16T16-05-12\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -818,8 +818,7 @@
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 27.9000015pt</gui:Font>
               <gui:Text>
-Please touch 'Repeat' to repeat the task or 'Next' to continue
-</gui:Text>
+ Please touch 'Repeat' to repeat the task or 'Next' to continue</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
