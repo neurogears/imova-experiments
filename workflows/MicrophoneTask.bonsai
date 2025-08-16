@@ -100,7 +100,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT3.636S</rx:DueTime>
+                      <rx:DueTime>PT4.803S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -183,7 +183,7 @@
               <Property Name="Path" />
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
-              <Path>C:\Data\IMOVA\MicrophoneSpeech</Path>
+              <Path>C:\Data\computeMD\microphone</Path>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>EnableRecording</Name>
@@ -223,7 +223,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="al:AudioCapture">
-                      <al:DeviceName>Microphone Array (Realtek(R) Au</al:DeviceName>
+                      <al:DeviceName>Microphone (3- USB audio CODEC)</al:DeviceName>
                       <al:SampleRate>44100</al:SampleRate>
                       <al:SampleFormat>Mono16</al:SampleFormat>
                       <al:BufferLength>10</al:BufferLength>
@@ -251,7 +251,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="al:AudioWriter">
-                      <al:FileName>C:\Data\IMOVA\MicrophoneSpeech\2025-08-13T14-02-50\Audio.wav</al:FileName>
+                      <al:FileName>C:\data\computeMD\microphone\2025-08-16T10-13-11\Audio.wav</al:FileName>
                       <al:Suffix>Timestamp</al:Suffix>
                       <al:Buffered>true</al:Buffered>
                       <al:Overwrite>false</al:Overwrite>
@@ -288,7 +288,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:\Data\IMOVA\MicrophoneSpeech\2025-08-13T14-02-50\Audio.csv</io:FileName>
+                    <io:FileName>C:\data\computeMD\microphone\2025-08-16T10-13-11\Audio.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>Timestamp</io:Suffix>
@@ -382,7 +382,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:CameraCapture">
-                      <cv:Index>0</cv:Index>
+                      <cv:Index>1</cv:Index>
                       <cv:CaptureProperties />
                     </Combinator>
                   </Expression>
@@ -408,7 +408,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:VideoWriter">
-                      <cv:FileName>C:\Data\IMOVA\MicrophoneSpeech\2025-08-13T14-02-50\Video.avi</cv:FileName>
+                      <cv:FileName>C:\data\computeMD\microphone\2025-08-16T10-13-11\Video.avi</cv:FileName>
                       <cv:Suffix>Timestamp</cv:Suffix>
                       <cv:Buffered>true</cv:Buffered>
                       <cv:Overwrite>false</cv:Overwrite>
@@ -451,7 +451,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:\Data\IMOVA\MicrophoneSpeech\2025-08-13T14-02-50\Video.csv</io:FileName>
+                    <io:FileName>C:\data\computeMD\microphone\2025-08-16T10-13-11\Video.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>Timestamp</io:Suffix>
@@ -520,7 +520,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\MicrophoneSpeech\2025-08-13T14-02-50\Instructions.csv</io:FileName>
+              <io:FileName>C:\data\computeMD\microphone\2025-08-16T10-13-11\Instructions.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -653,7 +653,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>C:\Data\IMOVA\MicrophoneSpeech\2025-08-13T14-02-50\Behavior\Behavior_35.bin</harp:FileName>
+                                  <harp:FileName>C:\data\computeMD\microphone\2025-08-16T10-13-11\Behavior\Behavior_35.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -697,7 +697,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>C:\Data\IMOVA\MicrophoneSpeech\2025-08-13T14-02-50\Behavior\device.yml</io:Path>
+                            <io:Path>C:\data\computeMD\microphone\2025-08-16T10-13-11\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -816,7 +816,7 @@
             <Expression xsi:type="gui:LabelBuilder">
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
-              <gui:Font>Microsoft Sans Serif, 24pt</gui:Font>
+              <gui:Font>Microsoft Sans Serif, 27.9000015pt</gui:Font>
               <gui:Text>
 Please touch 'Repeat' to repeat the task or 'Next' to continue
 </gui:Text>
@@ -856,7 +856,7 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
             <Expression xsi:type="gui:LabelBuilder">
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
-              <gui:Font>Microsoft Sans Serif, 27.9000015pt</gui:Font>
+              <gui:Font>Microsoft Sans Serif, 50.1000023pt</gui:Font>
               <gui:Text>0</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
@@ -923,7 +923,6 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
             <Expression xsi:type="gui:GroupBoxBuilder">
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
-              <gui:Font>Microsoft Sans Serif, 27.8571434pt</gui:Font>
               <gui:Text />
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
@@ -936,7 +935,7 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
               <gui:RowStyles>
                 <gui:RowStyle>
                   <gui:SizeType>Absolute</gui:SizeType>
-                  <gui:Height>400</gui:Height>
+                  <gui:Height>800</gui:Height>
                 </gui:RowStyle>
               </gui:RowStyles>
               <gui:CellSpans />
@@ -1046,7 +1045,10 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="StringProperty">
-                      <Value>Over half a minute, could you tell me  'How you spend an average day?'
+                      <Value>
+Over half a minute, could you tell me:  
+
+'How you spend an average day?'
 
 Touch 'Start' on the screen when you are ready!</Value>
                     </Combinator>
@@ -1100,7 +1102,7 @@ Touch 'Start' on the screen when you are ready!</Value>
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="IntProperty">
-                      <Value>2</Value>
+                      <Value>10</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -1289,7 +1291,9 @@ How do you spend an average day?</Value>
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="StringProperty">
-                      <Value>We will now do 5 repetitions of different sounds: 'Tee', 'Mee', 'La', 'Ca'. 
+                      <Value>
+We will now do 5 repetitions of different sounds: 'Tee', 'Mee', 'La', 'Ca'. 
+
 Lets practice with the first and then start the task.
 
 Touch 'Start' on the screen when you are ready!</Value>
@@ -1554,6 +1558,8 @@ Say 'Tee' 5 times!</Value>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="StringProperty">
                       <Value>
+
+
 'La' 5 times!
 </Value>
                     </Combinator>
@@ -1637,6 +1643,8 @@ Say 'Tee' 5 times!</Value>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="StringProperty">
                       <Value>
+
+
 
 'Ca' 5 times!</Value>
                     </Combinator>
@@ -1811,7 +1819,9 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="StringProperty">
-                      <Value>We will now ask you to hold two sustained notes, 'eee' and then 'aah'. 
+                      <Value>
+We will now ask you to hold two sustained notes, 'eee' and then 'aah'. 
+
 Both for 5 seconds.  
 
 If you are ready please touch 'Start' on the screen!</Value>
@@ -1993,6 +2003,7 @@ Hold 'eee' for 5 seconds!</Value>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="StringProperty">
                       <Value>
+
 
 Hold 'aah' for 5 seconds</Value>
                     </Combinator>

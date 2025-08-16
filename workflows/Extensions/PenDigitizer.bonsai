@@ -43,8 +43,8 @@
       <Expression xsi:type="PropertySource" TypeArguments="drw:CreateCanvas,p1:Size">
         <MemberName>Size</MemberName>
         <Value>
-          <Width>2600</Width>
-          <Height>1600</Height>
+          <Width>3840</Width>
+          <Height>2160</Height>
         </Value>
       </Expression>
       <Expression xsi:type="MemberSelector">
@@ -64,8 +64,8 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="cv:CreatePoint">
-          <cv:X>504</cv:X>
-          <cv:Y>140</cv:Y>
+          <cv:X>2053</cv:X>
+          <cv:Y>810</cv:Y>
         </Combinator>
       </Expression>
       <Expression xsi:type="PropertyMapping">
@@ -76,8 +76,8 @@
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="drw:CreateCanvas">
           <drw:Size>
-            <drw:Width>2600</drw:Width>
-            <drw:Height>1600</drw:Height>
+            <drw:Width>3840</drw:Width>
+            <drw:Height>2160</drw:Height>
           </drw:Size>
           <drw:Depth>U8</drw:Depth>
           <drw:Channels>3</drw:Channels>

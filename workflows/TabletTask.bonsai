@@ -101,7 +101,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT4.666S</rx:DueTime>
+                      <rx:DueTime>PT4.438S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -184,7 +184,7 @@
               <Property Name="Path" />
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
-              <Path>C:\Data\IMOVA\Webcam</Path>
+              <Path>C:\Data\computeMD\webcam</Path>
             </Expression>
             <Expression xsi:type="GroupWorkflow">
               <Name>LogHarp</Name>
@@ -313,7 +313,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>C:\Data\IMOVA\Webcam\2025-08-14T10-54-18\Behavior\Behavior_35.bin</harp:FileName>
+                                  <harp:FileName>C:\Data\computeMD\webcam\2025-08-16T10-57-31\Behavior\Behavior_35.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -357,7 +357,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>C:\Data\IMOVA\Webcam\2025-08-14T10-54-18\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\computeMD\webcam\2025-08-16T10-57-31\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -411,7 +411,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\Webcam\2025-08-14T10-54-18\keystrokes.csv</io:FileName>
+              <io:FileName>C:\Data\computeMD\webcam\2025-08-16T10-57-31\keystrokes.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -432,7 +432,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\IMOVA\Webcam\2025-08-14T10-54-18\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\computeMD\webcam\2025-08-16T10-57-31\Instructions.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -541,9 +541,7 @@
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 24pt</gui:Font>
-              <gui:Text>
-Please touch 'Repeat' to repeat the task or 'Next' to continue
-</gui:Text>
+              <gui:Text>Finished, Thank you</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="rx:BehaviorSubject" TypeArguments="p3:IplImage">
@@ -601,7 +599,7 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
             <Expression xsi:type="gui:LabelBuilder">
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
-              <gui:Font>Microsoft Sans Serif, 24pt</gui:Font>
+              <gui:Font>Microsoft Sans Serif, 50pt</gui:Font>
               <gui:Text>0</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
@@ -668,7 +666,6 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
             <Expression xsi:type="gui:GroupBoxBuilder">
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
-              <gui:Font>Microsoft Sans Serif, 60pt</gui:Font>
               <gui:Text />
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
@@ -730,7 +727,7 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
           <ui:Width>1000</ui:Width>
           <ui:Height>600</ui:Height>
         </ui:Size>
-        <ui:WindowState>Normal</ui:WindowState>
+        <ui:WindowState>Maximized</ui:WindowState>
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="rx:Timer">
@@ -774,7 +771,10 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>We will now complete tasks with a digitising tablet.  You will see what you write on the screen, NOT on the paper.  
+                <Value>
+We will now complete tasks with a digitising tablet.
+
+The pen will write to the screen, NOT the paper.  
 
 We will change the sheet of paper for each task.
 
@@ -838,11 +838,13 @@ Touch 'Start' to continue!</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Please write 'The quick brown fox jumps over the lazy dog'
+                <Value>On each line please write: 
 
-Start a new line if you finish the sentence.
+'The quick brown fox jumps over the lazy dog'
 
-You have half a minute to write this as many times as you can.
+Start a new line if you finish the phrase
+
+You have half a minute
 
 Touch 'Start' when you are ready</Value>
               </Combinator>
@@ -895,7 +897,7 @@ Touch 'Start' when you are ready</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>30</Value>
+                <Value>15</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -934,8 +936,8 @@ Touch 'Start' when you are ready</Value>
             <Expression xsi:type="WorkflowOutput" />
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PenDigitizer.bonsai">
               <Size>
-                <Width>2600</Width>
-                <Height>1600</Height>
+                <Width>3840</Width>
+                <Height>2160</Height>
               </Size>
             </Expression>
             <Expression xsi:type="ExternalizedMapping">
@@ -1078,9 +1080,12 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Now with the RIGHT hand draw both spirals starting at the centre dot and moving outwards.
+                <Value>
+Now with the RIGHT hand 
 
-DO NOT REST YOUR HAND OR ARM ON THE TABLET while you draw.
+Draw both spirals starting at the centre and moving outwards.
+
+Keep your hand / arm OFF the tablet while you draw
 
 Touch 'Start' when you are ready!</Value>
               </Combinator>
@@ -1172,8 +1177,8 @@ Touch 'Start' when you are ready!</Value>
             <Expression xsi:type="WorkflowOutput" />
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PenDigitizer.bonsai">
               <Size>
-                <Width>2600</Width>
-                <Height>1600</Height>
+                <Width>3840</Width>
+                <Height>2160</Height>
               </Size>
             </Expression>
             <Expression xsi:type="ExternalizedMapping">
@@ -1317,12 +1322,12 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Continuing with the RIGHT hand now trace the lines.
+                <Value>
+Now please trace the lines
 
-DO NOT REST YOUR HAND OR ARM ON THE TABLET while you draw.
+Keep your hand / arm OFF the tablet while you draw
 
-Touch 'Start' when you are ready!
-</Value>
+Touch 'Start' when you are ready!</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1425,8 +1430,8 @@ Trace the lines!</Value>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PenDigitizer.bonsai">
               <Size>
-                <Width>2600</Width>
-                <Height>1600</Height>
+                <Width>3840</Width>
+                <Height>2160</Height>
               </Size>
             </Expression>
           </Nodes>
@@ -1558,9 +1563,12 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Now with the LEFT hand draw both spirals starting at the centre dot and moving outwards.
+                <Value>
+Now with the LEFT hand 
 
-DO NOT REST YOUR HAND OR ARM ON THE TABLET while you draw.
+Draw both spirals starting at the centre and moving outwards.
+
+Keep your hand / arm OFF the tablet while you draw
 
 Touch 'Start' when you are ready!
 </Value>
@@ -1666,8 +1674,8 @@ Trace the spirals!</Value>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PenDigitizer.bonsai">
               <Size>
-                <Width>2600</Width>
-                <Height>1600</Height>
+                <Width>3840</Width>
+                <Height>2160</Height>
               </Size>
             </Expression>
           </Nodes>
@@ -1799,9 +1807,12 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Continuing with the LEFT hand now trace the lines.
+                <Value>
+Continuing with the LEFT hand 
 
-DO NOT REST YOUR HAND OR ARM ON THE TABLET while you draw.
+Now trace the lines again
+
+Keep your hand / arm OFF the tablet while you draw
 
 Touch 'Start' when you are ready!
 </Value>
@@ -1907,8 +1918,8 @@ Trace the lines!</Value>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PenDigitizer.bonsai">
               <Size>
-                <Width>2600</Width>
-                <Height>1600</Height>
+                <Width>3840</Width>
+                <Height>2160</Height>
               </Size>
             </Expression>
           </Nodes>
