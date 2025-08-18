@@ -1101,7 +1101,7 @@ Touch 'Start' on the screen when you are ready!</Value>
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="IntProperty">
-                      <Value>10</Value>
+                      <Value>30</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
