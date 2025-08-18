@@ -8,8 +8,8 @@
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="drw:CreateCanvas">
           <drw:Size>
-            <drw:Width>1000</drw:Width>
-            <drw:Height>1000</drw:Height>
+            <drw:Width>3840</drw:Width>
+            <drw:Height>2160</drw:Height>
           </drw:Size>
           <drw:Depth>U8</drw:Depth>
           <drw:Channels>3</drw:Channels>
