@@ -10,6 +10,7 @@
                  xmlns:wie="clr-namespace:Bonsai.Windows.Input;assembly=Bonsai.Windows.Input"
                  xmlns:io="clr-namespace:Bonsai.IO;assembly=Bonsai.System"
                  xmlns:gui="clr-namespace:Bonsai.Gui;assembly=Bonsai.Gui"
+                 xmlns:p2="clr-namespace:;assembly=Extensions"
                  xmlns:ui="clr-namespace:Bonsai.Design;assembly=Bonsai.Design"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
@@ -99,7 +100,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT3.178S</rx:DueTime>
+                      <rx:DueTime>PT2.949S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -239,7 +240,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\computeMD\keyboard\2025-08-16T10-24-43\text.csv</io:FileName>
+              <io:FileName>C:\Data\computeMD\keyboard\2025-09-09T13-01-40\text.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -259,7 +260,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\computeMD\keyboard\2025-08-16T10-24-43\text_input_start.csv</io:FileName>
+              <io:FileName>C:\Data\computeMD\keyboard\2025-09-09T13-01-40\text_input_start.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -279,7 +280,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\computeMD\keyboard\2025-08-16T10-24-43\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\computeMD\keyboard\2025-09-09T13-01-40\Instructions.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -456,7 +457,7 @@ false as pressed)</scr:Expression>
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>C:\Data\computeMD\keyboard\2025-08-16T10-24-43\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\computeMD\keyboard\2025-09-09T13-01-40\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -589,13 +590,7 @@ false as pressed)</scr:Expression>
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 24pt</gui:Font>
-              <gui:Text>Now please can you type the phrase 'The quick brown fox jumps over the lazy dog'
-
-If you finish the phrase, press return to start a new line. 
-
-You have half a minute.
-
-Touch 'Start' on the screen to begin!</gui:Text>
+              <gui:Text />
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
@@ -629,7 +624,7 @@ Touch 'Start' on the screen to begin!</gui:Text>
                 <Property Name="Text" />
               </PropertyMappings>
             </Expression>
-            <Expression xsi:type="gui:TextBoxBuilder">
+            <Expression xsi:type="p2:TextBoxAutoFocusBuilder">
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Multiline>true</gui:Multiline>
