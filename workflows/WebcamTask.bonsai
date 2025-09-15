@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <WorkflowBuilder Version="2.9.0"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xmlns:rx="clr-namespace:Bonsai.Reactive;assembly=Bonsai.Core"
@@ -1175,9 +1175,9 @@ Lets practice this now. Press 'Start'!</Value>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
                 <Value>
-The first task is to 'screw up your eyes' as tight as possible 
+The first task is to close your eyes for 2 seconds and then open them.
 
-Hold for 2 seconds and then open them.
+Start by looking at the camera and then close your eyes.
 
 Touch 'Start' on the screen when you are ready!</Value>
               </Combinator>
@@ -1198,7 +1198,7 @@ Touch 'Start' on the screen when you are ready!</Value>
         </Workflow>
       </Expression>
       <Expression xsi:type="rx:SelectMany">
-        <Name>EyelidTightClose</Name>
+        <Name>EyeClose</Name>
         <Workflow>
           <Nodes>
             <Expression xsi:type="WorkflowInput">
@@ -1274,7 +1274,7 @@ Touch 'Start' on the screen when you are ready!</Value>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
                 <Value>
-Screw up your eyes tight!</Value>
+Close your eyes for 2 seconds and then open!</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1417,9 +1417,9 @@ Please touch 'Repeat' to repeat task or 'Next' to continue</Value>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
                 <Value>
-The next tasks needs you to widely 'open and close your eyes' 
+In the next task we ask you to 'open and close your eyes' 
 
-Repeat until the task ends.
+Please repeat blinking until the task ends.
 
 Touch 'Start' on the screen when you are ready!</Value>
               </Combinator>
@@ -1440,7 +1440,7 @@ Touch 'Start' on the screen when you are ready!</Value>
         </Workflow>
       </Expression>
       <Expression xsi:type="rx:SelectMany">
-        <Name>EyelidOpenClose</Name>
+        <Name>EyeBlink</Name>
         <Workflow>
           <Nodes>
             <Expression xsi:type="WorkflowInput">
@@ -1685,7 +1685,7 @@ Touch 'Start' on the screen when you are ready!</Value>
         </Workflow>
       </Expression>
       <Expression xsi:type="rx:SelectMany">
-        <Name>MouthWide</Name>
+        <Name>MouthOpen</Name>
         <Workflow>
           <Nodes>
             <Expression xsi:type="WorkflowInput">

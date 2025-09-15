@@ -184,7 +184,7 @@
               <Property Name="Path" />
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
-              <Path>C:\Data\computeMD\webcam</Path>
+              <Path>C:\Data\computeMD\tablet</Path>
             </Expression>
             <Expression xsi:type="GroupWorkflow">
               <Name>LogHarp</Name>
@@ -836,7 +836,7 @@ Touch 'Start' to continue!</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>30</Value>
+                <Value>15</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
