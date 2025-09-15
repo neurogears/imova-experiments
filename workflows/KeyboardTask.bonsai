@@ -99,7 +99,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT3.178S</rx:DueTime>
+                      <rx:DueTime>PT2.401S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -218,7 +218,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\computeMD\keyboard\2025-08-16T10-24-43\keystrokes.csv</io:FileName>
+              <io:FileName>C:\Data\computeMD\keyboard\2025-09-09T11-29-26\keystrokes.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -239,7 +239,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\computeMD\keyboard\2025-08-16T10-24-43\text.csv</io:FileName>
+              <io:FileName>C:\Data\computeMD\keyboard\2025-09-09T11-29-26\text.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -259,7 +259,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\computeMD\keyboard\2025-08-16T10-24-43\text_input_start.csv</io:FileName>
+              <io:FileName>C:\Data\computeMD\keyboard\2025-09-09T11-29-26\text_input_start.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -279,7 +279,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\computeMD\keyboard\2025-08-16T10-24-43\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\computeMD\keyboard\2025-09-09T11-29-26\Instructions.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -412,7 +412,7 @@ false as pressed)</scr:Expression>
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>C:\Data\computeMD\keyboard\2025-08-16T10-24-43\Behavior\Behavior_35.bin</harp:FileName>
+                                  <harp:FileName>C:\Data\computeMD\keyboard\2025-09-09T11-29-26\Behavior\Behavior_35.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -456,7 +456,7 @@ false as pressed)</scr:Expression>
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>C:\Data\computeMD\keyboard\2025-08-16T10-24-43\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\computeMD\keyboard\2025-09-09T11-29-26\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -589,13 +589,7 @@ false as pressed)</scr:Expression>
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 24pt</gui:Font>
-              <gui:Text>Now please can you type the phrase 'The quick brown fox jumps over the lazy dog'
-
-If you finish the phrase, press return to start a new line. 
-
-You have half a minute.
-
-Touch 'Start' on the screen to begin!</gui:Text>
+              <gui:Text>Chose Repeat or Next Task</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
@@ -609,8 +603,8 @@ Touch 'Start' on the screen to begin!</gui:Text>
             </Expression>
             <Expression xsi:type="gui:ButtonBuilder">
               <gui:Name>Start</gui:Name>
-              <gui:Enabled>true</gui:Enabled>
-              <gui:Visible>true</gui:Visible>
+              <gui:Enabled>false</gui:Enabled>
+              <gui:Visible>false</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50pt, style=Bold</gui:Font>
               <gui:Text>Start</gui:Text>
             </Expression>
@@ -632,6 +626,7 @@ Touch 'Start' on the screen to begin!</gui:Text>
             <Expression xsi:type="gui:TextBoxBuilder">
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
+              <gui:Text />
               <gui:Multiline>true</gui:Multiline>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -788,7 +783,7 @@ Touch 'Start' on the screen to begin!</gui:Text>
           <ui:Width>1000</ui:Width>
           <ui:Height>600</ui:Height>
         </ui:Size>
-        <ui:WindowState>Normal</ui:WindowState>
+        <ui:WindowState>Maximized</ui:WindowState>
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="rx:Timer">
