@@ -9,7 +9,6 @@
                  xmlns:beh="clr-namespace:Harp.Behavior;assembly=Harp.Behavior"
                  xmlns:al="clr-namespace:Bonsai.Audio;assembly=Bonsai.Audio"
                  xmlns:io="clr-namespace:Bonsai.IO;assembly=Bonsai.System"
-                 xmlns:cv="clr-namespace:Bonsai.Vision;assembly=Bonsai.Vision"
                  xmlns:gui="clr-namespace:Bonsai.Gui;assembly=Bonsai.Gui"
                  xmlns:ui="clr-namespace:Bonsai.Design;assembly=Bonsai.Design"
                  xmlns="https://bonsai-rx.org/2018/workflow">
@@ -100,7 +99,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT3.738S</rx:DueTime>
+                      <rx:DueTime>PT4.836S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -345,169 +344,6 @@
               </Workflow>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
-              <Name>EnableRecording</Name>
-            </Expression>
-            <Expression xsi:type="rx:Condition">
-              <Workflow>
-                <Nodes>
-                  <Expression xsi:type="WorkflowInput">
-                    <Name>Source1</Name>
-                  </Expression>
-                  <Expression xsi:type="WorkflowOutput" />
-                </Nodes>
-                <Edges>
-                  <Edge From="0" To="1" Label="Source1" />
-                </Edges>
-              </Workflow>
-            </Expression>
-            <Expression xsi:type="rx:SelectMany">
-              <Name>VideoRecorder</Name>
-              <Workflow>
-                <Nodes>
-                  <Expression xsi:type="ExternalizedMapping">
-                    <Property Name="Value" DisplayName="FileName" />
-                  </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="StringProperty">
-                      <Value>Video</Value>
-                    </Combinator>
-                  </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="rx:Take">
-                      <rx:Count>1</rx:Count>
-                    </Combinator>
-                  </Expression>
-                  <Expression xsi:type="rx:AsyncSubject">
-                    <Name>BaseFileName</Name>
-                  </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="cv:CameraCapture">
-                      <cv:Index>1</cv:Index>
-                      <cv:CaptureProperties />
-                    </Combinator>
-                  </Expression>
-                  <Expression xsi:type="SubscribeSubject">
-                    <Name>BaseFileName</Name>
-                  </Expression>
-                  <Expression xsi:type="Format">
-                    <Format>{0}.avi</Format>
-                    <Selector>it</Selector>
-                  </Expression>
-                  <Expression xsi:type="PropertyMapping">
-                    <PropertyMappings>
-                      <Property Name="Name" />
-                    </PropertyMappings>
-                  </Expression>
-                  <Expression xsi:type="IncludeWorkflow" Path="Extensions\FormatFileName.bonsai">
-                    <Name>Video.avi</Name>
-                  </Expression>
-                  <Expression xsi:type="PropertyMapping">
-                    <PropertyMappings>
-                      <Property Name="FileName" />
-                    </PropertyMappings>
-                  </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="cv:VideoWriter">
-                      <cv:FileName>C:\Data\computeMD\microphone\2025-09-09T16-55-27\Video.avi</cv:FileName>
-                      <cv:Suffix>Timestamp</cv:Suffix>
-                      <cv:Buffered>true</cv:Buffered>
-                      <cv:Overwrite>false</cv:Overwrite>
-                      <cv:FourCC>FMP4</cv:FourCC>
-                      <cv:FrameRate>30</cv:FrameRate>
-                      <cv:FrameSize>
-                        <cv:Width>0</cv:Width>
-                        <cv:Height>0</cv:Height>
-                      </cv:FrameSize>
-                      <cv:ResizeInterpolation>NearestNeighbor</cv:ResizeInterpolation>
-                    </Combinator>
-                  </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="rx:ElementIndex" />
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>Index</Selector>
-                  </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="rx:Timestamp" />
-                  </Expression>
-                  <Expression xsi:type="SubscribeSubject">
-                    <Name>BaseFileName</Name>
-                  </Expression>
-                  <Expression xsi:type="Format">
-                    <Format>{0}.csv</Format>
-                    <Selector>it</Selector>
-                  </Expression>
-                  <Expression xsi:type="PropertyMapping">
-                    <PropertyMappings>
-                      <Property Name="Name" />
-                    </PropertyMappings>
-                  </Expression>
-                  <Expression xsi:type="IncludeWorkflow" Path="Extensions\FormatFileName.bonsai">
-                    <Name>Video.csv</Name>
-                  </Expression>
-                  <Expression xsi:type="PropertyMapping">
-                    <PropertyMappings>
-                      <Property Name="FileName" />
-                    </PropertyMappings>
-                  </Expression>
-                  <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:\Data\computeMD\microphone\2025-09-09T16-55-27\Video.csv</io:FileName>
-                    <io:Append>false</io:Append>
-                    <io:Overwrite>false</io:Overwrite>
-                    <io:Suffix>Timestamp</io:Suffix>
-                    <io:IncludeHeader>true</io:IncludeHeader>
-                  </Expression>
-                  <Expression xsi:type="SubscribeSubject">
-                    <Name>EnableRecording</Name>
-                  </Expression>
-                  <Expression xsi:type="rx:Condition">
-                    <Name>Disable</Name>
-                    <Workflow>
-                      <Nodes>
-                        <Expression xsi:type="WorkflowInput">
-                          <Name>Source1</Name>
-                        </Expression>
-                        <Expression xsi:type="BitwiseNot" />
-                        <Expression xsi:type="WorkflowOutput" />
-                      </Nodes>
-                      <Edges>
-                        <Edge From="0" To="1" Label="Source1" />
-                        <Edge From="1" To="2" Label="Source1" />
-                      </Edges>
-                    </Workflow>
-                  </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="rx:TakeUntil" />
-                  </Expression>
-                  <Expression xsi:type="WorkflowOutput" />
-                </Nodes>
-                <Edges>
-                  <Edge From="0" To="1" Label="Source1" />
-                  <Edge From="1" To="2" Label="Source1" />
-                  <Edge From="2" To="3" Label="Source1" />
-                  <Edge From="4" To="10" Label="Source1" />
-                  <Edge From="5" To="6" Label="Source1" />
-                  <Edge From="6" To="7" Label="Source1" />
-                  <Edge From="7" To="8" Label="Source1" />
-                  <Edge From="8" To="9" Label="Source1" />
-                  <Edge From="9" To="10" Label="Source2" />
-                  <Edge From="10" To="11" Label="Source1" />
-                  <Edge From="11" To="12" Label="Source1" />
-                  <Edge From="12" To="13" Label="Source1" />
-                  <Edge From="13" To="19" Label="Source1" />
-                  <Edge From="14" To="15" Label="Source1" />
-                  <Edge From="15" To="16" Label="Source1" />
-                  <Edge From="16" To="17" Label="Source1" />
-                  <Edge From="17" To="18" Label="Source1" />
-                  <Edge From="18" To="19" Label="Source2" />
-                  <Edge From="19" To="22" Label="Source1" />
-                  <Edge From="20" To="21" Label="Source1" />
-                  <Edge From="21" To="22" Label="Source2" />
-                  <Edge From="22" To="23" Label="Source1" />
-                </Edges>
-              </Workflow>
-            </Expression>
-            <Expression xsi:type="SubscribeSubject">
               <Name>Instructions</Name>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\Timestamp.bonsai" />
@@ -520,7 +356,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\computeMD\microphone\2025-09-09T16-55-27\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\computeMD\tic\2025-09-15T02-33-25\Instructions.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -697,7 +533,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>C:\Data\computeMD\microphone\2025-09-09T16-55-27\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\computeMD\tic\2025-09-15T02-33-25\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -739,11 +575,9 @@
             <Edge From="2" To="3" Label="Source1" />
             <Edge From="3" To="4" Label="Source1" />
             <Edge From="5" To="6" Label="Source1" />
-            <Edge From="6" To="7" Label="Source1" />
-            <Edge From="8" To="9" Label="Source1" />
-            <Edge From="9" To="12" Label="Source1" />
-            <Edge From="10" To="11" Label="Source1" />
-            <Edge From="11" To="12" Label="Source2" />
+            <Edge From="6" To="9" Label="Source1" />
+            <Edge From="7" To="8" Label="Source1" />
+            <Edge From="8" To="9" Label="Source2" />
           </Edges>
         </Workflow>
       </Expression>
@@ -818,9 +652,8 @@
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 27.9000015pt</gui:Font>
               <gui:Text>
-As per powerpoint.
-
-+5 seconds compared to Qualisys time. </gui:Text>
+Please touch 'Repeat' to repeat the task or 'Next' to continue
+</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
@@ -858,7 +691,7 @@ As per powerpoint.
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50.1000023pt</gui:Font>
-              <gui:Text>27</gui:Text>
+              <gui:Text>0</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
@@ -871,8 +704,8 @@ As per powerpoint.
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="gui:TableLayoutPanelBuilder">
-              <gui:Enabled>true</gui:Enabled>
-              <gui:Visible>true</gui:Visible>
+              <gui:Enabled>false</gui:Enabled>
+              <gui:Visible>false</gui:Visible>
               <gui:ColumnCount>2</gui:ColumnCount>
               <gui:RowCount>1</gui:RowCount>
               <gui:ColumnStyles>
