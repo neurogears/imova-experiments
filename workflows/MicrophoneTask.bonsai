@@ -264,9 +264,7 @@
                   <Expression xsi:type="MemberSelector">
                     <Selector>Index</Selector>
                   </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="rx:Timestamp" />
-                  </Expression>
+                  <Expression xsi:type="IncludeWorkflow" Path="Extensions\Timestamp.bonsai" />
                   <Expression xsi:type="SubscribeSubject">
                     <Name>BaseFileName</Name>
                   </Expression>
@@ -427,9 +425,7 @@
                   <Expression xsi:type="MemberSelector">
                     <Selector>Index</Selector>
                   </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="rx:Timestamp" />
-                  </Expression>
+                  <Expression xsi:type="IncludeWorkflow" Path="Extensions\Timestamp.bonsai" />
                   <Expression xsi:type="SubscribeSubject">
                     <Name>BaseFileName</Name>
                   </Expression>
