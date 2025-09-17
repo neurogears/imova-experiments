@@ -14,6 +14,7 @@
                  xmlns:p2="clr-namespace:OpenCV.Net;assembly=OpenCV.Net"
                  xmlns:p3="clr-namespace:Bonsai.Vision.Design;assembly=Bonsai.Vision.Design"
                  xmlns:ui="clr-namespace:Bonsai.Design;assembly=Bonsai.Design"
+                 xmlns:dsp="clr-namespace:Bonsai.Dsp;assembly=Bonsai.Dsp"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
     <Nodes>
@@ -102,7 +103,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT2.774S</rx:DueTime>
+                      <rx:DueTime>PT3.815S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -314,7 +315,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>C:\Data\computeMD\webcam\2025-08-16T16-03-12\Behavior\Behavior_35.bin</harp:FileName>
+                                  <harp:FileName>C:\Data\computeMD\webcam\2025-09-09T17-22-20\Behavior\Behavior_35.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -358,7 +359,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>C:\Data\computeMD\webcam\2025-08-16T16-03-12\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\computeMD\webcam\2025-09-15T02-41-14\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -407,7 +408,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\computeMD\webcam\2025-08-16T16-03-12\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\computeMD\webcam\2025-09-15T02-41-14\Instructions.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -479,7 +480,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="al:AudioWriter">
-                      <al:FileName>C:\Data\computeMD\webcam\2025-08-16T16-03-12\Audio.wav</al:FileName>
+                      <al:FileName>C:\Data\computeMD\webcam\2025-09-15T03-05-48\Audio.wav</al:FileName>
                       <al:Suffix>Timestamp</al:Suffix>
                       <al:Buffered>true</al:Buffered>
                       <al:Overwrite>false</al:Overwrite>
@@ -492,9 +493,7 @@
                   <Expression xsi:type="MemberSelector">
                     <Selector>Index</Selector>
                   </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="rx:Timestamp" />
-                  </Expression>
+                  <Expression xsi:type="IncludeWorkflow" Path="Extensions\Timestamp.bonsai" />
                   <Expression xsi:type="SubscribeSubject">
                     <Name>BaseFileName</Name>
                   </Expression>
@@ -516,7 +515,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:\Data\computeMD\webcam\2025-08-16T16-03-12\Audio.csv</io:FileName>
+                    <io:FileName>C:\Data\computeMD\webcam\2025-09-15T03-05-48\Audio.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>Timestamp</io:Suffix>
@@ -639,7 +638,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:VideoWriter">
-                      <cv:FileName>C:\Data\computeMD\webcam\2025-08-16T16-03-12\Video.avi</cv:FileName>
+                      <cv:FileName>C:\Data\computeMD\webcam\2025-09-15T03-05-48\Video.avi</cv:FileName>
                       <cv:Suffix>Timestamp</cv:Suffix>
                       <cv:Buffered>true</cv:Buffered>
                       <cv:Overwrite>false</cv:Overwrite>
@@ -658,9 +657,7 @@
                   <Expression xsi:type="MemberSelector">
                     <Selector>Index</Selector>
                   </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="rx:Timestamp" />
-                  </Expression>
+                  <Expression xsi:type="IncludeWorkflow" Path="Extensions\Timestamp.bonsai" />
                   <Expression xsi:type="SubscribeSubject">
                     <Name>BaseFileName</Name>
                   </Expression>
@@ -682,7 +679,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:\Data\computeMD\webcam\2025-08-16T16-03-12\Video.csv</io:FileName>
+                    <io:FileName>C:\Data\computeMD\webcam\2025-09-15T03-05-48\Video.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>Timestamp</io:Suffix>
@@ -824,13 +821,7 @@
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 24pt</gui:Font>
               <gui:Text>
-First we are going to check that your image is in the centre.  
-
-During these tasks look at the camera.  
-
-You need to lightly touch buttons on the screen to progress.
-
-Lets practice this now. Press 'Start'!</gui:Text>
+Please touch 'Repeat' to repeat task or 'Next' to continue</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="rx:BehaviorSubject" TypeArguments="p2:IplImage">
@@ -860,8 +851,8 @@ Lets practice this now. Press 'Start'!</gui:Text>
             </Expression>
             <Expression xsi:type="gui:ButtonBuilder">
               <gui:Name>Start</gui:Name>
-              <gui:Enabled>true</gui:Enabled>
-              <gui:Visible>true</gui:Visible>
+              <gui:Enabled>false</gui:Enabled>
+              <gui:Visible>false</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50pt, style=Bold</gui:Font>
               <gui:Text>Start</gui:Text>
             </Expression>
@@ -897,8 +888,8 @@ Lets practice this now. Press 'Start'!</gui:Text>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="gui:TableLayoutPanelBuilder">
-              <gui:Enabled>true</gui:Enabled>
-              <gui:Visible>true</gui:Visible>
+              <gui:Enabled>false</gui:Enabled>
+              <gui:Visible>false</gui:Visible>
               <gui:ColumnCount>2</gui:ColumnCount>
               <gui:RowCount>1</gui:RowCount>
               <gui:ColumnStyles />
@@ -1002,7 +993,7 @@ Lets practice this now. Press 'Start'!</gui:Text>
           <ui:Width>1000</ui:Width>
           <ui:Height>600</ui:Height>
         </ui:Size>
-        <ui:WindowState>Normal</ui:WindowState>
+        <ui:WindowState>Maximized</ui:WindowState>
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="rx:Timer">
@@ -1103,6 +1094,27 @@ Lets practice this now. Press 'Start'!</Value>
               <Name>EnableRecording</Name>
             </Expression>
             <Expression xsi:type="Combinator">
+              <Combinator xsi:type="dsp:Range">
+                <dsp:BufferLength>10</dsp:BufferLength>
+                <dsp:Depth>F32</dsp:Depth>
+                <dsp:Start>0</dsp:Start>
+                <dsp:End>0</dsp:End>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="dsp:ConvertScale">
+                <dsp:Depth>U8</dsp:Depth>
+                <dsp:Scale>1</dsp:Scale>
+                <dsp:Shift>256</dsp:Shift>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="cv:ConvertToImage" />
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>Webcam</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
               <Combinator xsi:type="BooleanProperty">
                 <Value>false</Value>
               </Combinator>
@@ -1124,8 +1136,11 @@ Lets practice this now. Press 'Start'!</Value>
             <Edge From="1" To="2" Label="Source1" />
             <Edge From="3" To="4" Label="Source1" />
             <Edge From="5" To="6" Label="Source1" />
+            <Edge From="6" To="7" Label="Source1" />
             <Edge From="7" To="8" Label="Source1" />
-            <Edge From="8" To="9" Label="Source1" />
+            <Edge From="9" To="10" Label="Source1" />
+            <Edge From="11" To="12" Label="Source1" />
+            <Edge From="12" To="13" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -1180,9 +1195,9 @@ Lets practice this now. Press 'Start'!</Value>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
                 <Value>
-The first task is to 'screw up your eyes' as tight as possible 
+The first task is to close your eyes for 2 seconds and then open them.
 
-Hold for 2 seconds and then open them.
+Start by looking at the camera and then close your eyes.
 
 Touch 'Start' on the screen when you are ready!</Value>
               </Combinator>
@@ -1203,7 +1218,7 @@ Touch 'Start' on the screen when you are ready!</Value>
         </Workflow>
       </Expression>
       <Expression xsi:type="rx:SelectMany">
-        <Name>EyelidTightClose</Name>
+        <Name>EyeClose</Name>
         <Workflow>
           <Nodes>
             <Expression xsi:type="WorkflowInput">
@@ -1279,9 +1294,7 @@ Touch 'Start' on the screen when you are ready!</Value>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
                 <Value>
-Look at the camera!
-
-Screw up your eyes tight!</Value>
+Close your eyes for 2 seconds and then open!</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1353,6 +1366,27 @@ Please touch 'Repeat' to repeat task or 'Next' to continue</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="WorkflowOutput" />
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="dsp:Range">
+                <dsp:BufferLength>10</dsp:BufferLength>
+                <dsp:Depth>F32</dsp:Depth>
+                <dsp:Start>0</dsp:Start>
+                <dsp:End>0</dsp:End>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="dsp:ConvertScale">
+                <dsp:Depth>U8</dsp:Depth>
+                <dsp:Scale>1</dsp:Scale>
+                <dsp:Shift>256</dsp:Shift>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="cv:ConvertToImage" />
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>Webcam</Name>
+            </Expression>
           </Nodes>
           <Edges>
             <Edge From="1" To="2" Label="Source1" />
@@ -1361,6 +1395,9 @@ Please touch 'Repeat' to repeat task or 'Next' to continue</Value>
             <Edge From="7" To="8" Label="Source1" />
             <Edge From="9" To="10" Label="Source1" />
             <Edge From="10" To="11" Label="Source1" />
+            <Edge From="12" To="13" Label="Source1" />
+            <Edge From="13" To="14" Label="Source1" />
+            <Edge From="14" To="15" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -1424,9 +1461,9 @@ Please touch 'Repeat' to repeat task or 'Next' to continue</Value>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
                 <Value>
-The next tasks needs you to widely 'open and close your eyes' 
+In the next task we ask you to 'open and close your eyes' 
 
-Repeat until the task ends.
+Please repeat blinking until the task ends.
 
 Touch 'Start' on the screen when you are ready!</Value>
               </Combinator>
@@ -1447,7 +1484,7 @@ Touch 'Start' on the screen when you are ready!</Value>
         </Workflow>
       </Expression>
       <Expression xsi:type="rx:SelectMany">
-        <Name>EyelidOpenClose</Name>
+        <Name>EyeBlink</Name>
         <Workflow>
           <Nodes>
             <Expression xsi:type="WorkflowInput">
@@ -1525,7 +1562,7 @@ Touch 'Start' on the screen when you are ready!</Value>
                 <Value>
 Look at the camera!
 
-Open and close your eyes!</Value>
+(Open and close your EYES)</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1598,6 +1635,27 @@ Please touch 'Repeat' to repeat task or 'Next' to continue
               </Combinator>
             </Expression>
             <Expression xsi:type="WorkflowOutput" />
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="dsp:Range">
+                <dsp:BufferLength>10</dsp:BufferLength>
+                <dsp:Depth>F32</dsp:Depth>
+                <dsp:Start>0</dsp:Start>
+                <dsp:End>0</dsp:End>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="dsp:ConvertScale">
+                <dsp:Depth>U8</dsp:Depth>
+                <dsp:Scale>1</dsp:Scale>
+                <dsp:Shift>256</dsp:Shift>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="cv:ConvertToImage" />
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>Webcam</Name>
+            </Expression>
           </Nodes>
           <Edges>
             <Edge From="1" To="2" Label="Source1" />
@@ -1606,6 +1664,9 @@ Please touch 'Repeat' to repeat task or 'Next' to continue
             <Edge From="7" To="8" Label="Source1" />
             <Edge From="9" To="10" Label="Source1" />
             <Edge From="10" To="11" Label="Source1" />
+            <Edge From="12" To="13" Label="Source1" />
+            <Edge From="13" To="14" Label="Source1" />
+            <Edge From="14" To="15" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -1692,7 +1753,7 @@ Touch 'Start' on the screen when you are ready!</Value>
         </Workflow>
       </Expression>
       <Expression xsi:type="rx:SelectMany">
-        <Name>MouthWide</Name>
+        <Name>MouthOpen</Name>
         <Workflow>
           <Nodes>
             <Expression xsi:type="WorkflowInput">
@@ -1768,7 +1829,9 @@ Touch 'Start' on the screen when you are ready!</Value>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
                 <Value>
-Open your mouth!</Value>
+Look at the camera!
+
+(open your MOUTH)</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1865,6 +1928,27 @@ Please touch 'Repeat' to repeat task or 'Next' to continue
               </Combinator>
             </Expression>
             <Expression xsi:type="WorkflowOutput" />
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="dsp:Range">
+                <dsp:BufferLength>10</dsp:BufferLength>
+                <dsp:Depth>F32</dsp:Depth>
+                <dsp:Start>0</dsp:Start>
+                <dsp:End>0</dsp:End>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="dsp:ConvertScale">
+                <dsp:Depth>U8</dsp:Depth>
+                <dsp:Scale>1</dsp:Scale>
+                <dsp:Shift>256</dsp:Shift>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="cv:ConvertToImage" />
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>Webcam</Name>
+            </Expression>
           </Nodes>
           <Edges>
             <Edge From="1" To="2" Label="Source1" />
@@ -1877,6 +1961,9 @@ Please touch 'Repeat' to repeat task or 'Next' to continue
             <Edge From="12" To="13" Label="Source2" />
             <Edge From="13" To="14" Label="Source1" />
             <Edge From="14" To="15" Label="Source1" />
+            <Edge From="16" To="17" Label="Source1" />
+            <Edge From="17" To="18" Label="Source1" />
+            <Edge From="18" To="19" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -2041,7 +2128,7 @@ Touch 'Start' on the screen when you are ready!</Value>
                 <Value>
 Look at the camera!
 
-Open and close your mouth!</Value>
+(open and close your MOUTH)</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -2136,6 +2223,27 @@ Open and close your mouth!</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="WorkflowOutput" />
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="dsp:Range">
+                <dsp:BufferLength>10</dsp:BufferLength>
+                <dsp:Depth>F32</dsp:Depth>
+                <dsp:Start>0</dsp:Start>
+                <dsp:End>0</dsp:End>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="dsp:ConvertScale">
+                <dsp:Depth>U8</dsp:Depth>
+                <dsp:Scale>1</dsp:Scale>
+                <dsp:Shift>256</dsp:Shift>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="cv:ConvertToImage" />
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>Webcam</Name>
+            </Expression>
           </Nodes>
           <Edges>
             <Edge From="1" To="2" Label="Source1" />
@@ -2148,6 +2256,9 @@ Open and close your mouth!</Value>
             <Edge From="12" To="13" Label="Source2" />
             <Edge From="13" To="14" Label="Source1" />
             <Edge From="14" To="15" Label="Source1" />
+            <Edge From="16" To="17" Label="Source1" />
+            <Edge From="17" To="18" Label="Source1" />
+            <Edge From="18" To="19" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -2312,7 +2423,7 @@ Touch 'Start' on the screen when you are ready!</Value>
                 <Value>
 Look at the camera!
 
-Purse your lips!</Value>
+(purse your lips)</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -2409,6 +2520,27 @@ Please touch 'Repeat' to repeat task or 'Next' to continue
               </Combinator>
             </Expression>
             <Expression xsi:type="WorkflowOutput" />
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="dsp:Range">
+                <dsp:BufferLength>10</dsp:BufferLength>
+                <dsp:Depth>F32</dsp:Depth>
+                <dsp:Start>0</dsp:Start>
+                <dsp:End>0</dsp:End>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="dsp:ConvertScale">
+                <dsp:Depth>U8</dsp:Depth>
+                <dsp:Scale>1</dsp:Scale>
+                <dsp:Shift>256</dsp:Shift>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="cv:ConvertToImage" />
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>Webcam</Name>
+            </Expression>
           </Nodes>
           <Edges>
             <Edge From="1" To="2" Label="Source1" />
@@ -2421,6 +2553,303 @@ Please touch 'Repeat' to repeat task or 'Next' to continue
             <Edge From="12" To="13" Label="Source2" />
             <Edge From="13" To="14" Label="Source1" />
             <Edge From="14" To="15" Label="Source1" />
+            <Edge From="16" To="17" Label="Source1" />
+            <Edge From="17" To="18" Label="Source1" />
+            <Edge From="18" To="19" Label="Source1" />
+          </Edges>
+        </Workflow>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:Repeat" />
+      </Expression>
+      <Expression xsi:type="SubscribeSubject">
+        <Name>Next</Name>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:TakeUntil" />
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:Timer">
+          <rx:DueTime>PT0S</rx:DueTime>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="rx:SelectMany">
+        <Name>Instruction</Name>
+        <Workflow>
+          <Nodes>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>Start</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Take">
+                <rx:Count>1</rx:Count>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="WorkflowOutput" />
+            <Expression xsi:type="WorkflowInput">
+              <Name>Source1</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="BooleanProperty">
+                <Value>true</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>EnableStart</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="BooleanProperty">
+                <Value>false</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>EnableRecording</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="BooleanProperty">
+                <Value>false</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>EnableRepeat</Name>
+            </Expression>
+            <Expression xsi:type="ExternalizedMapping">
+              <Property Name="Value" />
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="StringProperty">
+                <Value>
+Now we want you look at the camera in response / in a natural pose until the timer ends.
+
+Touch 'Start' on the screen when you are ready!</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>Instructions</Name>
+            </Expression>
+          </Nodes>
+          <Edges>
+            <Edge From="0" To="1" Label="Source1" />
+            <Edge From="1" To="2" Label="Source1" />
+            <Edge From="4" To="5" Label="Source1" />
+            <Edge From="6" To="7" Label="Source1" />
+            <Edge From="8" To="9" Label="Source1" />
+            <Edge From="10" To="11" Label="Source1" />
+            <Edge From="11" To="12" Label="Source1" />
+          </Edges>
+        </Workflow>
+      </Expression>
+      <Expression xsi:type="rx:SelectMany">
+        <Name>FaceRest</Name>
+        <Workflow>
+          <Nodes>
+            <Expression xsi:type="WorkflowInput">
+              <Name>Source1</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="BooleanProperty">
+                <Value>false</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>EnableStart</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="BooleanProperty">
+                <Value>true</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>EnableRecording</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Timer">
+                <rx:DueTime>PT0S</rx:DueTime>
+                <rx:Period>PT1S</rx:Period>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="ExternalizedMapping">
+              <Property Name="Value" DisplayName="Time(s)" />
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="IntProperty">
+                <Value>30</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:WithLatestFrom" />
+            </Expression>
+            <Expression xsi:type="scr:ExpressionTransform">
+              <scr:Expression>it.Item2-it.Item1</scr:Expression>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>Timer</Name>
+            </Expression>
+            <Expression xsi:type="rx:TakeWhile">
+              <Workflow>
+                <Nodes>
+                  <Expression xsi:type="WorkflowInput">
+                    <Name>Source1</Name>
+                  </Expression>
+                  <Expression xsi:type="GreaterThan">
+                    <Operand xsi:type="DoubleProperty">
+                      <Value>0</Value>
+                    </Operand>
+                  </Expression>
+                  <Expression xsi:type="WorkflowOutput" />
+                </Nodes>
+                <Edges>
+                  <Edge From="0" To="1" Label="Source1" />
+                  <Edge From="1" To="2" Label="Source1" />
+                </Edges>
+              </Workflow>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:TakeLast">
+                <rx:Count>1</rx:Count>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="WorkflowOutput" />
+            <Expression xsi:type="ExternalizedMapping">
+              <Property Name="Value" DisplayName="instructions" />
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="StringProperty">
+                <Value>
+Please look at camera 'in repose' a neutral pose!
+</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>Instructions</Name>
+            </Expression>
+          </Nodes>
+          <Edges>
+            <Edge From="1" To="2" Label="Source1" />
+            <Edge From="3" To="4" Label="Source1" />
+            <Edge From="5" To="8" Label="Source1" />
+            <Edge From="6" To="7" Label="Source1" />
+            <Edge From="7" To="8" Label="Source2" />
+            <Edge From="8" To="9" Label="Source1" />
+            <Edge From="9" To="10" Label="Source1" />
+            <Edge From="10" To="11" Label="Source1" />
+            <Edge From="11" To="12" Label="Source1" />
+            <Edge From="12" To="13" Label="Source1" />
+            <Edge From="14" To="15" Label="Source1" />
+            <Edge From="15" To="16" Label="Source1" />
+          </Edges>
+        </Workflow>
+      </Expression>
+      <Expression xsi:type="rx:SelectMany">
+        <Name>End?_Repeat?</Name>
+        <Workflow>
+          <Nodes>
+            <Expression xsi:type="WorkflowInput">
+              <Name>Source1</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="StringProperty">
+                <Value>
+Please touch 'Repeat' to repeat task or 'Next' to continue
+</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>Instructions</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="BooleanProperty">
+                <Value>false</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>EnableStart</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="BooleanProperty">
+                <Value>false</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>EnableRecording</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="BooleanProperty">
+                <Value>true</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>EnableRepeat</Name>
+            </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>Repeat</Name>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="Combinator">
+                <Combinator xsi:type="BooleanProperty">
+                  <Value>true</Value>
+                </Combinator>
+              </Builder>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="SubscribeSubject">
+                <Name>Finish</Name>
+              </Builder>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="Combinator">
+                <Combinator xsi:type="BooleanProperty">
+                  <Value>false</Value>
+                </Combinator>
+              </Builder>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="Combinator">
+                <Combinator xsi:type="rx:Merge" />
+              </Builder>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Take">
+                <rx:Count>1</rx:Count>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="WorkflowOutput" />
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="dsp:Range">
+                <dsp:BufferLength>10</dsp:BufferLength>
+                <dsp:Depth>F32</dsp:Depth>
+                <dsp:Start>0</dsp:Start>
+                <dsp:End>0</dsp:End>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="dsp:ConvertScale">
+                <dsp:Depth>U8</dsp:Depth>
+                <dsp:Scale>1</dsp:Scale>
+                <dsp:Shift>256</dsp:Shift>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="cv:ConvertToImage" />
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>Webcam</Name>
+            </Expression>
+          </Nodes>
+          <Edges>
+            <Edge From="1" To="2" Label="Source1" />
+            <Edge From="3" To="4" Label="Source1" />
+            <Edge From="5" To="6" Label="Source1" />
+            <Edge From="7" To="8" Label="Source1" />
+            <Edge From="9" To="10" Label="Source1" />
+            <Edge From="10" To="13" Label="Source1" />
+            <Edge From="11" To="12" Label="Source1" />
+            <Edge From="12" To="13" Label="Source2" />
+            <Edge From="13" To="14" Label="Source1" />
+            <Edge From="14" To="15" Label="Source1" />
+            <Edge From="16" To="17" Label="Source1" />
+            <Edge From="17" To="18" Label="Source1" />
+            <Edge From="18" To="19" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -2585,9 +3014,7 @@ Touch 'Start' on the screen when you are ready!</Value>
                 <Value>
 Look at the camera!
 
-Stick out your tongue!
-
-(Try to hold for the full 10 seconds)
+(stick out your tongue for 10 SECONDS)
 
 
 </Value>
@@ -2687,6 +3114,27 @@ Please touch 'Repeat' to repeat task or 'Next' to continue
               </Combinator>
             </Expression>
             <Expression xsi:type="WorkflowOutput" />
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="dsp:Range">
+                <dsp:BufferLength>10</dsp:BufferLength>
+                <dsp:Depth>F32</dsp:Depth>
+                <dsp:Start>0</dsp:Start>
+                <dsp:End>0</dsp:End>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="dsp:ConvertScale">
+                <dsp:Depth>U8</dsp:Depth>
+                <dsp:Scale>1</dsp:Scale>
+                <dsp:Shift>256</dsp:Shift>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="cv:ConvertToImage" />
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>Webcam</Name>
+            </Expression>
           </Nodes>
           <Edges>
             <Edge From="1" To="2" Label="Source1" />
@@ -2699,6 +3147,9 @@ Please touch 'Repeat' to repeat task or 'Next' to continue
             <Edge From="12" To="13" Label="Source2" />
             <Edge From="13" To="14" Label="Source1" />
             <Edge From="14" To="15" Label="Source1" />
+            <Edge From="16" To="17" Label="Source1" />
+            <Edge From="17" To="18" Label="Source1" />
+            <Edge From="18" To="19" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -2720,50 +3171,57 @@ Please touch 'Repeat' to repeat task or 'Next' to continue
       <Edge From="3" To="4" Label="Source1" />
       <Edge From="5" To="6" Label="Source1" />
       <Edge From="6" To="7" Label="Source1" />
-      <Edge From="7" To="50" Label="Source1" />
+      <Edge From="7" To="57" Label="Source1" />
       <Edge From="8" To="9" Label="Source1" />
       <Edge From="9" To="10" Label="Source1" />
       <Edge From="10" To="11" Label="Source1" />
       <Edge From="11" To="12" Label="Source1" />
       <Edge From="12" To="14" Label="Source1" />
       <Edge From="13" To="14" Label="Source2" />
-      <Edge From="14" To="50" Label="Source2" />
+      <Edge From="14" To="57" Label="Source2" />
       <Edge From="15" To="16" Label="Source1" />
       <Edge From="16" To="17" Label="Source1" />
       <Edge From="17" To="18" Label="Source1" />
       <Edge From="18" To="19" Label="Source1" />
       <Edge From="19" To="21" Label="Source1" />
       <Edge From="20" To="21" Label="Source2" />
-      <Edge From="21" To="50" Label="Source3" />
+      <Edge From="21" To="57" Label="Source3" />
       <Edge From="22" To="23" Label="Source1" />
       <Edge From="23" To="24" Label="Source1" />
       <Edge From="24" To="25" Label="Source1" />
       <Edge From="25" To="26" Label="Source1" />
       <Edge From="26" To="28" Label="Source1" />
       <Edge From="27" To="28" Label="Source2" />
-      <Edge From="28" To="50" Label="Source4" />
+      <Edge From="28" To="57" Label="Source4" />
       <Edge From="29" To="30" Label="Source1" />
       <Edge From="30" To="31" Label="Source1" />
       <Edge From="31" To="32" Label="Source1" />
       <Edge From="32" To="33" Label="Source1" />
       <Edge From="33" To="35" Label="Source1" />
       <Edge From="34" To="35" Label="Source2" />
-      <Edge From="35" To="50" Label="Source5" />
+      <Edge From="35" To="57" Label="Source5" />
       <Edge From="36" To="37" Label="Source1" />
       <Edge From="37" To="38" Label="Source1" />
       <Edge From="38" To="39" Label="Source1" />
       <Edge From="39" To="40" Label="Source1" />
       <Edge From="40" To="42" Label="Source1" />
       <Edge From="41" To="42" Label="Source2" />
-      <Edge From="42" To="50" Label="Source6" />
+      <Edge From="42" To="57" Label="Source6" />
       <Edge From="43" To="44" Label="Source1" />
       <Edge From="44" To="45" Label="Source1" />
       <Edge From="45" To="46" Label="Source1" />
       <Edge From="46" To="47" Label="Source1" />
       <Edge From="47" To="49" Label="Source1" />
       <Edge From="48" To="49" Label="Source2" />
-      <Edge From="49" To="50" Label="Source7" />
+      <Edge From="49" To="57" Label="Source7" />
       <Edge From="50" To="51" Label="Source1" />
+      <Edge From="51" To="52" Label="Source1" />
+      <Edge From="52" To="53" Label="Source1" />
+      <Edge From="53" To="54" Label="Source1" />
+      <Edge From="54" To="56" Label="Source1" />
+      <Edge From="55" To="56" Label="Source2" />
+      <Edge From="56" To="57" Label="Source8" />
+      <Edge From="57" To="58" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
