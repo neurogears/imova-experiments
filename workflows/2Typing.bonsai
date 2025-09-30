@@ -183,7 +183,7 @@
               <Property Name="Path" />
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
-              <Path>C:\Data\computeMD\keyboard</Path>
+              <Path>Data\CMD001\typing</Path>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="wie:KeyDown">
@@ -617,6 +617,7 @@ false as pressed)</scr:Expression>
               <p2:Enabled>false</p2:Enabled>
               <p2:Visible>false</p2:Visible>
               <p2:Font>Microsoft Sans Serif, 24pt</p2:Font>
+              <p2:Text />
               <p2:Multiline>true</p2:Multiline>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">

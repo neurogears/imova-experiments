@@ -99,7 +99,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT2.1S</rx:DueTime>
+                      <rx:DueTime>PT4.709S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -182,7 +182,7 @@
               <Property Name="Path" />
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
-              <Path>C:\Data\computeMD\tic</Path>
+              <Path>Data\CMD001\sitAlone</Path>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>EnableRecording</Name>
@@ -354,7 +354,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\computeMD\tic\2025-09-24T11-57-00\Instructions.csv</io:FileName>
+              <io:FileName>Data\CMD001\sitAlone\2025-10-01T07-53-14\Instructions.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -487,7 +487,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>C:\Data\computeMD\tic\2025-09-24T11-57-00\Behavior\Behavior_35.bin</harp:FileName>
+                                  <harp:FileName>Data\CMD001\sitAlone\2025-10-01T07-53-14\Behavior\Behavior_122.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -531,7 +531,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>C:\Data\computeMD\tic\2025-09-24T11-57-00\Behavior\device.yml</io:Path>
+                            <io:Path>Data\CMD001\sitAlone\2025-10-01T07-53-14\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -650,8 +650,9 @@
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 27.9000015pt</gui:Font>
               <gui:Text>
-Please touch 'Repeat' to repeat the task or 'Next' to continue
-</gui:Text>
+To record audio during SitAlone task  
+
+Start Bonsai before Qualisys!  </gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
@@ -665,8 +666,8 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
             </Expression>
             <Expression xsi:type="gui:ButtonBuilder">
               <gui:Name>Start</gui:Name>
-              <gui:Enabled>false</gui:Enabled>
-              <gui:Visible>false</gui:Visible>
+              <gui:Enabled>true</gui:Enabled>
+              <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50.1000023pt, style=Bold</gui:Font>
               <gui:Text>Start</gui:Text>
             </Expression>
@@ -689,7 +690,7 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50.1000023pt</gui:Font>
-              <gui:Text>-20</gui:Text>
+              <gui:Text>0</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
@@ -878,9 +879,7 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="StringProperty">
                       <Value>
-To record audio during SitAlone task  
-
-Start Bonsai before Qualisys!  </Value>
+To record audio during SitAlone task</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="MulticastSubject">

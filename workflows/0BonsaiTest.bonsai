@@ -184,7 +184,7 @@
               <Property Name="Path" />
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
-              <Path>C:\Data\computeMD\tablet</Path>
+              <Path>Data\CMD001\test</Path>
             </Expression>
             <Expression xsi:type="GroupWorkflow">
               <Name>LogHarp</Name>

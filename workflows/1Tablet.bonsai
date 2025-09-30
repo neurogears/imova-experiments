@@ -101,7 +101,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT2.593S</rx:DueTime>
+                      <rx:DueTime>PT4.341S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -184,7 +184,7 @@
               <Property Name="Path" />
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
-              <Path>C:\Data\computeMD\tablet</Path>
+              <Path>Data\CMD001\tablet</Path>
             </Expression>
             <Expression xsi:type="GroupWorkflow">
               <Name>LogHarp</Name>
@@ -313,7 +313,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>C:\Data\computeMD\tablet\2025-09-24T17-33-44\Behavior\Behavior_35.bin</harp:FileName>
+                                  <harp:FileName>C:\Data\computeMD\tablet\2025-09-27T07-13-17\Behavior\Behavior_122.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -357,7 +357,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>C:\Data\computeMD\tablet\2025-09-24T17-33-44\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\computeMD\tablet\2025-09-27T07-13-17\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -411,7 +411,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\computeMD\tablet\2025-09-24T17-33-44\keystrokes.csv</io:FileName>
+              <io:FileName>C:\Data\computeMD\tablet\2025-09-27T07-13-17\keystrokes.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -432,7 +432,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\computeMD\tablet\2025-09-24T17-33-44\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\computeMD\tablet\2025-09-27T07-13-17\Instructions.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -541,9 +541,7 @@
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 24pt</gui:Font>
-              <gui:Text>
-Please touch 'Repeat' to repeat the task or 'Next' to continue
-</gui:Text>
+              <gui:Text />
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="rx:BehaviorSubject" TypeArguments="p3:IplImage">
@@ -602,7 +600,7 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50pt</gui:Font>
-              <gui:Text>0</gui:Text>
+              <gui:Text>2</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
@@ -615,8 +613,8 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="gui:TableLayoutPanelBuilder">
-              <gui:Enabled>false</gui:Enabled>
-              <gui:Visible>false</gui:Visible>
+              <gui:Enabled>true</gui:Enabled>
+              <gui:Visible>true</gui:Visible>
               <gui:ColumnCount>2</gui:ColumnCount>
               <gui:RowCount>1</gui:RowCount>
               <gui:ColumnStyles>
@@ -872,8 +870,8 @@ Touch 'Start' when you are ready</Value>
             <Expression xsi:type="WorkflowOutput" />
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PenDigitizer.bonsai">
               <Size>
-                <Width>3840</Width>
-                <Height>2160</Height>
+                <Width>1920</Width>
+                <Height>1080</Height>
               </Size>
             </Expression>
             <Expression xsi:type="ExternalizedMapping">
@@ -1120,8 +1118,8 @@ Touch 'Start' when you are ready!</Value>
             <Expression xsi:type="WorkflowOutput" />
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PenDigitizer.bonsai">
               <Size>
-                <Width>3840</Width>
-                <Height>2160</Height>
+                <Width>1920</Width>
+                <Height>1080</Height>
               </Size>
             </Expression>
             <Expression xsi:type="ExternalizedMapping">
@@ -1376,8 +1374,8 @@ Trace the spirals!</Value>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PenDigitizer.bonsai">
               <Size>
-                <Width>3840</Width>
-                <Height>2160</Height>
+                <Width>1920</Width>
+                <Height>1080</Height>
               </Size>
             </Expression>
           </Nodes>
@@ -1619,8 +1617,8 @@ Trace the lines!</Value>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PenDigitizer.bonsai">
               <Size>
-                <Width>3840</Width>
-                <Height>2160</Height>
+                <Width>1920</Width>
+                <Height>1080</Height>
               </Size>
             </Expression>
           </Nodes>
@@ -1862,8 +1860,8 @@ Trace the lines!</Value>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PenDigitizer.bonsai">
               <Size>
-                <Width>3840</Width>
-                <Height>2160</Height>
+                <Width>1920</Width>
+                <Height>1080</Height>
               </Size>
             </Expression>
           </Nodes>
