@@ -100,7 +100,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT3.031S</rx:DueTime>
+                      <rx:DueTime>PT2.307S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -183,7 +183,7 @@
               <Property Name="Path" />
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
-              <Path>C:\Data\computeMD\microphone</Path>
+              <Path>C:\Data\computeMD\microphone\CMD001</Path>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>EnableRecording</Name>
@@ -251,7 +251,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="al:AudioWriter">
-                      <al:FileName>C:\Data\computeMD\microphone\2025-09-18T09-21-51\Audio.wav</al:FileName>
+                      <al:FileName>C:\Data\computeMD\microphone\2025-09-27T06-43-54\Audio.wav</al:FileName>
                       <al:Suffix>Timestamp</al:Suffix>
                       <al:Buffered>true</al:Buffered>
                       <al:Overwrite>false</al:Overwrite>
@@ -286,7 +286,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:\Data\computeMD\microphone\2025-09-18T09-21-51\Audio.csv</io:FileName>
+                    <io:FileName>C:\Data\computeMD\microphone\2025-09-27T06-43-54\Audio.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>Timestamp</io:Suffix>
@@ -380,7 +380,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:CameraCapture">
-                      <cv:Index>1</cv:Index>
+                      <cv:Index>0</cv:Index>
                       <cv:CaptureProperties />
                     </Combinator>
                   </Expression>
@@ -406,7 +406,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:VideoWriter">
-                      <cv:FileName>C:\Data\computeMD\microphone\2025-09-18T09-21-51\Video.avi</cv:FileName>
+                      <cv:FileName>C:\Data\computeMD\microphone\2025-09-27T06-43-54\Video.avi</cv:FileName>
                       <cv:Suffix>Timestamp</cv:Suffix>
                       <cv:Buffered>true</cv:Buffered>
                       <cv:Overwrite>false</cv:Overwrite>
@@ -447,7 +447,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:\Data\computeMD\microphone\2025-09-18T09-21-51\Video.csv</io:FileName>
+                    <io:FileName>C:\Data\computeMD\microphone\2025-09-27T06-43-54\Video.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>Timestamp</io:Suffix>
@@ -516,7 +516,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\computeMD\microphone\2025-09-24T16-56-25\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\computeMD\microphone\2025-09-27T06-43-54\Instructions.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -649,7 +649,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>C:\Data\computeMD\microphone\2025-09-24T16-56-25\Behavior\Behavior_35.bin</harp:FileName>
+                                  <harp:FileName>C:\Data\computeMD\microphone\2025-09-27T06-43-54\Behavior\Behavior_35.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -693,7 +693,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>C:\Data\computeMD\microphone\2025-09-24T16-56-25\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\computeMD\microphone\2025-09-27T06-43-54\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -814,11 +814,8 @@
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 27.9000015pt</gui:Font>
               <gui:Text>
-Over half a minute, could you tell me:  
 
-'How you spend an average day?'
-
-Touch 'Start' on the screen when you are ready!</gui:Text>
+'Mee' 5 times!</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
@@ -832,8 +829,8 @@ Touch 'Start' on the screen when you are ready!</gui:Text>
             </Expression>
             <Expression xsi:type="gui:ButtonBuilder">
               <gui:Name>Start</gui:Name>
-              <gui:Enabled>true</gui:Enabled>
-              <gui:Visible>true</gui:Visible>
+              <gui:Enabled>false</gui:Enabled>
+              <gui:Visible>false</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50.1000023pt, style=Bold</gui:Font>
               <gui:Text>Start</gui:Text>
             </Expression>
@@ -856,7 +853,7 @@ Touch 'Start' on the screen when you are ready!</gui:Text>
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50.1000023pt</gui:Font>
-              <gui:Text>0</gui:Text>
+              <gui:Text>2</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
@@ -869,8 +866,8 @@ Touch 'Start' on the screen when you are ready!</gui:Text>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="gui:TableLayoutPanelBuilder">
-              <gui:Enabled>false</gui:Enabled>
-              <gui:Visible>false</gui:Visible>
+              <gui:Enabled>true</gui:Enabled>
+              <gui:Visible>true</gui:Visible>
               <gui:ColumnCount>2</gui:ColumnCount>
               <gui:RowCount>1</gui:RowCount>
               <gui:ColumnStyles>
