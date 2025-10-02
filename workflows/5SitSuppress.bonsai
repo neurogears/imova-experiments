@@ -182,7 +182,7 @@
               <Property Name="Path" />
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
-              <Path>Data\CMD001\sitSuppress</Path>
+              <Path>C:\Data\sitSuppress</Path>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>EnableRecording</Name>
@@ -933,7 +933,7 @@ Start Bonsai before Qualisys!  </Value>
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="IntProperty">
-                      <Value>50</Value>
+                      <Value>45</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -976,7 +976,7 @@ Start Bonsai before Qualisys!  </Value>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="StringProperty">
                       <Value>
-As per powerpoint.</Value>
+Same as QTM</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="MulticastSubject">

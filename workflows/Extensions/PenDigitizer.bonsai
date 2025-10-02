@@ -64,8 +64,8 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="cv:CreatePoint">
-          <cv:X>430</cv:X>
-          <cv:Y>324</cv:Y>
+          <cv:X>1239</cv:X>
+          <cv:Y>385</cv:Y>
         </Combinator>
       </Expression>
       <Expression xsi:type="PropertyMapping">
