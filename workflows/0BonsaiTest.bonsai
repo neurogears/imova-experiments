@@ -101,7 +101,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT4.301S</rx:DueTime>
+                      <rx:DueTime>PT2.868S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -184,7 +184,7 @@
               <Property Name="Path" />
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
-              <Path>Data\CMD001\test</Path>
+              <Path>C:\Data\test</Path>
             </Expression>
             <Expression xsi:type="GroupWorkflow">
               <Name>LogHarp</Name>
@@ -313,7 +313,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>C:\Data\computeMD\tablet\2025-09-24T17-16-32\Behavior\Behavior_35.bin</harp:FileName>
+                                  <harp:FileName>Data\CMD001\test\2025-10-01T10-45-58\Behavior\Behavior_122.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -357,7 +357,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>C:\Data\computeMD\tablet\2025-09-24T17-16-32\Behavior\device.yml</io:Path>
+                            <io:Path>Data\CMD001\test\2025-10-01T10-45-58\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -411,7 +411,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\computeMD\tablet\2025-09-24T17-16-32\keystrokes.csv</io:FileName>
+              <io:FileName>Data\CMD001\test\2025-10-01T10-45-58\keystrokes.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -432,7 +432,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\computeMD\tablet\2025-09-24T17-16-32\Instructions.csv</io:FileName>
+              <io:FileName>Data\CMD001\test\2025-10-01T10-45-58\Instructions.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -759,6 +759,7 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue</gui:Text>
             <Expression xsi:type="MulticastSubject">
               <Name>EnableStart</Name>
             </Expression>
+            <Expression xsi:type="IncludeWorkflow" Path="Extensions\clearCanvas.bonsai" />
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="BooleanProperty">
                 <Value>false</Value>
@@ -792,9 +793,9 @@ Touch 'Start' to continue!</Value>
             <Edge From="0" To="1" Label="Source1" />
             <Edge From="1" To="2" Label="Source1" />
             <Edge From="4" To="5" Label="Source1" />
-            <Edge From="6" To="7" Label="Source1" />
-            <Edge From="8" To="9" Label="Source1" />
+            <Edge From="7" To="8" Label="Source1" />
             <Edge From="9" To="10" Label="Source1" />
+            <Edge From="10" To="11" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -871,8 +872,8 @@ Touch 'Start' to continue!</Value>
             <Expression xsi:type="WorkflowOutput" />
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PenDigitizer.bonsai">
               <Size>
-                <Width>3840</Width>
-                <Height>2160</Height>
+                <Width>1920</Width>
+                <Height>1080</Height>
               </Size>
             </Expression>
             <Expression xsi:type="ExternalizedMapping">
@@ -1109,8 +1110,8 @@ When you are ready for the next practice.  Please press 'Next'!</Value>
             <Expression xsi:type="WorkflowOutput" />
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PenDigitizer.bonsai">
               <Size>
-                <Width>3840</Width>
-                <Height>2160</Height>
+                <Width>1920</Width>
+                <Height>1080</Height>
               </Size>
             </Expression>
             <Expression xsi:type="ExternalizedMapping">

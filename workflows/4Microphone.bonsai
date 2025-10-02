@@ -183,7 +183,7 @@
               <Property Name="Path" />
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
-              <Path>C:\Data\computeMD\microphone\CMD001</Path>
+              <Path>C:\Data\microphone</Path>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>EnableRecording</Name>

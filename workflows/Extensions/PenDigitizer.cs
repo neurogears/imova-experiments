@@ -16,7 +16,7 @@ public class PenDigitizer
         return source.Select(value => {
             var point = value.Item1;
             var image = value.Item2;
-            CV.Circle(image, point, 5, Scalar.Rgb(255, 0, 0), -1);
+            CV.Circle(image, point, 2, Scalar.Rgb(255, 0, 0), -1);
             
             
             // Return the transformed point and image
