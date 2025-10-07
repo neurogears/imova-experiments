@@ -930,7 +930,7 @@ To record audio during SitAlone task</Value>
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="IntProperty">
-                      <Value>150</Value>
+                      <Value>155</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -973,7 +973,7 @@ To record audio during SitAlone task</Value>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="StringProperty">
                       <Value>
-Same as QTM time</Value>
+QTM time + 5s</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="MulticastSubject">
