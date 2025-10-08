@@ -121,7 +121,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT4.515S</rx:DueTime>
+                      <rx:DueTime>PT2.14S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -206,9 +206,11 @@
           <Nodes>
             <Expression xsi:type="ExternalizedMapping">
               <Property Name="Path" />
+              <Property Name="SubjectID" />
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
-              <Path>C:\Data\typing</Path>
+              <Path>C:\Data\imova\typing</Path>
+              <SubjectID>0</SubjectID>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="wie:KeyDown">
@@ -244,7 +246,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>Data\CMD001\typing\2025-10-02T09-48-20\keystrokes.csv</io:FileName>
+              <io:FileName>C:\Data\IMOVA\typing\b\2025-10-08T00-44-24\keystrokes.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -265,7 +267,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>Data\CMD001\typing\2025-10-02T09-48-20\text.csv</io:FileName>
+              <io:FileName>C:\Data\IMOVA\typing\b\2025-10-08T00-44-24\text.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -285,7 +287,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>Data\CMD001\typing\2025-10-02T09-48-20\text_input_start.csv</io:FileName>
+              <io:FileName>C:\Data\IMOVA\typing\b\2025-10-08T00-44-24\text_input_start.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -305,7 +307,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>Data\CMD001\typing\2025-10-02T09-48-20\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\IMOVA\typing\b\2025-10-08T00-44-24\Instructions.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -482,7 +484,7 @@ false as pressed)</scr:Expression>
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>Data\CMD001\typing\2025-10-02T09-48-20\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\typing\2\2025-10-07T23-56-33\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
