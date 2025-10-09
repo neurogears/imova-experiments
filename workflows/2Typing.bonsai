@@ -121,7 +121,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT4.515S</rx:DueTime>
+                      <rx:DueTime>PT4.808S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -244,7 +244,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>Data\CMD001\typing\2025-10-02T09-48-20\keystrokes.csv</io:FileName>
+              <io:FileName>C:\Data\typing\2025-10-07T11-28-48\keystrokes.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -265,7 +265,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>Data\CMD001\typing\2025-10-02T09-48-20\text.csv</io:FileName>
+              <io:FileName>C:\Data\typing\2025-10-07T11-28-48\text.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -285,7 +285,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>Data\CMD001\typing\2025-10-02T09-48-20\text_input_start.csv</io:FileName>
+              <io:FileName>C:\Data\typing\2025-10-07T11-28-48\text_input_start.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -305,7 +305,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>Data\CMD001\typing\2025-10-02T09-48-20\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\typing\2025-10-07T11-28-48\Instructions.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -438,7 +438,7 @@ false as pressed)</scr:Expression>
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>Data\CMD001\typing\2025-10-02T09-48-20\Behavior\Behavior_35.bin</harp:FileName>
+                                  <harp:FileName>C:\Data\typing\2025-10-07T11-28-48\Behavior\Behavior_122.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -482,7 +482,7 @@ false as pressed)</scr:Expression>
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>Data\CMD001\typing\2025-10-02T09-48-20\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\typing\2025-10-07T11-28-48\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -899,7 +899,11 @@ false as pressed)</scr:Expression>
 
 If you finish the phrase, press return to start a new line. 
 
-You have half a minute.
+Each phrase starts with a capital letter and ends with an exclamation mark.  
+
+You can edit your typing but please don't worry if you make a mistake.  
+
+You have half a minute to type as many repitations as you can, as accurately as you can.
 
 Touch 'Start' on the screen to begin!</Value>
               </Combinator>
@@ -1005,8 +1009,11 @@ Touch 'Start' on the screen to begin!</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Please type!
+                <Value>Please type ...
 
+Today is a sunny day!
+Today is a sunny day!
+Today is a sunny day!
 Today is a sunny day!
 Today is a sun ...</Value>
               </Combinator>
