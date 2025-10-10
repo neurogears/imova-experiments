@@ -99,7 +99,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT3.474S</rx:DueTime>
+                      <rx:DueTime>PT4.927S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -255,7 +255,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="al:AudioWriter">
-                      <al:FileName>Data\CMD001\sitSuppress\2025-10-01T07-48-39\Audio.wav</al:FileName>
+                      <al:FileName>C:\Data\sitSuppress\2025-10-07T12-48-13\Audio.wav</al:FileName>
                       <al:Suffix>Timestamp</al:Suffix>
                       <al:Buffered>true</al:Buffered>
                       <al:Overwrite>false</al:Overwrite>
@@ -290,7 +290,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>Data\CMD001\sitSuppress\2025-10-01T07-48-39\Audio.csv</io:FileName>
+                    <io:FileName>C:\Data\sitSuppress\2025-10-07T12-48-13\Audio.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>Timestamp</io:Suffix>
@@ -359,7 +359,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>Data\CMD001\sitSuppress\2025-10-01T07-48-39\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\sitSuppress\2025-10-07T12-48-13\Instructions.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -492,7 +492,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>Data\CMD001\sitSuppress\2025-10-01T07-48-39\Behavior\Behavior_35.bin</harp:FileName>
+                                  <harp:FileName>C:\Data\sitSuppress\2025-10-07T12-48-13\Behavior\Behavior_122.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -536,7 +536,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>Data\CMD001\sitSuppress\2025-10-01T07-48-39\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\sitSuppress\2025-10-07T12-48-13\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -654,10 +654,7 @@
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 27.9000015pt</gui:Font>
-              <gui:Text>
-As per powerpoint.
-
-+5 seconds compared to Qualisys time. </gui:Text>
+              <gui:Text>QTM + 5s</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
@@ -938,7 +935,7 @@ Start Bonsai before Qualisys!  </Value>
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="IntProperty">
-                      <Value>45</Value>
+                      <Value>50</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -980,8 +977,7 @@ Start Bonsai before Qualisys!  </Value>
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="StringProperty">
-                      <Value>
-Same as QTM</Value>
+                      <Value>QTM + 5s</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="MulticastSubject">

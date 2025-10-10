@@ -121,7 +121,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT4.779S</rx:DueTime>
+                      <rx:DueTime>PT4.808S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -907,7 +907,11 @@ Today is a sun ...</gui:Text>
 
 If you finish the phrase, press return to start a new line. 
 
-You have half a minute.
+Each phrase starts with a capital letter and ends with an exclamation mark.  
+
+You can edit your typing but please don't worry if you make a mistake.  
+
+You have half a minute to type as many repitations as you can, as accurately as you can.
 
 Touch 'Start' on the screen to begin!</Value>
               </Combinator>
@@ -1013,8 +1017,11 @@ Touch 'Start' on the screen to begin!</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Please type!
+                <Value>Please type ...
 
+Today is a sunny day!
+Today is a sunny day!
+Today is a sunny day!
 Today is a sunny day!
 Today is a sun ...</Value>
               </Combinator>
