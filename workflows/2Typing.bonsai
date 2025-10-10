@@ -199,6 +199,9 @@
           </Edges>
         </Workflow>
       </Expression>
+      <Expression xsi:type="ExternalizedMapping">
+        <Property Name="SubjectID" />
+      </Expression>
       <Expression xsi:type="GroupWorkflow">
         <Name>Logging</Name>
         <Description>Log all relevant streams</Description>
@@ -206,9 +209,11 @@
           <Nodes>
             <Expression xsi:type="ExternalizedMapping">
               <Property Name="Path" />
+              <Property Name="SubjectID" />
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
-              <Path>C:\Data\typing</Path>
+              <Path>C:\Data\imova\typing</Path>
+              <SubjectID>CMD312</SubjectID>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="wie:KeyDown">
@@ -244,7 +249,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\typing\2025-10-07T11-28-48\keystrokes.csv</io:FileName>
+              <io:FileName>C:\Data\imova\typing\0\2025-10-09T14-24-48\keystrokes.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -265,7 +270,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\typing\2025-10-07T11-28-48\text.csv</io:FileName>
+              <io:FileName>C:\Data\imova\typing\0\2025-10-09T14-24-48\text.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -285,7 +290,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\typing\2025-10-07T11-28-48\text_input_start.csv</io:FileName>
+              <io:FileName>C:\Data\imova\typing\0\2025-10-09T14-24-48\text_input_start.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -305,7 +310,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\typing\2025-10-07T11-28-48\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\imova\typing\0\2025-10-09T14-24-48\Instructions.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -438,7 +443,7 @@ false as pressed)</scr:Expression>
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>C:\Data\typing\2025-10-07T11-28-48\Behavior\Behavior_122.bin</harp:FileName>
+                                  <harp:FileName>C:\Data\imova\typing\0\2025-10-09T14-24-48\Behavior\Behavior_34.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -482,7 +487,7 @@ false as pressed)</scr:Expression>
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>C:\Data\typing\2025-10-07T11-28-48\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\imova\typing\0\2025-10-09T14-24-48\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -547,6 +552,7 @@ false as pressed)</scr:Expression>
       </Expression>
       <Expression xsi:type="GroupWorkflow">
         <Name>Subjects</Name>
+        <Description />
         <Workflow>
           <Nodes>
             <Expression xsi:type="Combinator">
@@ -615,7 +621,10 @@ false as pressed)</scr:Expression>
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 24pt</gui:Font>
-              <gui:Text>Chose Repeat or Next Task</gui:Text>
+              <gui:Text>Please type!
+
+Today is a sunny day!
+Today is a sun ...</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
@@ -639,10 +648,9 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="p2:TextBoxAutoFocusBuilder">
-              <p2:Enabled>false</p2:Enabled>
-              <p2:Visible>false</p2:Visible>
+              <p2:Enabled>true</p2:Enabled>
+              <p2:Visible>true</p2:Visible>
               <p2:Font>Microsoft Sans Serif, 24pt</p2:Font>
-              <p2:Text />
               <p2:Multiline>true</p2:Multiline>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -670,10 +678,10 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="gui:LabelBuilder">
-              <gui:Enabled>false</gui:Enabled>
-              <gui:Visible>false</gui:Visible>
+              <gui:Enabled>true</gui:Enabled>
+              <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50.1000023pt</gui:Font>
-              <gui:Text>0</gui:Text>
+              <gui:Text>25</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="gui:TableLayoutPanelBuilder">
@@ -726,8 +734,8 @@ false as pressed)</scr:Expression>
             </Expression>
             <Expression xsi:type="gui:ButtonBuilder">
               <gui:Name>Repeat</gui:Name>
-              <gui:Enabled>true</gui:Enabled>
-              <gui:Visible>true</gui:Visible>
+              <gui:Enabled>false</gui:Enabled>
+              <gui:Visible>false</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50pt, style=Bold</gui:Font>
               <gui:Text>Repeat</gui:Text>
             </Expression>
@@ -746,8 +754,8 @@ false as pressed)</scr:Expression>
             </Expression>
             <Expression xsi:type="gui:ButtonBuilder">
               <gui:Name>Next</gui:Name>
-              <gui:Enabled>true</gui:Enabled>
-              <gui:Visible>true</gui:Visible>
+              <gui:Enabled>false</gui:Enabled>
+              <gui:Visible>false</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50pt, style=Bold</gui:Font>
               <gui:Text>Next</gui:Text>
             </Expression>
@@ -1138,14 +1146,15 @@ Today is a sun ...</Value>
       <Expression xsi:type="WorkflowOutput" />
     </Nodes>
     <Edges>
-      <Edge From="3" To="4" Label="Source1" />
-      <Edge From="5" To="6" Label="Source1" />
+      <Edge From="1" To="2" Label="Source1" />
+      <Edge From="4" To="5" Label="Source1" />
       <Edge From="6" To="7" Label="Source1" />
       <Edge From="7" To="8" Label="Source1" />
       <Edge From="8" To="9" Label="Source1" />
-      <Edge From="9" To="11" Label="Source1" />
-      <Edge From="10" To="11" Label="Source2" />
-      <Edge From="11" To="12" Label="Source1" />
+      <Edge From="9" To="10" Label="Source1" />
+      <Edge From="10" To="12" Label="Source1" />
+      <Edge From="11" To="12" Label="Source2" />
+      <Edge From="12" To="13" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
