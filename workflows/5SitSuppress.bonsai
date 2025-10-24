@@ -7,8 +7,8 @@
                  xmlns:scr="clr-namespace:Bonsai.Scripting.Expressions;assembly=Bonsai.Scripting.Expressions"
                  xmlns:sys="clr-namespace:System;assembly=mscorlib"
                  xmlns:beh="clr-namespace:Harp.Behavior;assembly=Harp.Behavior"
-                 xmlns:al="clr-namespace:Bonsai.Audio;assembly=Bonsai.Audio"
                  xmlns:io="clr-namespace:Bonsai.IO;assembly=Bonsai.System"
+                 xmlns:al="clr-namespace:Bonsai.Audio;assembly=Bonsai.Audio"
                  xmlns:gui="clr-namespace:Bonsai.Gui;assembly=Bonsai.Gui"
                  xmlns:ui="clr-namespace:Bonsai.Design;assembly=Bonsai.Design"
                  xmlns="https://bonsai-rx.org/2018/workflow">
@@ -173,8 +173,19 @@
           </Edges>
         </Workflow>
       </Expression>
-      <Expression xsi:type="ExternalizedMapping">
-        <Property Name="SubjectID" />
+      <Expression xsi:type="io:CsvReader">
+        <io:FileName>subjectid.csv</io:FileName>
+        <io:SkipRows>0</io:SkipRows>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:Take">
+          <rx:Count>1</rx:Count>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="PropertyMapping">
+        <PropertyMappings>
+          <Property Name="SubjectID" />
+        </PropertyMappings>
       </Expression>
       <Expression xsi:type="GroupWorkflow">
         <Name>Logging</Name>
@@ -1091,8 +1102,10 @@ Start Bonsai before Qualisys!  </Value>
     </Nodes>
     <Edges>
       <Edge From="1" To="2" Label="Source1" />
-      <Edge From="4" To="5" Label="Source1" />
+      <Edge From="2" To="3" Label="Source1" />
+      <Edge From="3" To="4" Label="Source1" />
       <Edge From="6" To="7" Label="Source1" />
+      <Edge From="8" To="9" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
