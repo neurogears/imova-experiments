@@ -9,9 +9,10 @@
                  xmlns:beh="clr-namespace:Harp.Behavior;assembly=Harp.Behavior"
                  xmlns:io="clr-namespace:Bonsai.IO;assembly=Bonsai.System"
                  xmlns:p2="clr-namespace:Bonsai.Wintab;assembly=Bonsai.Wintab"
+                 xmlns:p3="clr-namespace:;assembly=Extensions"
                  xmlns:gui="clr-namespace:Bonsai.Gui;assembly=Bonsai.Gui"
-                 xmlns:p3="clr-namespace:OpenCV.Net;assembly=OpenCV.Net"
-                 xmlns:p4="clr-namespace:Bonsai.Vision.Design;assembly=Bonsai.Vision.Design"
+                 xmlns:p4="clr-namespace:OpenCV.Net;assembly=OpenCV.Net"
+                 xmlns:p5="clr-namespace:Bonsai.Vision.Design;assembly=Bonsai.Vision.Design"
                  xmlns:ui="clr-namespace:Bonsai.Design;assembly=Bonsai.Design"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
@@ -438,6 +439,9 @@
             <Expression xsi:type="SubscribeSubject">
               <Name>Instructions</Name>
             </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="p3:ToLiteral" />
+            </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\Timestamp.bonsai" />
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\FormatFileName.bonsai">
               <Name>Instructions.csv</Name>
@@ -480,10 +484,11 @@
             <Edge From="7" To="8" Label="Source2" />
             <Edge From="8" To="9" Label="Source1" />
             <Edge From="10" To="11" Label="Source1" />
-            <Edge From="11" To="14" Label="Source1" />
-            <Edge From="12" To="13" Label="Source1" />
-            <Edge From="13" To="14" Label="Source2" />
-            <Edge From="15" To="16" Label="Source1" />
+            <Edge From="11" To="12" Label="Source1" />
+            <Edge From="12" To="15" Label="Source1" />
+            <Edge From="13" To="14" Label="Source1" />
+            <Edge From="14" To="15" Label="Source2" />
+            <Edge From="16" To="17" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -562,11 +567,11 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
 </gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
-            <Expression xsi:type="rx:BehaviorSubject" TypeArguments="p3:IplImage">
+            <Expression xsi:type="rx:BehaviorSubject" TypeArguments="p4:IplImage">
               <rx:Name>TabletCanvas</rx:Name>
             </Expression>
             <Expression xsi:type="VisualizerMapping">
-              <VisualizerType xsi:type="TypeMapping" TypeArguments="p4:IplImageVisualizer" />
+              <VisualizerType xsi:type="TypeMapping" TypeArguments="p5:IplImageVisualizer" />
             </Expression>
             <Expression xsi:type="gui:TableLayoutPanelBuilder">
               <gui:Enabled>true</gui:Enabled>
