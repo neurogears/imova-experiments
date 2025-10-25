@@ -537,6 +537,7 @@
             </Expression>
             <Expression xsi:type="io:CsvWriter">
               <io:FileName>C:\Data\computeMD\microphone\2025-09-27T06-43-54\Instructions.csv</io:FileName>
+              <io:Delimiter>\t</io:Delimiter>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>

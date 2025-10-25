@@ -224,7 +224,7 @@
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
               <Path>C:\Data\imova\typing</Path>
-              <SubjectID>CMD312</SubjectID>
+              <SubjectID>bla2</SubjectID>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="wie:KeyDown">
@@ -260,7 +260,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\imova\typing\0\2025-10-09T14-24-48\keystrokes.csv</io:FileName>
+              <io:FileName>C:\Data\imova\typing\bla2\2025-10-25T13-34-13\keystrokes.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -287,7 +287,8 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\imova\typing\0\2025-10-09T14-24-48\text.csv</io:FileName>
+              <io:FileName>C:\Data\imova\typing\bla2\2025-10-25T13-34-13\text.csv</io:FileName>
+              <io:Delimiter>\t</io:Delimiter>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -307,7 +308,8 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\imova\typing\0\2025-10-09T14-24-48\text_input_start.csv</io:FileName>
+              <io:FileName>C:\Data\imova\typing\bla2\2025-10-25T13-34-13\text_input_start.csv</io:FileName>
+              <io:Delimiter>\t</io:Delimiter>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -330,7 +332,8 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\imova\typing\0\2025-10-09T14-24-48\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\imova\typing\bla2\2025-10-25T13-34-13\Instructions.csv</io:FileName>
+              <io:Delimiter>\t</io:Delimiter>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -644,10 +647,7 @@ false as pressed)</scr:Expression>
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 24pt</gui:Font>
-              <gui:Text>Please type!
-
-Today is a sunny day!
-Today is a sun ...</gui:Text>
+              <gui:Text>Chose Repeat or Next Task</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
@@ -671,8 +671,8 @@ Today is a sun ...</gui:Text>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="p2:TextBoxAutoFocusBuilder">
-              <p2:Enabled>true</p2:Enabled>
-              <p2:Visible>true</p2:Visible>
+              <p2:Enabled>false</p2:Enabled>
+              <p2:Visible>false</p2:Visible>
               <p2:Font>Microsoft Sans Serif, 24pt</p2:Font>
               <p2:Text />
               <p2:Multiline>true</p2:Multiline>
@@ -702,10 +702,10 @@ Today is a sun ...</gui:Text>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="gui:LabelBuilder">
-              <gui:Enabled>true</gui:Enabled>
-              <gui:Visible>true</gui:Visible>
+              <gui:Enabled>false</gui:Enabled>
+              <gui:Visible>false</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50.1000023pt</gui:Font>
-              <gui:Text>25</gui:Text>
+              <gui:Text>0</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="gui:TableLayoutPanelBuilder">
@@ -758,8 +758,8 @@ Today is a sun ...</gui:Text>
             </Expression>
             <Expression xsi:type="gui:ButtonBuilder">
               <gui:Name>Repeat</gui:Name>
-              <gui:Enabled>false</gui:Enabled>
-              <gui:Visible>false</gui:Visible>
+              <gui:Enabled>true</gui:Enabled>
+              <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50pt, style=Bold</gui:Font>
               <gui:Text>Repeat</gui:Text>
             </Expression>
@@ -778,8 +778,8 @@ Today is a sun ...</gui:Text>
             </Expression>
             <Expression xsi:type="gui:ButtonBuilder">
               <gui:Name>Next</gui:Name>
-              <gui:Enabled>false</gui:Enabled>
-              <gui:Visible>false</gui:Visible>
+              <gui:Enabled>true</gui:Enabled>
+              <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50pt, style=Bold</gui:Font>
               <gui:Text>Next</gui:Text>
             </Expression>

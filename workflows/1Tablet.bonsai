@@ -429,6 +429,7 @@
             </Expression>
             <Expression xsi:type="io:CsvWriter">
               <io:FileName>C:\Data\tablet\2025-10-07T12-29-22\keystrokes.csv</io:FileName>
+              <io:Delimiter>\t</io:Delimiter>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -453,6 +454,7 @@
             </Expression>
             <Expression xsi:type="io:CsvWriter">
               <io:FileName>C:\Data\tablet\2025-10-07T12-29-22\Instructions.csv</io:FileName>
+              <io:Delimiter>\t</io:Delimiter>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
