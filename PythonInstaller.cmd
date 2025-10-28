@@ -1,0 +1,1 @@
+powershell -ExecutionPolicy Bypass -File ./PythonInstaller.ps1

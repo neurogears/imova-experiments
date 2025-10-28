@@ -1,3 +1,5 @@
 .bonsai/*
+.venv
 !.bonsai/Bonsai.config
 workflows/obj/
+uv.lock
