@@ -187,7 +187,7 @@
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
               <Path>C:\Data\imova\sitAlone</Path>
-              <SubjectID />
+              <SubjectID>CMD998</SubjectID>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>EnableRecording</Name>
@@ -882,8 +882,18 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="StringProperty">
-                      <Value>
-To record audio during SitAlone task</Value>
+                      <Value>CONTROL REMAINS WITH QTM OPERATOR!!
+
+To record audio during SitAlone task
+
+Main screen should be off, use mirror monitor on desk.
+
+1.  Load QTM task
+2.  Load Bonsai workflow
+3.  Start Bonsai task
+4.  Press QTM  trigger
+5.  Stop after QTM task has finished
+</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="MulticastSubject">
@@ -935,7 +945,7 @@ To record audio during SitAlone task</Value>
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="IntProperty">
-                      <Value>155</Value>
+                      <Value>250</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -977,8 +987,7 @@ To record audio during SitAlone task</Value>
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="StringProperty">
-                      <Value>
-QTM time + 5s</Value>
+                      <Value>stop manually as per QTM timings</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="MulticastSubject">
