@@ -261,6 +261,7 @@ false as pressed)</scr:Expression>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
               <io:FileName>C:\Data\imova\typing\bla2\2025-10-25T13-34-13\keystrokes.csv</io:FileName>
+              <io:Delimiter>\t</io:Delimiter>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>

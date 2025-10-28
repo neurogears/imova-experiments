@@ -268,7 +268,7 @@
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="al:AudioWriter">
                       <al:FileName>Data\CMD001\sitAlone\2025-10-01T14-31-36\Audio.wav</al:FileName>
-                      <al:Suffix>Timestamp</al:Suffix>
+                      <al:Suffix>FileCount</al:Suffix>
                       <al:Buffered>true</al:Buffered>
                       <al:Overwrite>false</al:Overwrite>
                       <al:SampleRate>44100</al:SampleRate>
@@ -303,9 +303,10 @@
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
                     <io:FileName>Data\CMD001\sitAlone\2025-10-01T14-31-36\Audio.csv</io:FileName>
+                    <io:Delimiter>\t</io:Delimiter>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
-                    <io:Suffix>Timestamp</io:Suffix>
+                    <io:Suffix>FileCount</io:Suffix>
                     <io:IncludeHeader>true</io:IncludeHeader>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
