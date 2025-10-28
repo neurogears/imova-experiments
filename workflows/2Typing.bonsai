@@ -7,10 +7,10 @@
                  xmlns:p1="clr-namespace:Bonsai.Numerics.Distributions;assembly=Bonsai.Numerics"
                  xmlns:scr="clr-namespace:Bonsai.Scripting.Expressions;assembly=Bonsai.Scripting.Expressions"
                  xmlns:sys="clr-namespace:System;assembly=mscorlib"
-                 xmlns:wie="clr-namespace:Bonsai.Windows.Input;assembly=Bonsai.Windows.Input"
                  xmlns:io="clr-namespace:Bonsai.IO;assembly=Bonsai.System"
-                 xmlns:gui="clr-namespace:Bonsai.Gui;assembly=Bonsai.Gui"
+                 xmlns:wie="clr-namespace:Bonsai.Windows.Input;assembly=Bonsai.Windows.Input"
                  xmlns:p2="clr-namespace:;assembly=Extensions"
+                 xmlns:gui="clr-namespace:Bonsai.Gui;assembly=Bonsai.Gui"
                  xmlns:ui="clr-namespace:Bonsai.Design;assembly=Bonsai.Design"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
@@ -199,8 +199,19 @@
           </Edges>
         </Workflow>
       </Expression>
-      <Expression xsi:type="ExternalizedMapping">
-        <Property Name="SubjectID" />
+      <Expression xsi:type="io:CsvReader">
+        <io:FileName>subjectid.csv</io:FileName>
+        <io:SkipRows>0</io:SkipRows>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:Take">
+          <rx:Count>1</rx:Count>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="PropertyMapping">
+        <PropertyMappings>
+          <Property Name="SubjectID" />
+        </PropertyMappings>
       </Expression>
       <Expression xsi:type="GroupWorkflow">
         <Name>Logging</Name>
@@ -213,7 +224,7 @@
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
               <Path>C:\Data\imova\typing</Path>
-              <SubjectID>CMD312</SubjectID>
+              <SubjectID>bla2</SubjectID>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="wie:KeyDown">
@@ -249,7 +260,7 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\imova\typing\0\2025-10-09T14-24-48\keystrokes.csv</io:FileName>
+              <io:FileName>C:\Data\imova\typing\bla2\2025-10-25T13-34-13\keystrokes.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -259,6 +270,12 @@ false as pressed)</scr:Expression>
             <Expression xsi:type="WorkflowOutput" />
             <Expression xsi:type="SubscribeSubject">
               <Name>Text</Name>
+            </Expression>
+            <Expression xsi:type="scr:ExpressionCondition">
+              <scr:Expression>!String.IsNullOrEmpty(it)</scr:Expression>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="p2:ToLiteral" />
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\Timestamp.bonsai" />
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\FormatFileName.bonsai">
@@ -270,7 +287,8 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\imova\typing\0\2025-10-09T14-24-48\text.csv</io:FileName>
+              <io:FileName>C:\Data\imova\typing\bla2\2025-10-25T13-34-13\text.csv</io:FileName>
+              <io:Delimiter>\t</io:Delimiter>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -290,7 +308,8 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\imova\typing\0\2025-10-09T14-24-48\text_input_start.csv</io:FileName>
+              <io:FileName>C:\Data\imova\typing\bla2\2025-10-25T13-34-13\text_input_start.csv</io:FileName>
+              <io:Delimiter>\t</io:Delimiter>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -299,6 +318,9 @@ false as pressed)</scr:Expression>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>Instructions</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="p2:ToLiteral" />
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\Timestamp.bonsai" />
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\FormatFileName.bonsai">
@@ -310,7 +332,8 @@ false as pressed)</scr:Expression>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\imova\typing\0\2025-10-09T14-24-48\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\imova\typing\bla2\2025-10-25T13-34-13\Instructions.csv</io:FileName>
+              <io:Delimiter>\t</io:Delimiter>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -536,17 +559,20 @@ false as pressed)</scr:Expression>
             <Edge From="9" To="10" Label="Source2" />
             <Edge From="10" To="11" Label="Source1" />
             <Edge From="12" To="13" Label="Source1" />
-            <Edge From="13" To="16" Label="Source1" />
+            <Edge From="13" To="14" Label="Source1" />
             <Edge From="14" To="15" Label="Source1" />
-            <Edge From="15" To="16" Label="Source2" />
-            <Edge From="17" To="18" Label="Source1" />
-            <Edge From="18" To="21" Label="Source1" />
+            <Edge From="15" To="18" Label="Source1" />
+            <Edge From="16" To="17" Label="Source1" />
+            <Edge From="17" To="18" Label="Source2" />
             <Edge From="19" To="20" Label="Source1" />
-            <Edge From="20" To="21" Label="Source2" />
-            <Edge From="22" To="23" Label="Source1" />
-            <Edge From="23" To="26" Label="Source1" />
+            <Edge From="20" To="23" Label="Source1" />
+            <Edge From="21" To="22" Label="Source1" />
+            <Edge From="22" To="23" Label="Source2" />
             <Edge From="24" To="25" Label="Source1" />
-            <Edge From="25" To="26" Label="Source2" />
+            <Edge From="25" To="26" Label="Source1" />
+            <Edge From="26" To="29" Label="Source1" />
+            <Edge From="27" To="28" Label="Source1" />
+            <Edge From="28" To="29" Label="Source2" />
           </Edges>
         </Workflow>
       </Expression>
@@ -621,10 +647,7 @@ false as pressed)</scr:Expression>
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 24pt</gui:Font>
-              <gui:Text>Please type!
-
-Today is a sunny day!
-Today is a sun ...</gui:Text>
+              <gui:Text>Chose Repeat or Next Task</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
@@ -648,9 +671,10 @@ Today is a sun ...</gui:Text>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="p2:TextBoxAutoFocusBuilder">
-              <p2:Enabled>true</p2:Enabled>
-              <p2:Visible>true</p2:Visible>
+              <p2:Enabled>false</p2:Enabled>
+              <p2:Visible>false</p2:Visible>
               <p2:Font>Microsoft Sans Serif, 24pt</p2:Font>
+              <p2:Text />
               <p2:Multiline>true</p2:Multiline>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -678,10 +702,10 @@ Today is a sun ...</gui:Text>
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="gui:LabelBuilder">
-              <gui:Enabled>true</gui:Enabled>
-              <gui:Visible>true</gui:Visible>
+              <gui:Enabled>false</gui:Enabled>
+              <gui:Visible>false</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50.1000023pt</gui:Font>
-              <gui:Text>25</gui:Text>
+              <gui:Text>0</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="gui:TableLayoutPanelBuilder">
@@ -734,8 +758,8 @@ Today is a sun ...</gui:Text>
             </Expression>
             <Expression xsi:type="gui:ButtonBuilder">
               <gui:Name>Repeat</gui:Name>
-              <gui:Enabled>false</gui:Enabled>
-              <gui:Visible>false</gui:Visible>
+              <gui:Enabled>true</gui:Enabled>
+              <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50pt, style=Bold</gui:Font>
               <gui:Text>Repeat</gui:Text>
             </Expression>
@@ -754,8 +778,8 @@ Today is a sun ...</gui:Text>
             </Expression>
             <Expression xsi:type="gui:ButtonBuilder">
               <gui:Name>Next</gui:Name>
-              <gui:Enabled>false</gui:Enabled>
-              <gui:Visible>false</gui:Visible>
+              <gui:Enabled>true</gui:Enabled>
+              <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50pt, style=Bold</gui:Font>
               <gui:Text>Next</gui:Text>
             </Expression>
@@ -1147,14 +1171,16 @@ Today is a sun ...</Value>
     </Nodes>
     <Edges>
       <Edge From="1" To="2" Label="Source1" />
-      <Edge From="4" To="5" Label="Source1" />
+      <Edge From="2" To="3" Label="Source1" />
+      <Edge From="3" To="4" Label="Source1" />
       <Edge From="6" To="7" Label="Source1" />
-      <Edge From="7" To="8" Label="Source1" />
       <Edge From="8" To="9" Label="Source1" />
       <Edge From="9" To="10" Label="Source1" />
-      <Edge From="10" To="12" Label="Source1" />
-      <Edge From="11" To="12" Label="Source2" />
-      <Edge From="12" To="13" Label="Source1" />
+      <Edge From="10" To="11" Label="Source1" />
+      <Edge From="11" To="12" Label="Source1" />
+      <Edge From="12" To="14" Label="Source1" />
+      <Edge From="13" To="14" Label="Source2" />
+      <Edge From="14" To="15" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
