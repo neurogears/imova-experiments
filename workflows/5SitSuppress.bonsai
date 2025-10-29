@@ -7,8 +7,9 @@
                  xmlns:scr="clr-namespace:Bonsai.Scripting.Expressions;assembly=Bonsai.Scripting.Expressions"
                  xmlns:sys="clr-namespace:System;assembly=mscorlib"
                  xmlns:beh="clr-namespace:Harp.Behavior;assembly=Harp.Behavior"
-                 xmlns:al="clr-namespace:Bonsai.Audio;assembly=Bonsai.Audio"
                  xmlns:io="clr-namespace:Bonsai.IO;assembly=Bonsai.System"
+                 xmlns:al="clr-namespace:Bonsai.Audio;assembly=Bonsai.Audio"
+                 xmlns:p2="clr-namespace:;assembly=Extensions"
                  xmlns:gui="clr-namespace:Bonsai.Gui;assembly=Bonsai.Gui"
                  xmlns:ui="clr-namespace:Bonsai.Design;assembly=Bonsai.Design"
                  xmlns="https://bonsai-rx.org/2018/workflow">
@@ -173,8 +174,19 @@
           </Edges>
         </Workflow>
       </Expression>
-      <Expression xsi:type="ExternalizedMapping">
-        <Property Name="SubjectID" />
+      <Expression xsi:type="io:CsvReader">
+        <io:FileName>subjectid.csv</io:FileName>
+        <io:SkipRows>0</io:SkipRows>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:Take">
+          <rx:Count>1</rx:Count>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="PropertyMapping">
+        <PropertyMappings>
+          <Property Name="SubjectID" />
+        </PropertyMappings>
       </Expression>
       <Expression xsi:type="GroupWorkflow">
         <Name>Logging</Name>
@@ -255,8 +267,8 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="al:AudioWriter">
-                      <al:FileName>C:\Data\imova\sitSuppress\CMD348\2025-10-15T13-17-51\Audio.wav</al:FileName>
-                      <al:Suffix>Timestamp</al:Suffix>
+                      <al:FileName>C:\Data\sitSuppress\2025-10-07T12-48-13\Audio.wav</al:FileName>
+                      <al:Suffix>FileCount</al:Suffix>
                       <al:Buffered>true</al:Buffered>
                       <al:Overwrite>false</al:Overwrite>
                       <al:SampleRate>44100</al:SampleRate>
@@ -290,10 +302,11 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:\Data\imova\sitSuppress\CMD348\2025-10-15T13-17-51\Audio.csv</io:FileName>
+                    <io:FileName>C:\Data\sitSuppress\2025-10-07T12-48-13\Audio.csv</io:FileName>
+                    <io:Delimiter>\t</io:Delimiter>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
-                    <io:Suffix>Timestamp</io:Suffix>
+                    <io:Suffix>FileCount</io:Suffix>
                     <io:IncludeHeader>true</io:IncludeHeader>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
@@ -349,6 +362,9 @@
             <Expression xsi:type="SubscribeSubject">
               <Name>Instructions</Name>
             </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="p2:ToLiteral" />
+            </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\Timestamp.bonsai" />
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\FormatFileName.bonsai">
               <Name>Instructions.csv</Name>
@@ -359,7 +375,8 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\imova\sitSuppress\CMD348\2025-10-15T13-17-51\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\sitSuppress\2025-10-07T12-48-13\Instructions.csv</io:FileName>
+              <io:Delimiter>\t</io:Delimiter>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -578,9 +595,10 @@
             <Edge From="2" To="3" Label="Source1" />
             <Edge From="3" To="4" Label="Source1" />
             <Edge From="5" To="6" Label="Source1" />
-            <Edge From="6" To="9" Label="Source1" />
-            <Edge From="7" To="8" Label="Source1" />
-            <Edge From="8" To="9" Label="Source2" />
+            <Edge From="6" To="7" Label="Source1" />
+            <Edge From="7" To="10" Label="Source1" />
+            <Edge From="8" To="9" Label="Source1" />
+            <Edge From="9" To="10" Label="Source2" />
           </Edges>
         </Workflow>
       </Expression>
@@ -1102,8 +1120,10 @@ VERBALLY TELL PARTICIPANT WHEN 30 SECONDS IS UP
     </Nodes>
     <Edges>
       <Edge From="1" To="2" Label="Source1" />
-      <Edge From="4" To="5" Label="Source1" />
+      <Edge From="2" To="3" Label="Source1" />
+      <Edge From="3" To="4" Label="Source1" />
       <Edge From="6" To="7" Label="Source1" />
+      <Edge From="8" To="9" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
