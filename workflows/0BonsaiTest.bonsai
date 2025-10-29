@@ -189,7 +189,7 @@
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
               <Path>C:\Data\imova\test</Path>
-              <SubjectID />
+              <SubjectID>CMD998</SubjectID>
             </Expression>
             <Expression xsi:type="GroupWorkflow">
               <Name>LogHarp</Name>

@@ -104,7 +104,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT4.305S</rx:DueTime>
+                      <rx:DueTime>PT3.19S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -203,7 +203,7 @@
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
               <Path>C:\Data\imova\webcam</Path>
-              <SubjectID />
+              <SubjectID>CMD998</SubjectID>
             </Expression>
             <Expression xsi:type="GroupWorkflow">
               <Name>LogHarp</Name>
@@ -332,7 +332,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>C:\Data\webcam\2025-10-02T09-54-38\Behavior\Behavior_35.bin</harp:FileName>
+                                  <harp:FileName>C:\Data\imova\webcam\CMD198\2025-10-21T09-13-38\Behavior\Behavior_122.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -376,7 +376,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>C:\Data\webcam\2025-10-02T09-54-38\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\imova\webcam\CMD198\2025-10-21T09-13-38\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -844,9 +844,7 @@
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 24pt</gui:Font>
-              <gui:Text>
-Please look at camera in a neutral pose as if having passport photos taken!
-</gui:Text>
+              <gui:Text>Chose Repeat or Next Task</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="rx:BehaviorSubject" TypeArguments="p3:IplImage">
@@ -900,7 +898,7 @@ Please look at camera in a neutral pose as if having passport photos taken!
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50pt</gui:Font>
-              <gui:Text>10</gui:Text>
+              <gui:Text>0</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
@@ -913,8 +911,8 @@ Please look at camera in a neutral pose as if having passport photos taken!
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="gui:TableLayoutPanelBuilder">
-              <gui:Enabled>true</gui:Enabled>
-              <gui:Visible>true</gui:Visible>
+              <gui:Enabled>false</gui:Enabled>
+              <gui:Visible>false</gui:Visible>
               <gui:ColumnCount>2</gui:ColumnCount>
               <gui:RowCount>1</gui:RowCount>
               <gui:ColumnStyles />
@@ -1071,13 +1069,13 @@ Please look at camera in a neutral pose as if having passport photos taken!
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
                 <Value>
-First we are going to check that your image is in the centre.  
+First we are going to check that your face is close to the centre of the screen
 
-During these tasks look at the camera.  
+During all these tasks look at the camera and we will tell you when it ends. 
 
-You need to lightly touch buttons on the screen to progress.
+As before you lightly touch buttons on the screen to progress.
 
-Lets practice this now. Press 'Start'!</Value>
+When you are ready to start this block of tasks - press 'Start'</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1220,11 +1218,13 @@ Lets practice this now. Press 'Start'!</Value>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
                 <Value>
-Please look at the camera with a 'neutral' expression as if you were having a passport photo taken.
+Please look at the camera with a 'neutral' expression.
 
-The task will last for 20 seconds.
+The task is only half a minute but will feel like a long time.  
 
-Touch 'Start' on the screen when you are ready!</Value>
+Remember to try and stay as still as you can - as if you were having a passport photo taken.
+
+Touch 'Start' on the screen when you are ready! We will tell when the task has finished.</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1276,7 +1276,7 @@ Touch 'Start' on the screen when you are ready!</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>20</Value>
+                <Value>30</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -1319,7 +1319,7 @@ Touch 'Start' on the screen when you are ready!</Value>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
                 <Value>
-Please look at camera in a neutral pose as if having passport photos taken!
+Please look at the camera in a neutral pose as if having a passport photos taken!
 </Value>
               </Combinator>
             </Expression>
@@ -1515,10 +1515,9 @@ Please touch 'Repeat' to repeat task or 'Next' to continue
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>
-The first task is to screw up your eyes tightly for 2 seconds and then open them.
+                <Value>Now please screw up your eyes tightly for 2 seconds and then open them.
 
-Start by looking at the camera and then close your eyes.
+Start by looking at the camera and then screw up your eyes.
 
 Touch 'Start' on the screen when you are ready!</Value>
               </Combinator>
@@ -1572,7 +1571,7 @@ Touch 'Start' on the screen when you are ready!</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>4</Value>
+                <Value>5</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -1614,8 +1613,7 @@ Touch 'Start' on the screen when you are ready!</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>
-Close your eyes for 2 seconds and then open!</Value>
+                <Value>Screw up your eyes for 2 seconds and then open!</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1781,12 +1779,11 @@ Please touch 'Repeat' to repeat task or 'Next' to continue</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>
-In the next task we ask you to 'open and close your eyes' 
+                <Value>Now please 'open and close your eyes' 
 
-Please repeat blinking until the task ends.
+Please open your eyes fully and blink deliberately.
 
-Touch 'Start' on the screen when you are ready!</Value>
+Touch 'Start' on the screen when you are ready! We will tell when the task has finished</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1838,7 +1835,7 @@ Touch 'Start' on the screen when you are ready!</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>6</Value>
+                <Value>11</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -2051,11 +2048,9 @@ Please touch 'Repeat' to repeat task or 'Next' to continue
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
                 <Value>
-For the next task 'open your mouth' wide 
+For the next task OPEN your mouth' wide 
 
-Please hold open until the task ends.
-
-Touch 'Start' on the screen when you are ready!</Value>
+Touch 'Start' on the screen when you are ready! We will tell when the task has finished</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -2348,9 +2343,9 @@ Please touch 'Repeat' to repeat task or 'Next' to continue
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
                 <Value>
-The next task is 'open and close your mouth' as wide as you can
+The next task is to 'OPEN and CLOSE your mouth' as wide as you can
 
-Please repeat this until the task ends.  
+Please repeat this until we tell you the task has ended.
 
 Touch 'Start' on the screen when you are ready!</Value>
               </Combinator>
@@ -2404,7 +2399,7 @@ Touch 'Start' on the screen when you are ready!</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>6</Value>
+                <Value>11</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -2643,9 +2638,9 @@ Look at the camera!
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
                 <Value>
-The next tasks asks you to  'purse your lips' as if you were going to blow a kiss to someone
+The next tasks asks you to 'purse your lips' as if you were going to blow a kiss to someone
 
-Hold the pose for a few seconds
+Hold the pose until we tell you that the task has finished.
 
 Touch 'Start' on the screen when you are ready!</Value>
               </Combinator>
@@ -2699,7 +2694,7 @@ Touch 'Start' on the screen when you are ready!</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>4</Value>
+                <Value>5</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -2942,7 +2937,7 @@ Please touch 'Repeat' to repeat task or 'Next' to continue
                 <Value>
 The last camera tasks asks you to 'stick out your tongue' as far as possible.
 
-Hold it out fully until the task ends.
+Hold it out fully until we tell you task has finished.  This is a test of sustained hold of the tongue and lasts 10s. We will tell you when the task finishes.
 
 Touch 'Start' on the screen when you are ready!</Value>
               </Combinator>

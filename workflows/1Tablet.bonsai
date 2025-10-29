@@ -102,7 +102,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT4.538S</rx:DueTime>
+                      <rx:DueTime>PT3.679S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -201,7 +201,7 @@
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
               <Path>C:\Data\imova\tablet</Path>
-              <SubjectID />
+              <SubjectID>CMD998</SubjectID>
             </Expression>
             <Expression xsi:type="GroupWorkflow">
               <Name>LogHarp</Name>
@@ -330,7 +330,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>C:\Data\tablet\2025-10-07T12-29-22\Behavior\Behavior_35.bin</harp:FileName>
+                                  <harp:FileName>C:\Data\imova\tablet\CMD198\2025-10-21T09-03-41\Behavior\Behavior_35.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -374,7 +374,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>C:\Data\tablet\2025-10-07T12-29-22\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\imova\tablet\CMD198\2025-10-21T09-03-41\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -797,11 +797,11 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>On each line please write: 'Today is a sunny day!'
+                <Value>Please check you have a sheet with 'Today is a sunny day!' at the top.
+
+On each line please write this phrase with a capital at the start and exclamation mark at end.
 
 Start a new line if you finish the phrase.  
-
-Place the other hand on the top of the table.  
 
 You have half a minute.  Touch 'Start' when you are ready</Value>
               </Combinator>
@@ -906,9 +906,7 @@ You have half a minute.  Touch 'Start' when you are ready</Value>
 Please write!
 
 Today is a sunny day!
-
 Today is a sunny day!
-
 Today is a ...</Value>
               </Combinator>
             </Expression>
@@ -1044,10 +1042,11 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>
-Now with the RIGHT hand. Draw both spirals starting at the centre and moving outwards.  Keep your hand/arm OFF the tablet while you draw.  
+                <Value>Please change the paper, putting your writing to the bottom and check you have paper with spirals in front of you.
 
-Rest the hand you are not using on the table.
+Now with the RIGHT hand. Starting with the larger spiral, trace both spirals starting at the centre and MOVING OUT.  
+
+Keep your hand/arm OFF the tablet while you draw.  
 
 If you finish please put the pen down and wait for the next task.
 
@@ -1102,7 +1101,7 @@ Touch 'Start' when you are ready!</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>30</Value>
+                <Value>40</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -1286,10 +1285,9 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>
-Now with the LEFT hand.  Draw both spirals starting at the CENTRE and moving outwards.  Keep your hand / arm OFF the tablet while you draw. 
+                <Value>Now put the pen on the left side as we will repeat with the LEFT hand!  
 
-Also remember to rest the hand you are not using on the table!
+Instrucions are the same as before.  Starting with the larger spiral, trace both spirals starting at the centre and MOVING OUT. Keep your hand / arm OFF the tablet while you draw. 
 
 If you finish please put the pen down and wait for the next task.
 
@@ -1346,7 +1344,7 @@ Touch 'Start' when you are ready!
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>30</Value>
+                <Value>40</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -1530,9 +1528,11 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>With the RIGHT hand, draw 3 horizontal lines connecting the dot then 3 vertical lines connecting the dots
+                <Value>Now please change the paper again, putting the spirals to the bottom and check have a set of coloured blocks and dots in front of you. Place the pen on the right, ready to draw with the RIGHT HAND.
 
-Similar to the spirals, keep your hand / arm OFF the tablet while you draw and keep the other hand on the table.
+Please draw 3 horizontal lines connecting the dots and then 3 vertical lines connecting the dots.  [Choice of direction is up to you]
+
+Keep your hand / arm OFF the tablet while you draw.
 
 If you finish please put the pen down and wait for the next task.
 
@@ -1589,7 +1589,7 @@ Touch 'Start' when you are ready!
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>20</Value>
+                <Value>30</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -1773,9 +1773,11 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>With the LEFT hand, please draw 3 horizontal lines connecting the dots then 3 vertical lines connecting the dots
+                <Value>Now move the pen to the left side so that you are ready to repeat the task on the left.
 
-Similar to the spirals, keep your hand / arm OFF the tablet while you draw and keep the other hand on the table.
+Please repeat so that you draw 3 horizontal lines connecting the dots and then 3 vertical lines connecting the dots. [Choice of direction is up to you]
+
+Keep your hand / arm OFF the tablet while you draw.
 
 If you finish please put the pen down and wait for the next task.
 
@@ -1832,7 +1834,7 @@ Touch 'Start' when you are ready!
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>20</Value>
+                <Value>30</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
