@@ -7,8 +7,8 @@
                  xmlns:scr="clr-namespace:Bonsai.Scripting.Expressions;assembly=Bonsai.Scripting.Expressions"
                  xmlns:sys="clr-namespace:System;assembly=mscorlib"
                  xmlns:beh="clr-namespace:Harp.Behavior;assembly=Harp.Behavior"
-                 xmlns:al="clr-namespace:Bonsai.Audio;assembly=Bonsai.Audio"
                  xmlns:io="clr-namespace:Bonsai.IO;assembly=Bonsai.System"
+                 xmlns:al="clr-namespace:Bonsai.Audio;assembly=Bonsai.Audio"
                  xmlns:cv="clr-namespace:Bonsai.Vision;assembly=Bonsai.Vision"
                  xmlns:gui="clr-namespace:Bonsai.Gui;assembly=Bonsai.Gui"
                  xmlns:ui="clr-namespace:Bonsai.Design;assembly=Bonsai.Design"
@@ -100,7 +100,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT4.638S</rx:DueTime>
+                      <rx:DueTime>PT2.94S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -174,8 +174,19 @@
           </Edges>
         </Workflow>
       </Expression>
-      <Expression xsi:type="ExternalizedMapping">
-        <Property Name="SubjectID" />
+      <Expression xsi:type="io:CsvReader">
+        <io:FileName>subjectid.csv</io:FileName>
+        <io:SkipRows>0</io:SkipRows>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:Take">
+          <rx:Count>1</rx:Count>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="PropertyMapping">
+        <PropertyMappings>
+          <Property Name="SubjectID" />
+        </PropertyMappings>
       </Expression>
       <Expression xsi:type="GroupWorkflow">
         <Name>Logging</Name>
@@ -188,7 +199,7 @@
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
               <Path>C:\Data\imova\microphone</Path>
-              <SubjectID>CMD998</SubjectID>
+              <SubjectID>CMD999</SubjectID>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>EnableRecording</Name>
@@ -256,7 +267,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="al:AudioWriter">
-                      <al:FileName>C:\Data\imova\microphone\CMD084\2025-10-15T10-27-18\Audio.wav</al:FileName>
+                      <al:FileName>C:\Data\imova\microphone\CMD999\2025-10-29T09-57-01\Audio.wav</al:FileName>
                       <al:Suffix>Timestamp</al:Suffix>
                       <al:Buffered>true</al:Buffered>
                       <al:Overwrite>false</al:Overwrite>
@@ -291,7 +302,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:\Data\imova\microphone\CMD084\2025-10-15T10-27-18\Audio.csv</io:FileName>
+                    <io:FileName>C:\Data\imova\microphone\CMD999\2025-10-29T09-57-01\Audio.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>Timestamp</io:Suffix>
@@ -411,7 +422,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:VideoWriter">
-                      <cv:FileName>C:\Data\imova\microphone\CMD084\2025-10-15T10-27-18\Video.avi</cv:FileName>
+                      <cv:FileName>C:\Data\imova\microphone\CMD999\2025-10-29T09-57-01\Video.avi</cv:FileName>
                       <cv:Suffix>Timestamp</cv:Suffix>
                       <cv:Buffered>true</cv:Buffered>
                       <cv:Overwrite>false</cv:Overwrite>
@@ -452,7 +463,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:\Data\imova\microphone\CMD084\2025-10-15T10-27-18\Video.csv</io:FileName>
+                    <io:FileName>C:\Data\imova\microphone\CMD999\2025-10-29T09-57-01\Video.csv</io:FileName>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>Timestamp</io:Suffix>
@@ -521,11 +532,8 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\imova\microphone\CMD084\2025-10-15T10-27-18\Instructions.csv</io:FileName>
-=======
-              <io:FileName>C:\Data\computeMD\microphone\2025-09-27T06-43-54\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\imova\microphone\CMD999\2025-10-29T09-57-22\Instructions.csv</io:FileName>
               <io:Delimiter>\t</io:Delimiter>
->>>>>>> origin/main
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>None</io:Suffix>
@@ -658,7 +666,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>C:\Data\imova\microphone\CMD084\2025-10-15T10-27-18\Behavior\Behavior_35.bin</harp:FileName>
+                                  <harp:FileName>C:\Data\imova\microphone\CMD999\2025-10-29T09-57-22\Behavior\Behavior_35.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -702,7 +710,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>C:\Data\imova\microphone\CMD084\2025-10-15T10-27-18\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\imova\microphone\CMD999\2025-10-29T09-57-22\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -822,9 +830,13 @@
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 27.9000015pt</gui:Font>
-              <gui:Text>
-Please touch 'Repeat' to repeat the task or 'Next' to continue
-</gui:Text>
+              <gui:Text>We now want to hear your voice in conversation.  Over half a minute, could you tell me:  
+
+'How you spend an average day?'  
+
+Fill the whole half minute with detail!
+
+Touch 'Start' on the screen when you are ready!</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="SubscribeSubject">
@@ -838,8 +850,8 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
             </Expression>
             <Expression xsi:type="gui:ButtonBuilder">
               <gui:Name>Start</gui:Name>
-              <gui:Enabled>false</gui:Enabled>
-              <gui:Visible>false</gui:Visible>
+              <gui:Enabled>true</gui:Enabled>
+              <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50.1000023pt, style=Bold</gui:Font>
               <gui:Text>Start</gui:Text>
             </Expression>
@@ -2171,8 +2183,10 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
     </Nodes>
     <Edges>
       <Edge From="1" To="2" Label="Source1" />
-      <Edge From="4" To="5" Label="Source1" />
+      <Edge From="2" To="3" Label="Source1" />
+      <Edge From="3" To="4" Label="Source1" />
       <Edge From="6" To="7" Label="Source1" />
+      <Edge From="8" To="9" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
