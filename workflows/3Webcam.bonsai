@@ -104,7 +104,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT3.19S</rx:DueTime>
+                      <rx:DueTime>PT4.517S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -203,7 +203,7 @@
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
               <Path>C:\Data\imova\webcam</Path>
-              <SubjectID>CMD998</SubjectID>
+              <SubjectID>CMD999</SubjectID>
             </Expression>
             <Expression xsi:type="GroupWorkflow">
               <Name>LogHarp</Name>
@@ -332,7 +332,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>C:\Data\imova\webcam\CMD198\2025-10-21T09-13-38\Behavior\Behavior_122.bin</harp:FileName>
+                                  <harp:FileName>C:\Data\imova\webcam\CMD999\2025-10-29T09-27-37\Behavior\Behavior_35.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -376,7 +376,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>C:\Data\imova\webcam\CMD198\2025-10-21T09-13-38\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\imova\webcam\CMD999\2025-10-29T09-27-37\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -428,7 +428,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\webcam\2025-10-02T09-54-38\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\imova\webcam\CMD999\2025-10-29T09-27-37\Instructions.csv</io:FileName>
               <io:Delimiter>\t</io:Delimiter>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
@@ -501,7 +501,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="al:AudioWriter">
-                      <al:FileName>C:\Data\webcam\2025-10-02T09-54-38\Audio.wav</al:FileName>
+                      <al:FileName>C:\Data\imova\webcam\CMD999\2025-10-29T09-27-37\Audio.wav</al:FileName>
                       <al:Suffix>FileCount</al:Suffix>
                       <al:Buffered>true</al:Buffered>
                       <al:Overwrite>false</al:Overwrite>
@@ -536,7 +536,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:\Data\webcam\2025-10-02T09-54-38\Audio.csv</io:FileName>
+                    <io:FileName>C:\Data\imova\webcam\CMD999\2025-10-29T09-27-37\Audio.csv</io:FileName>
                     <io:Delimiter>\t</io:Delimiter>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
@@ -660,7 +660,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:VideoWriter">
-                      <cv:FileName>C:\Data\webcam\2025-10-02T09-54-38\Video.avi</cv:FileName>
+                      <cv:FileName>C:\Data\imova\webcam\CMD999\2025-10-29T09-27-37\Video.avi</cv:FileName>
                       <cv:Suffix>FileCount</cv:Suffix>
                       <cv:Buffered>true</cv:Buffered>
                       <cv:Overwrite>false</cv:Overwrite>
@@ -701,7 +701,7 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>C:\Data\webcam\2025-10-02T09-54-38\Video.csv</io:FileName>
+                    <io:FileName>C:\Data\imova\webcam\CMD999\2025-10-29T09-27-37\Video.csv</io:FileName>
                     <io:Delimiter>\t</io:Delimiter>
                     <io:Append>false</io:Append>
                     <io:Overwrite>false</io:Overwrite>
@@ -844,7 +844,9 @@
               <gui:Enabled>true</gui:Enabled>
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 24pt</gui:Font>
-              <gui:Text>Chose Repeat or Next Task</gui:Text>
+              <gui:Text>
+Please touch 'Repeat' to repeat task or 'Next' to continue
+</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="rx:BehaviorSubject" TypeArguments="p3:IplImage">
@@ -1069,7 +1071,7 @@
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
                 <Value>
-First we are going to check that your face is close to the centre of the screen
+First we are going to check that your face is close to the centre of the screen and we can see both shoulders.
 
 During all these tasks look at the camera and we will tell you when it ends. 
 
@@ -1319,7 +1321,7 @@ Touch 'Start' on the screen when you are ready! We will tell when the task has f
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
                 <Value>
-Please look at the camera in a neutral pose as if having a passport photos taken!
+Please hold your pose for a passport photo!
 </Value>
               </Combinator>
             </Expression>

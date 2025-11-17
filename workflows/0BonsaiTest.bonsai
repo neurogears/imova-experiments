@@ -101,7 +101,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT2.868S</rx:DueTime>
+                      <rx:DueTime>PT4.78S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -189,7 +189,7 @@
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
               <Path>C:\Data\imova\test</Path>
-              <SubjectID>CMD998</SubjectID>
+              <SubjectID>CMD254</SubjectID>
             </Expression>
             <Expression xsi:type="GroupWorkflow">
               <Name>LogHarp</Name>
@@ -318,7 +318,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>Data\CMD001\test\2025-10-01T10-45-58\Behavior\Behavior_122.bin</harp:FileName>
+                                  <harp:FileName>C:\Data\imova\test\000\2025-10-29T08-39-12\Behavior\Behavior_122.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -362,7 +362,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>Data\CMD001\test\2025-10-01T10-45-58\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\imova\test\000\2025-10-29T08-39-12\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -416,7 +416,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>Data\CMD001\test\2025-10-01T10-45-58\keystrokes.csv</io:FileName>
+              <io:FileName>C:\Data\imova\test\000\2025-10-29T08-39-12\keystrokes.csv</io:FileName>
               <io:Delimiter>\t</io:Delimiter>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
@@ -438,7 +438,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>Data\CMD001\test\2025-10-01T10-45-58\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\imova\test\000\2025-10-29T08-39-12\Instructions.csv</io:FileName>
               <io:Delimiter>\t</io:Delimiter>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
@@ -486,7 +486,9 @@
               <Property Name="Value" DisplayName="SubjectID" />
             </Expression>
             <Expression xsi:type="Combinator">
-              <Combinator xsi:type="StringProperty" />
+              <Combinator xsi:type="StringProperty">
+                <Value>CMD254</Value>
+              </Combinator>
             </Expression>
             <Expression xsi:type="rx:SelectMany">
               <Name>SubjectIDWriter</Name>
@@ -585,7 +587,15 @@
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 24pt</gui:Font>
               <gui:Text>
-Please touch 'Repeat' to repeat the task or 'Next' to continue</gui:Text>
+We will now complete tasks with this drawing tablet!
+
+The pen will write to the screen, NOT the paper.  
+
+We will change the sheet of paper for each task.
+
+We will start with a practice.
+
+Touch 'Start' to continue!</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="rx:BehaviorSubject" TypeArguments="p3:IplImage">
@@ -620,8 +630,8 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue</gui:Text>
             </Expression>
             <Expression xsi:type="gui:ButtonBuilder">
               <gui:Name>Start</gui:Name>
-              <gui:Enabled>false</gui:Enabled>
-              <gui:Visible>false</gui:Visible>
+              <gui:Enabled>true</gui:Enabled>
+              <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50pt, style=Bold</gui:Font>
               <gui:Text>Start</gui:Text>
             </Expression>
