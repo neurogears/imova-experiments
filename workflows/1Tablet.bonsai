@@ -798,7 +798,7 @@ Trace the lines!</gui:Text>
               <Combinator xsi:type="StringProperty">
                 <Value>Need sheet 'Today is a sunny day!' at the top.
 
-On each line please write this phrase with a capital at the start and exclamation mark at end.
+On each line please write this phrase with a capital at the start and exclamation mark at end!
 
 Start a new line if you finish the phrase.  
 
@@ -1041,7 +1041,7 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Please change the paper again - check you have paper with spirals in front of you.
+                <Value>Check you have paper with spirals in front of you.
 
 Now with RIGHT hand. Starting with the larger spiral - trace both spirals starting at the CENTRE and drawing out.  
 
@@ -1531,7 +1531,7 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Please change the paper - check have a set of coloured blocks and dots in front of you. Place the pen on the right, ready to draw with the RIGHT HAND.
+                <Value>Check you have a set of coloured blocks and dots in front of you. Place the pen on the right, ready to draw with the RIGHT HAND.
 
 Please draw 3 horizontal lines connecting the dots and then 3 vertical lines connecting the dots.  [Choice of direction is up to you]
 
