@@ -532,7 +532,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>We would like to hear your voice within conversation. Could you tell me over about 30 seconds, 'How you spend an average day?'</Value>
+                <Value>Init</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
