@@ -189,7 +189,7 @@
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
               <Path>C:\Data\imova\test</Path>
-              <SubjectID>672</SubjectID>
+              <SubjectID>CMD000</SubjectID>
             </Expression>
             <Expression xsi:type="GroupWorkflow">
               <Name>LogHarp</Name>
@@ -511,7 +511,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>672</Value>
+                <Value>CMD000</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:SelectMany">
@@ -984,7 +984,7 @@ Please test writing!</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>DigitizerHabituation</Value>
+                <Value>DigitizerHabituation1</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1031,7 +1031,7 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Instruction1</Value>
+                <Value>EndRepeat</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1169,7 +1169,7 @@ When you are ready for the next practice.  Please press 'Start'!</Value>
         </Workflow>
       </Expression>
       <Expression xsi:type="rx:SelectMany">
-        <Name>WritingTask</Name>
+        <Name>DigitizerHabituation</Name>
         <Workflow>
           <Nodes>
             <Expression xsi:type="WorkflowInput">
@@ -1262,7 +1262,7 @@ Have a final practice with the pen!</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>WritingTask</Value>
+                <Value>DigitizerHabituation2</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1309,7 +1309,7 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue</Value>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Instruction1</Value>
+                <Value>EndRepeat</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">

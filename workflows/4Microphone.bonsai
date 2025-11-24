@@ -398,7 +398,16 @@
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:CameraCapture">
                       <cv:Index>0</cv:Index>
-                      <cv:CaptureProperties />
+                      <cv:CaptureProperties>
+                        <cv:CapturePropertyAssignment>
+                          <cv:Property>FrameWidth</cv:Property>
+                          <cv:Value>1280</cv:Value>
+                        </cv:CapturePropertyAssignment>
+                        <cv:CapturePropertyAssignment>
+                          <cv:Property>FrameHeight</cv:Property>
+                          <cv:Value>720</cv:Value>
+                        </cv:CapturePropertyAssignment>
+                      </cv:CaptureProperties>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
