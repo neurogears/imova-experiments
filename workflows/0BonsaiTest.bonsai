@@ -101,7 +101,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT4.78S</rx:DueTime>
+                      <rx:DueTime>PT4.379S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -189,7 +189,7 @@
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\PathPrefix.bonsai">
               <Path>C:\Data\imova\test</Path>
-              <SubjectID>CMD254</SubjectID>
+              <SubjectID>672</SubjectID>
             </Expression>
             <Expression xsi:type="GroupWorkflow">
               <Name>LogHarp</Name>
@@ -318,7 +318,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="harp:MessageWriter">
-                                  <harp:FileName>C:\Data\imova\test\000\2025-10-29T08-39-12\Behavior\Behavior_122.bin</harp:FileName>
+                                  <harp:FileName>C:\Data\imova\test\672\2025-11-19T14-45-07\Behavior\Behavior_35.bin</harp:FileName>
                                   <harp:Suffix>None</harp:Suffix>
                                   <harp:Buffered>true</harp:Buffered>
                                   <harp:Overwrite>false</harp:Overwrite>
@@ -362,7 +362,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="io:WriteAllText">
-                            <io:Path>C:\Data\imova\test\000\2025-10-29T08-39-12\Behavior\device.yml</io:Path>
+                            <io:Path>C:\Data\imova\test\672\2025-11-19T14-45-07\Behavior\device.yml</io:Path>
                             <io:Overwrite>false</io:Overwrite>
                             <io:Append>false</io:Append>
                           </Combinator>
@@ -416,7 +416,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\imova\test\000\2025-10-29T08-39-12\keystrokes.csv</io:FileName>
+              <io:FileName>C:\Data\imova\test\672\2025-11-19T14-45-07\keystrokes.csv</io:FileName>
               <io:Delimiter>\t</io:Delimiter>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
@@ -438,7 +438,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName>C:\Data\imova\test\000\2025-10-29T08-39-12\Instructions.csv</io:FileName>
+              <io:FileName>C:\Data\imova\test\672\2025-11-19T14-45-07\Instructions.csv</io:FileName>
               <io:Delimiter>\t</io:Delimiter>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
@@ -511,7 +511,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>CMD254</Value>
+                <Value>672</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:SelectMany">
@@ -620,15 +620,7 @@
               <gui:Visible>true</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 24pt</gui:Font>
               <gui:Text>
-We will now complete tasks with this drawing tablet!
-
-The pen will write to the screen, NOT the paper.  
-
-We will change the sheet of paper for each task.
-
-We will start with a practice.
-
-Touch 'Start' to continue!</gui:Text>
+Please touch 'Repeat' to repeat the task or 'Next' to continue</gui:Text>
             </Expression>
             <Expression xsi:type="VisualizerMapping" />
             <Expression xsi:type="rx:BehaviorSubject" TypeArguments="p3:IplImage">
@@ -663,8 +655,8 @@ Touch 'Start' to continue!</gui:Text>
             </Expression>
             <Expression xsi:type="gui:ButtonBuilder">
               <gui:Name>Start</gui:Name>
-              <gui:Enabled>true</gui:Enabled>
-              <gui:Visible>true</gui:Visible>
+              <gui:Enabled>false</gui:Enabled>
+              <gui:Visible>false</gui:Visible>
               <gui:Font>Microsoft Sans Serif, 50pt, style=Bold</gui:Font>
               <gui:Text>Start</gui:Text>
             </Expression>
@@ -873,7 +865,7 @@ Touch 'Start' to continue!</gui:Text>
                 <Value>
 We will now complete tasks with this drawing tablet!
 
-The pen will write to the screen, NOT the paper.  
+Your writing will show up on the screen.
 
 We will change the sheet of paper for each task.
 
@@ -1144,9 +1136,9 @@ Please touch 'Repeat' to repeat the task or 'Next' to continue</Value>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
                 <Value>
-Now could you practice taking the sheet off with the clip.
+We will now practice changing the sheet of paper.
 
-When you are ready for the next practice.  Please press 'Next'!</Value>
+When you are ready for the next practice.  Please press 'Start'!</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
