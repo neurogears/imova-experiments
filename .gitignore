@@ -1,5 +1,6 @@
 .bonsai/*
 .venv
+__pycache__
 !.bonsai/Bonsai.config
 workflows/obj/
 uv.lock

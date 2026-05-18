@@ -1,0 +1,34 @@
+{
+  "properties": {
+    "device_idx": {
+      "default": 0,
+      "minimum": 0,
+      "title": "Device Idx",
+      "type": "integer"
+    },
+    "device_name": {
+      "default": "Camera0",
+      "title": "Device Name",
+      "type": "string"
+    },
+    "gain": {
+      "default": 0,
+      "minimum": 0,
+      "title": "Gain",
+      "type": "number"
+    },
+    "exposure": {
+      "default": 1000,
+      "minimum": 0,
+      "title": "Exposure",
+      "type": "number"
+    },
+    "description": {
+      "default": "",
+      "title": "Description",
+      "type": "string"
+    }
+  },
+  "title": "CameraDevice",
+  "type": "object"
+}
