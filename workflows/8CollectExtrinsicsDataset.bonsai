@@ -194,7 +194,7 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="io:GetFileSystemEntries">
-          <io:Path>../named_device_configs</io:Path>
+          <io:Path>../device_configs</io:Path>
           <io:SearchPattern>*.json</io:SearchPattern>
           <io:SearchOption>TopDirectoryOnly</io:SearchOption>
         </Combinator>
@@ -222,7 +222,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="io:ReadAllText">
-                      <io:Path>../named_device_configs\CameraTopRight.json</io:Path>
+                      <io:Path>../device_configs\CameraTopRight.json</io:Path>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
