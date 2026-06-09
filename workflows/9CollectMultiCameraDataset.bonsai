@@ -594,6 +594,10 @@
           </Edges>
         </Workflow>
       </Expression>
+      <Expression xsi:type="ExternalizedMapping">
+        <Property Name="Path" />
+        <Property Name="SubjectID" />
+      </Expression>
       <Expression xsi:type="rx:Defer">
         <Name>RecordCameraStreams</Name>
         <Workflow>
@@ -841,6 +845,10 @@
             <Edge From="17" To="18" Label="Source1" />
           </Edges>
         </Workflow>
+      </Expression>
+      <Expression xsi:type="ExternalizedMapping">
+        <Property Name="InitialDelay" />
+        <Property Name="RecordingDuration" />
       </Expression>
       <Expression xsi:type="GroupWorkflow">
         <Name>RecordingControl</Name>
@@ -1220,8 +1228,10 @@
       <Edge From="5" To="6" Label="Source1" />
       <Edge From="6" To="7" Label="Source1" />
       <Edge From="9" To="10" Label="Source1" />
-      <Edge From="10" To="11" Label="Source1" />
       <Edge From="10" To="12" Label="Source1" />
+      <Edge From="11" To="12" Label="Source2" />
+      <Edge From="12" To="13" Label="Source1" />
+      <Edge From="12" To="14" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
